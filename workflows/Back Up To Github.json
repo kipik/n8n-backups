@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "n8n": {
       "main": [
@@ -396,21 +396,6 @@
     },
     {
       "parameters": {
-        "content": "## Workflow Backups\nThis workflow will automatically backup your workflows to your Github account every 12 hours.\n\n### Setup\nOpen Globals and update the values below\n**repo.owner:** This is your Github username\n**repo.name:** This is the name of your repository\n**repo.path:** This is the folder to use within the repository, If it doesn't exist it will be created.\n\nIf your username was `n8n-io` and your repository was called `n8n-backups` and you wanted the workflows to go into a `workflows` folder you would set:\n\nrepo.owner - n8n-io\nrepo.name - n8n-backups\nrepo.path - workflows",
-        "height": 464.79920462713443,
-        "width": 389.78906250000017
-      },
-      "id": "fbdcfdd9-4f07-48e7-8586-092d67c7fe59",
-      "name": "Note",
-      "type": "n8n-nodes-base.stickyNote",
-      "position": [
-        180,
-        240
-      ],
-      "typeVersion": 1
-    },
-    {
-      "parameters": {
         "content": "## Single Item Loop\nWe process each workflow item one at a time, We first check Github to see if a file exists then we merge the Github Data and the API item so we can check if the values match in the function node `isDiffOrNew` we then set a status of `same`, `different` or `new`",
         "height": 424.04333333333386,
         "width": 755.2349999999991
@@ -487,5 +472,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-03T11:40:30.321Z"
+  "updatedAt": "2022-11-03T11:41:32.539Z"
 }
