@@ -1,0 +1,50 @@
+{
+  "active": false,
+  "connections": {},
+  "createdAt": "2022-11-02T18:11:34.275Z",
+  "id": 11,
+  "name": "Elimine les non jeux",
+  "nodes": [
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "baseId": {
+          "mode": "url",
+          "value": "",
+          "__regex": "https://airtable.com/([a-zA-Z0-9]{2,})"
+        },
+        "tableId": {
+          "mode": "url",
+          "value": "",
+          "__regex": "https://airtable.com/[a-zA-Z0-9]{2,}/([a-zA-Z0-9]{2,})"
+        },
+        "additionalFields": {}
+      },
+      "id": "f9a35b04-2c6b-4ac5-994f-862591b6d970",
+      "name": "Airtable Trigger",
+      "type": "n8n-nodes-base.airtableTrigger",
+      "typeVersion": 1,
+      "position": [
+        620,
+        320
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "updatedAt": "2022-11-02T18:16:06.622Z"
+}
