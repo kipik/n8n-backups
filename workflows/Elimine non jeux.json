@@ -71,6 +71,13 @@
             "type": "main",
             "index": 0
           }
+        ],
+        [
+          {
+            "node": "IF JDR1",
+            "type": "main",
+            "index": 0
+          }
         ]
       ]
     },
@@ -79,6 +86,28 @@
         [
           {
             "node": "Airtable1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF JDR1": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets2": {
+      "main": [
+        [
+          {
+            "node": "Airtable2",
             "type": "main",
             "index": 0
           }
@@ -364,6 +393,84 @@
           "name": "Airtable Thierry"
         }
       }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"Status\"]}}",
+              "operation": "notEqual",
+              "value2": "Campagnes suivies"
+            },
+            {
+              "value1": "={{ $json[\"genre\"] }}",
+              "value2": "Figurinisme"
+            }
+          ]
+        }
+      },
+      "id": "389d6421-834d-4de4-9e82-f5dbb5b83570",
+      "name": "IF JDR1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1240,
+        1240
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "16b5i7saYyEhRacgxKVWyVSS00T5KbtTMA2UubYN8g0s",
+        "range": "A:I",
+        "options": {}
+      },
+      "id": "58f98a75-f64a-4fdc-89e4-01b553841f55",
+      "name": "Google Sheets2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        -1000,
+        1220
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "application": {
+          "__rl": true,
+          "value": "appqMBlpxffjoCDno",
+          "mode": "id"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblpdlsFW8elPEBsx",
+          "mode": "id"
+        },
+        "id": "={{ $json[\"airtable_id\"] }}",
+        "options": {}
+      },
+      "id": "b845387a-d3df-45d8-b7be-3faacb82fe14",
+      "name": "Airtable2",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        -760,
+        1220
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -373,9 +480,9 @@
       "lastTimeChecked": "2022-11-02T21:51:05Z"
     },
     "node:Trigger on added Genre": {
-      "lastTimeChecked": "2022-11-03T10:00:43Z"
+      "lastTimeChecked": "2022-11-03T22:25:47Z"
     }
   },
   "tags": [],
-  "updatedAt": "2022-11-03T10:00:43.000Z"
+  "updatedAt": "2022-11-03T22:25:47.000Z"
 }
