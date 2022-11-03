@@ -1,0 +1,1320 @@
+{
+  "active": true,
+  "connections": {
+    "Start1": {
+      "main": [
+        [
+          {
+            "node": "Lit campagne ID1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF3": {
+      "main": [
+        [
+          {
+            "node": "Cherche entrée par mot-clé1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Cherche entrée par mot-clé1": {
+      "main": [
+        [
+          {
+            "node": "IF5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Lit campagne ID1": {
+      "main": [
+        [
+          {
+            "node": "Simplify1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update Notion1": {
+      "main": [
+        [
+          {
+            "node": "Check Image1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "NoOp1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Create New Notion1": {
+      "main": [
+        [
+          {
+            "node": "NoOp1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion Existe1": {
+      "main": [
+        [
+          {
+            "node": "Update Notion1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Create New Notion1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Image1": {
+      "main": [
+        [
+          {
+            "node": "Update -> Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Set3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set3": {
+      "main": [
+        [
+          {
+            "node": "Item Lists2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists2": {
+      "main": [
+        [
+          {
+            "node": "Item Lists3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists3": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Notion ID2": {
+      "main": [
+        [
+          {
+            "node": "Add Notion ID2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Notion ID3": {
+      "main": [
+        [
+          {
+            "node": "Add Notion ID3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable Trigger on Updated1": {
+      "main": [
+        [
+          {
+            "node": "Lit campagne ID1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simplify1": {
+      "main": [
+        [
+          {
+            "node": "IF3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Notion Existe1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simplify Notion1": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NoOp1": {
+      "main": [
+        [
+          {
+            "node": "Get Notion ID2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Notion avait forum1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Notion avait forum1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Date & Time2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Date & Time3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF5": {
+      "main": [
+        [
+          {
+            "node": "Simplify Notion1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set1": {
+      "main": [
+        [
+          {
+            "node": "Airtable3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail2": {
+      "main": [
+        [
+          {
+            "node": "TESTS2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time2": {
+      "main": [
+        [
+          {
+            "node": "Gmail2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail3": {
+      "main": [
+        [
+          {
+            "node": "TESTS3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time3": {
+      "main": [
+        [
+          {
+            "node": "Gmail3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-11-01T23:06:47.226Z",
+  "id": 8,
+  "name": "KS retenus",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "c755962b-8da7-4394-be6e-5bea49a7ef53",
+      "name": "Start1",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        -2140,
+        660
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"Status\"]}}",
+              "value2": "Campagnes suivies"
+            }
+          ]
+        }
+      },
+      "id": "8a2fd150-07ea-4aa9-9a01-76feb62d88ba",
+      "name": "IF3",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1420,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "getAll",
+        "databaseId": "9e2003ad-973a-4770-a836-9f38a3baf7b9",
+        "returnAll": true,
+        "filterType": "manual",
+        "filters": {
+          "conditions": [
+            {
+              "key": "nameClean|formula",
+              "condition": "contains",
+              "returnType": "text",
+              "textValue": "={{$json[\"name\"].replace(/[^\\w\\s]/gi, '').replace(/\\s/g,'').toLowerCase().substring(0,12)}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "320bf986-7947-4efc-9927-fe53cd573cca",
+      "name": "Cherche entrée par mot-clé1",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        -1100,
+        660
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "notionApi": {
+          "id": "6",
+          "name": "Notion account 2"
+        }
+      },
+      "continueOnFail": true
+    },
+    {
+      "parameters": {
+        "application": "=appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "id": "={{$json[\"id\"]}}"
+      },
+      "id": "12018138-328e-48a7-a0ae-0e20371cdb45",
+      "name": "Lit campagne ID1",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        -1900,
+        860
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "var desired = $json[\"name\"].replace(/[^\\w\\s]/gi, '').replace(/\\s/g,'').toLowerCase().substring(0,10);\n\nreturn {\n  nameClean: desired\n};"
+      },
+      "id": "2692b3e2-32e6-4d56-8914-439a5d54e0ea",
+      "name": "Prépare nom pour comparaison1",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        -1420,
+        620
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "update",
+        "pageId": "={{ $json[\"notion_id\"] }}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Statut|multi_select",
+              "multiSelectValue": [
+                "Nouvelles campagnes"
+              ]
+            },
+            {
+              "key": "Fin le|date",
+              "date": "={{ $json[\"deadline\"] }}",
+              "timezone": "Europe/Paris"
+            },
+            {
+              "key": "Airtable ID|rich_text",
+              "textContent": "={{ $json[\"airtable_id\"] }}"
+            },
+            {
+              "key": "La campagne|url",
+              "ignoreIfEmpty": true,
+              "urlValue": "={{ $json[\"campaign_url\"] }}"
+            },
+            {
+              "key": "Forum|url",
+              "ignoreIfEmpty": true,
+              "urlValue": "={{$json[\"airtable_forum\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "468a18a8-b51e-456d-98d2-974ad53d96a7",
+      "name": "Update Notion1",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        60,
+        800
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "6",
+          "name": "Notion account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": "9e2003ad-973a-4770-a836-9f38a3baf7b9",
+        "title": "={{ $json[\"name\"] }}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Fin le|date",
+              "date": "={{ $json[\"deadline\"] }}"
+            },
+            {
+              "key": "La campagne|url",
+              "urlValue": "={{ $json[\"campaign_url\"] }}"
+            },
+            {
+              "key": "Statut|multi_select",
+              "multiSelectValue": [
+                "Nouvelles campagnes"
+              ]
+            },
+            {
+              "key": "Image|files",
+              "fileUrls": {
+                "fileUrl": [
+                  {
+                    "name": "={{ $json[\"name\"] }} par {{ $json[\"creator\"] }}",
+                    "url": "={{ $json[\"image_url\"] }}"
+                  }
+                ]
+              }
+            },
+            {
+              "key": "Airtable ID|rich_text",
+              "textContent": "={{ $json[\"airtable_id\"] }}"
+            },
+            {
+              "key": "Forum|url",
+              "ignoreIfEmpty": true,
+              "urlValue": "={{ $json[\"airtable_forum\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "3d16f458-d580-4c37-be82-aa79befb6ad3",
+      "name": "Create New Notion1",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        60,
+        1020
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "6",
+          "name": "Notion account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"notion_id\"] }}",
+              "operation": "isNotEmpty"
+            },
+            {
+              "value1": "={{ $json[\"notion_url\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "daffe1fa-a660-4e16-b435-4dd932eacb93",
+      "name": "Notion Existe1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -220,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"property_image\"] }}",
+              "operation": "isEmpty"
+            }
+          ]
+        }
+      },
+      "id": "91ffbd99-75fa-4177-8f9b-89ebe91f91f8",
+      "name": "Check Image1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        340,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "update",
+        "pageId": "={{$node[\"Cherche entrée par mot-clé1\"].json[\"id\"]}}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Image|files",
+              "fileUrls": {
+                "fileUrl": [
+                  {
+                    "name": "={{$node[\"Merge1\"].json[\"name\"]}} par {{$node[\"Merge1\"].json[\"creator\"]}}",
+                    "url": "={{$node[\"Merge1\"].json[\"image_url\"]}}"
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "id": "1f8c25ad-a7dd-4ea0-872d-e54104495908",
+      "name": "Update -> Image",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        600,
+        680
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "6",
+          "name": "Notion account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "let parts = $node[\"Extrait adresse forum\"].json[\"forum\"].split('/');\nlet forum_id = parts.pop();\n\nreturn {\n  forum_id\n};"
+      },
+      "id": "5ff093b8-0e25-44eb-8513-aeb9aaf34ebc",
+      "name": "FunctionItem1",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        320
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "={{ $json[\"property_forum\"] }}",
+        "options": {}
+      },
+      "id": "cf789d9b-b8f7-49bf-b3e0-73a866919532",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        940,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "stream",
+              "value": "={{ $json[\"post_stream\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8a2182f5-dd8b-4d02-9b45-0b1f04862096",
+      "name": "Set3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "stream.posts",
+        "options": {}
+      },
+      "id": "bde7a8e2-4cbe-4fa6-95e9-6a0f9a482be0",
+      "name": "Item Lists2",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit"
+      },
+      "id": "83724c76-f648-4010-ad1b-3e6d465de014",
+      "name": "Item Lists3",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        1540,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "postId": "={{$json[\"id\"]}}",
+        "content": "={{ $json[\"cooked\"] }}\n\n<br>\n<blockquote>\n<p><strong>La page KS</strong> : <a href=\"{{$node[\"IF3\"].json[\"campaign_url\"]}}\" class=\"inline-onebox\" rel=\"noopener nofollow ugc\">{{$node[\"IF3\"].json[\"name\"]}} par {{$node[\"IF3\"].json[\"creator\"]}}</a></p></blockquote>",
+        "updateFields": {
+          "edit_reason": "=mis à jour auto au lancement du KS",
+          "cooked": true
+        }
+      },
+      "name": "Discourse1",
+      "type": "n8n-nodes-base.discourse",
+      "position": [
+        1760,
+        1180
+      ],
+      "typeVersion": 1,
+      "id": "3a141146-aa83-43d9-9db6-b966a7a70033",
+      "credentials": {
+        "discourseApi": {
+          "id": "8",
+          "name": "Discourse account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "application": "appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "id": "={{$node[\"Lit campagne ID1\"].json[\"id\"]}}",
+        "updateAllFields": false,
+        "fields": [
+          "forum",
+          "={{ $json[\"forum\"] }}"
+        ],
+        "options": {}
+      },
+      "id": "9846acb9-3f52-438a-a6e8-c18384ee2528",
+      "name": "Airtable2",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        280,
+        260
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "application": "=appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "id": "={{$node[\"NoOp1\"].json[\"property_airtable_id\"]}}",
+        "updateAllFields": false,
+        "fields": [
+          "notion"
+        ],
+        "options": {}
+      },
+      "id": "3e87e25a-a936-497f-98d6-168d804caf02",
+      "name": "Add Notion ID2",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        940,
+        900
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "notion",
+              "value": "={{ $json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f1c50e44-bbc7-4382-b63a-f1ec778d7a51",
+      "name": "Get Notion ID2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        680,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "application": "=appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "id": "={{$node[\"Lit campagne ID1\"].json[\"id\"]}}",
+        "updateAllFields": false,
+        "fields": [
+          "notion"
+        ],
+        "options": {}
+      },
+      "id": "053deaf5-6812-46fc-b6ae-d15c518ca3be",
+      "name": "Add Notion ID3",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        -960,
+        340
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "notion",
+              "value": "={{ $json[\"id\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "0bf7dabe-d952-49c4-91e0-c98e66077d1b",
+      "name": "Get Notion ID3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -1220,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "baseId": "appqMBlpxffjoCDno",
+        "tableId": "tblpdlsFW8elPEBsx",
+        "triggerField": "UpdatedTime",
+        "additionalFields": {}
+      },
+      "id": "9e946798-7441-4027-a2f4-215293dac219",
+      "name": "Airtable Trigger on Updated1",
+      "type": "n8n-nodes-base.airtableTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2140,
+        860
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "airtable_id",
+              "value": "={{ $json[\"id\"] }}"
+            },
+            {
+              "name": "name",
+              "value": "={{$json[\"fields\"][\"name\"]}}"
+            },
+            {
+              "name": "campaign_url",
+              "value": "={{$json[\"fields\"][\"campaign_url\"]}}"
+            },
+            {
+              "name": "deadline",
+              "value": "={{$json[\"fields\"][\"deadline_formated\"]}}"
+            },
+            {
+              "name": "image_name",
+              "value": "={{$json[\"fields\"][\"image_1024\"][0][\"filename\"]}}"
+            },
+            {
+              "name": "image_url",
+              "value": "={{$json[\"fields\"][\"image_1024\"][0][\"url\"]}}"
+            },
+            {
+              "name": "plateforme_id",
+              "value": "={{$json[\"fields\"][\"plateforme_id\"]}}"
+            },
+            {
+              "name": "airtable_forum",
+              "value": "={{$json[\"fields\"][\"forum\"]}}"
+            },
+            {
+              "name": "Status",
+              "value": "={{$json[\"fields\"][\"FollowedStatus\"]}}"
+            },
+            {
+              "name": "creator",
+              "value": "={{$json[\"fields\"][\"creator\"]}}"
+            },
+            {
+              "name": "notion_id_airtable"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4f2a16ce-4e43-4693-9cc8-9cbcdd4a22c9",
+      "name": "Simplify1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -1660,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "id": "55a72c8e-472e-4923-a120-2ff1391358fc",
+      "name": "Merge1",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        -460,
+        820
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "notion_id",
+              "value": "={{ $json[\"id\"] }}"
+            },
+            {
+              "name": "notion_url",
+              "value": "={{ $json[\"url\"] }}"
+            },
+            {
+              "name": "forum_notion",
+              "value": "={{ $json[\"property_forum\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a6c7a0ee-abb2-4136-b9f7-954580aa77f7",
+      "name": "Simplify Notion1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -660,
+        660
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "f9fb37eb-9ea5-41b1-b014-ba82dfb83d80",
+      "name": "NoOp1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        380,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"forum\"]}}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "4cdd1d6f-831e-4494-8923-94f627aa2646",
+      "name": "IF4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        180,
+        1320
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "discourseApi",
+        "requestMethod": "PUT",
+        "url": "=https://forum.cwowd.com/t/{{$json[\"topic_id\"]}}",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "category_id",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "id": "36f2aa54-754e-4cbb-aef7-1aac867888e9",
+      "name": "HTTP Request3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1760,
+        920
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "7",
+          "name": "Discourse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"property_forum\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "4a009aa1-a3d9-4c27-9d8f-c5b9e95e5115",
+      "name": "Notion avait forum1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        660,
+        1320
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "="
+            }
+          ]
+        }
+      },
+      "id": "ada4e8c0-fd35-46f0-abd1-e687b09e88b8",
+      "name": "IF5",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -880,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "application": "appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "id": "={{$node[\"Merge1\"].json[\"airtable_id\"]}}",
+        "updateAllFields": false,
+        "fields": [
+          "forum"
+        ],
+        "options": {}
+      },
+      "id": "450170ff-5221-48ef-bfed-4c4c4e6792dc",
+      "name": "Airtable3",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        1300
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "forum",
+              "value": "={{ $json[\"property_forum\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c9eeae66-d6ae-4b93-8d86-e659b4245fd8",
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        940,
+        1300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Nouvelle campagne de financement",
+        "includeHtml": true,
+        "htmlMessage": "=<p><img src=\"{{$node[\"Merge1\"].json[\"image_url\"]}}\" width=\"600\" height=\"auto\"></p>\n<p></p>\n<b>{{$node[\"Merge1\"].json[\"name\"]}}</b> par {{$node[\"Merge1\"].json[\"creator\"]}}\n<p></p>\n<a href=\"{{$node[\"Merge1\"].json[\"campaign_url\"]}}\">La page de la campagne</a> \n<p></p>\nFin de la campagne le : {{$json[\"deadline\"]}}\n\n<br>\n\n<p></p>\n\nPitch : {{$node[\"Lit campagne ID1\"].json[\"fields\"][\"blurb\"]}}\n<p></p>\n<a rel=\"noopener\" target=\"_blank\" href=\"{{$json[\"property_forum\"]}}\" style=\"background-color: #0083b9; font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; text-decoration: none; padding: 8px 12px; color: #ffffff; border-radius: 5px; display: inline-block; mso-padding-alt: 0;\">\n  <!--[if mso]>\n  <i style=\"letter-spacing: 20px; mso-font-width: -100%; mso-text-raise: 25pt;\">&nbsp;</i>\n  <![endif]-->\n  <span style=\"mso-text-raise: 15pt;\">On en discute &rarr;</span>\n  <!--[if mso]>\n  <i style=\"letter-spacing: 20px; mso-font-width: -100%;\">&nbsp;</i>\n  <![endif]-->\n</a>",
+        "message": "= La campagne {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"name\"]}}a été ajoutée aux campagnes suivies le {{$node[\"Airtable Trigger on Updated1\"].json[\"createdTime\"]}}.",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {
+          "bccList": [
+            "zoe.feger@gmail.com",
+            "jeanmichel@trayaud.com",
+            "pierre.fiol@free.fr",
+            "jbecousse@gmail.com",
+            "romain.garby@gmail.com",
+            "kimguanter@gmail.com"
+          ]
+        }
+      },
+      "id": "0df63b47-7ea0-4e8b-a07a-770286862ce2",
+      "name": "Gmail2",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        1460
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Nouvelle campagne de financement",
+        "includeHtml": true,
+        "htmlMessage": "=<p><img src=\"{{$node[\"Merge1\"].json[\"image_url\"]}}\" width=\"600\" height=\"auto\"></p>\n<p></p>\n<b>{{$node[\"Merge1\"].json[\"name\"]}}</b> par : {{$node[\"Merge1\"].json[\"creator\"]}}\n<p></p>\n<a href=\"{{$node[\"Merge1\"].json[\"campaign_url\"]}}\">La page de la campagne</a>\n<p></p>\nFin de la campagne le : {{$json[\"deadline\"]}}\n\n<br>\n\n<p></p>\n\nPitch : {{$node[\"Lit campagne ID1\"].json[\"fields\"][\"blurb\"]}}\n<p></p>\n<a rel=\"noopener\" target=\"_blank\" href=\"{{$json[\"property_forum\"]}}\" style=\"background-color: #0083b9; font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; text-decoration: none; padding: 8px 12px; color: #ffffff; border-radius: 5px; display: inline-block; mso-padding-alt: 0;\">\n  <!--[if mso]>\n  <i style=\"letter-spacing: 20px; mso-font-width: -100%; mso-text-raise: 25pt;\">&nbsp;</i>\n  <![endif]-->\n  <span style=\"mso-text-raise: 15pt;\">On en discute &rarr;</span>\n  <!--[if mso]>\n  <i style=\"letter-spacing: 20px; mso-font-width: -100%;\">&nbsp;</i>\n  <![endif]-->\n</a>",
+        "message": "= La campagne {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"name\"]}}a été ajoutée aux campagnes suivies le {{$node[\"Airtable Trigger on Updated1\"].json[\"createdTime\"]}}.",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {
+          "bccList": []
+        }
+      },
+      "id": "51137838-6ae9-4b02-accc-0a15f0f0bdfe",
+      "name": "TESTS2",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        1460
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "value": "={{$node[\"Lit campagne ID1\"].json[\"fields\"][\"deadline\"]}}",
+        "dataPropertyName": "=deadline",
+        "custom": true,
+        "toFormat": "DD MMMM YYYY à HH:mm",
+        "options": {
+          "fromFormat": "X",
+          "toTimezone": "CET"
+        }
+      },
+      "id": "ceff92da-2ba0-4c13-8097-f4bcc1d4c2e0",
+      "name": "Date & Time2",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        940,
+        1460
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Nouvelle campagne de financement",
+        "includeHtml": true,
+        "htmlMessage": "=<p><img src=\"{{$node[\"Merge1\"].json[\"image_url\"]}}\" width=\"600\" height=\"auto\"></p>\n<p></p>\n<b>{{$node[\"Merge1\"].json[\"name\"]}}</b> par {{$node[\"Merge1\"].json[\"creator\"]}}\n<p></p>\n<a href=\"{{$node[\"Merge1\"].json[\"campaign_url\"]}}\">La page de la campagne</a> \n<p></p>\nFin de la campagne le : {{$json[\"deadline\"]}}\n\n<br>\n\n<p></p>\n\nPitch : {{$node[\"Lit campagne ID1\"].json[\"fields\"][\"blurb\"]}}\n<p></p>",
+        "message": "= La campagne {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"name\"]}}a été ajoutée aux campagnes suivies le {{$node[\"Airtable Trigger on Updated1\"].json[\"createdTime\"]}}.",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {
+          "bccList": [
+            "zoe.feger@gmail.com",
+            "jeanmichel@trayaud.com",
+            "pierre.fiol@free.fr",
+            "jbecousse@gmail.com",
+            "romain.garby@gmail.com",
+            "kimguanter@gmail.com"
+          ]
+        }
+      },
+      "id": "ed70ddfa-5e1e-418c-a5a9-fc8091fd0042",
+      "name": "Gmail3",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        1660
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Nouvelle campagne de financement",
+        "includeHtml": true,
+        "htmlMessage": "=<p><img src=\"{{$node[\"Merge1\"].json[\"image_url\"]}}\" width=\"600\" height=\"auto\"></p>\n<p></p>\n<b>{{$node[\"Merge1\"].json[\"name\"]}}</b> par : {{$node[\"Merge1\"].json[\"creator\"]}}\n<p></p>\n<a href=\"{{$node[\"Merge1\"].json[\"campaign_url\"]}}\">La page de la campagne</a>\n<p></p>\nFin de la campagne le : {{$json[\"deadline\"]}}\n\n<br>\n\n<p></p>\n\nPitch : {{$node[\"Lit campagne ID1\"].json[\"fields\"][\"blurb\"]}}\n<p></p>\n<a rel=\"noopener\" target=\"_blank\" href=\"{{$json[\"property_forum\"]}}\" style=\"background-color: #0083b9; font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; text-decoration: none; padding: 8px 12px; color: #ffffff; border-radius: 5px; display: inline-block; mso-padding-alt: 0;\">\n  <!--[if mso]>\n  <i style=\"letter-spacing: 20px; mso-font-width: -100%; mso-text-raise: 25pt;\">&nbsp;</i>\n  <![endif]-->\n  <span style=\"mso-text-raise: 15pt;\">On en discute &rarr;</span>\n  <!--[if mso]>\n  <i style=\"letter-spacing: 20px; mso-font-width: -100%;\">&nbsp;</i>\n  <![endif]-->\n</a>",
+        "message": "= La campagne {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"name\"]}}a été ajoutée aux campagnes suivies le {{$node[\"Airtable Trigger on Updated1\"].json[\"createdTime\"]}}.",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {
+          "bccList": []
+        }
+      },
+      "id": "8b8f1c48-5f5a-46c0-a226-0fd20bc8aa61",
+      "name": "TESTS3",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        1660
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "value": "={{$node[\"Lit campagne ID1\"].json[\"fields\"][\"deadline\"]}}",
+        "dataPropertyName": "=deadline",
+        "custom": true,
+        "toFormat": "DD MMMM YYYY à HH:mm",
+        "options": {
+          "fromFormat": "X",
+          "toTimezone": "CET"
+        }
+      },
+      "id": "46290514-7d9f-4d5d-80f7-0e7d82694a7c",
+      "name": "Date & Time3",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        940,
+        1660
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": {
+    "node:Airtable Trigger on Updated1": {
+      "lastTimeChecked": "2022-11-03T02:04:56Z"
+    }
+  },
+  "tags": [],
+  "updatedAt": "2022-11-03T02:04:56.000Z"
+}
