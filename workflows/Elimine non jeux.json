@@ -1,0 +1,381 @@
+{
+  "active": true,
+  "connections": {
+    "Simplify": {
+      "main": [
+        [
+          {
+            "node": "IF STL",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Trigger on added Genre": {
+      "main": [
+        [
+          {
+            "node": "Simplify",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF STL": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "IF JDR",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF JDR": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Airtable1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-11-02T19:09:59.095Z",
+  "id": 12,
+  "name": "Elimine non jeux",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "6cd0257e-3568-4e99-80e0-d61e29860cad",
+      "name": "Start1",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        -2140,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "airtable_id",
+              "value": "={{ $json[\"id\"] }}"
+            },
+            {
+              "name": "status",
+              "value": "={{$json[\"fields\"][\"FollowedStatus\"]}}"
+            },
+            {
+              "name": "genre",
+              "value": "={{$json[\"fields\"][\"Genre\"]}}"
+            },
+            {
+              "name": "name",
+              "value": "={{$node[\"Trigger on added Genre\"].json[\"fields\"][\"name\"]}}"
+            },
+            {
+              "name": "campaign_url",
+              "value": "={{$node[\"Trigger on added Genre\"].json[\"fields\"][\"campaign_url\"]}}"
+            },
+            {
+              "name": "launched_at",
+              "value": "={{$node[\"Trigger on added Genre\"].json[\"fields\"][\"launched_at_formated\"]}}"
+            },
+            {
+              "name": "deadline",
+              "value": "={{$node[\"Trigger on added Genre\"].json[\"fields\"][\"deadline_formated\"]}}"
+            },
+            {
+              "name": "creator",
+              "value": "={{$node[\"Trigger on added Genre\"].json[\"fields\"][\"creator\"]}}"
+            },
+            {
+              "name": "plateform_id",
+              "value": "={{$node[\"Trigger on added Genre\"].json[\"fields\"][\"plateforme_id\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7f0e58e5-b00a-4a45-a545-519ec2fd8022",
+      "name": "Simplify",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -1920,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "application": {
+          "__rl": true,
+          "value": "appqMBlpxffjoCDno",
+          "mode": "id"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblpdlsFW8elPEBsx",
+          "mode": "id"
+        },
+        "id": "={{ $json[\"airtable_id\"] }}",
+        "options": {}
+      },
+      "id": "b6fc4a65-47e2-4b16-9345-11b26ff167f7",
+      "name": "Airtable",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        840
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "16b5i7saYyEhRacgxKVWyVSS00T5KbtTMA2UubYN8g0s",
+        "range": "A:I",
+        "options": {}
+      },
+      "id": "3d736a21-6bda-4567-bdf0-10b85d352a5d",
+      "name": "Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        -1240,
+        840
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "75c44088-62a1-4fe5-ab95-ce91ef708370",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -1460,
+        840
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "baseId": {
+          "__rl": true,
+          "value": "appqMBlpxffjoCDno",
+          "mode": "id"
+        },
+        "tableId": {
+          "__rl": true,
+          "value": "tblpdlsFW8elPEBsx",
+          "mode": "id"
+        },
+        "triggerField": "GenreSince",
+        "additionalFields": {
+          "fields": ""
+        }
+      },
+      "id": "ea4c7918-afb0-4d84-942e-7f51daa0e3ed",
+      "name": "Trigger on added Genre",
+      "type": "n8n-nodes-base.airtableTrigger",
+      "typeVersion": 1,
+      "position": [
+        -2140,
+        860
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"Status\"]}}",
+              "operation": "notEqual",
+              "value2": "Campagnes suivies"
+            },
+            {
+              "value1": "={{ $json[\"genre\"] }}",
+              "value2": "STL"
+            }
+          ]
+        }
+      },
+      "id": "77c9a3b9-5239-4a3b-adf1-c2e260b24005",
+      "name": "IF STL",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1680,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"Status\"]}}",
+              "operation": "notEqual",
+              "value2": "Campagnes suivies"
+            },
+            {
+              "value1": "={{ $json[\"genre\"] }}",
+              "value2": "JDR"
+            }
+          ]
+        }
+      },
+      "id": "e46a9d8f-6315-41ad-aa30-d8d2b17dba94",
+      "name": "IF JDR",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1460,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "1FE2rWqLUsJos_xuDi7O8ZdYavMF1RrB0vHvhgOEvmGk",
+        "range": "A:I",
+        "options": {}
+      },
+      "id": "d469d5ca-f575-4510-9005-5429551b786d",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        -1240,
+        1020
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "application": {
+          "__rl": true,
+          "value": "appqMBlpxffjoCDno",
+          "mode": "id"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblpdlsFW8elPEBsx",
+          "mode": "id"
+        },
+        "id": "={{ $json[\"airtable_id\"] }}",
+        "options": {}
+      },
+      "id": "c3e8e2a3-4b6e-476b-87cf-78d40bd561ec",
+      "name": "Airtable1",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        1020
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": {
+    "node:Airtable Trigger on Updated1": {
+      "lastTimeChecked": "2022-11-02T21:51:05Z"
+    },
+    "node:Trigger on added Genre": {
+      "lastTimeChecked": "2022-11-03T10:00:43Z"
+    }
+  },
+  "tags": [],
+  "updatedAt": "2022-11-03T10:00:43.000Z"
+}
