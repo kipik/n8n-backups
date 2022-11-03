@@ -1,0 +1,1615 @@
+{
+  "active": false,
+  "connections": {
+    "get infos": {
+      "main": [
+        [
+          {
+            "node": "Simplify Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "KS Recherche": {
+      "main": [
+        [
+          {
+            "node": "Simplify KS Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Data1": {
+      "main": [
+        [
+          {
+            "node": "Archivage1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Funded": {
+      "main": [
+        [
+          {
+            "node": "Delete1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Set Data4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check si Notion": {
+      "main": [
+        [
+          {
+            "node": "Update Notion",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Pas de notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Term": {
+      "main": [
+        [
+          {
+            "node": "KS Recherche",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date.now": {
+      "main": [
+        [
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cherche Airtable": {
+      "main": [
+        [
+          {
+            "node": "Extrait fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Set1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Airtable Dates": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "SplitInBatches1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrait fields1": {
+      "main": [
+        [
+          {
+            "node": "Format Airtable Dates",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "get infos",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [],
+        [
+          {
+            "node": "Actives",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SplitInBatches1": {
+      "main": [
+        [
+          {
+            "node": "Cherche Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simplify Airtable": {
+      "main": [
+        [
+          {
+            "node": "Search Term",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Check si Forum": {
+      "main": [
+        [
+          {
+            "node": "Get Discourse Topic",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simplify KS Data": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Got result",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Check si Notion",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Check si Forum",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Got result": {
+      "main": [
+        [
+          {
+            "node": "IDs match",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Pas trouvé de KS",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set Data1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IDs match": {
+      "main": [
+        [
+          {
+            "node": "Funded",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Manque infos KS",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set Data3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Data3": {
+      "main": [
+        [
+          {
+            "node": "Archivage3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Archivage3": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Data4": {
+      "main": [
+        [
+          {
+            "node": "Archivage4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Archivage4": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Archivage1": {
+      "main": [
+        [
+          {
+            "node": "Delete3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cron": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Discourse Topic": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SplitInBatches": {
+      "main": [
+        [
+          {
+            "node": "Delete4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delete4": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "SplitInBatches",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Delete2": {
+      "main": [
+        [
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SplitInBatches2": {
+      "main": [
+        [
+          {
+            "node": "Delete2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-11-02T14:04:36.416Z",
+  "id": 9,
+  "name": "Fin des campagnes",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "5d8f3542-eac7-418d-951c-930d2df8abfc",
+      "name": "Start1",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        -3440,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "dateTime",
+        "value1": "={{$json[\"formatedDeadline\"]}}",
+        "rules": {
+          "rules": [
+            {
+              "operation": "before",
+              "value2": "={{Date.now()}}"
+            }
+          ]
+        },
+        "fallbackOutput": 3
+      },
+      "id": "366ff5fa-dad5-410c-b4fd-cb467a8b4207",
+      "name": "Switch1",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [
+        -2420,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "application": "appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "id": "={{$json[\"airtableID\"]}}"
+      },
+      "id": "d697abdd-dbae-4dd3-b52e-7704ce5bca5d",
+      "name": "get infos1",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        -2160,
+        900
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://www.kickstarter.com/projects/search.json?term={{$json[\"newTerms\"]}}",
+        "allowUnauthorizedCerts": true,
+        "responseFormat": "string",
+        "options": {
+          "batchInterval": 3000,
+          "batchSize": 10
+        }
+      },
+      "id": "bb3c8121-d3bc-45e2-92ef-497ff7fbb653",
+      "name": "KS Recherche1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -1460,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "newTerms = $json[\"name\"].replace(/[^A-Za-z0-9\\_\\s]+/g, '').replace(/\\s/g,'+')\n\nreturn {\n  newTerms\n};"
+      },
+      "id": "14e71d90-a868-41be-afa2-9fc71bb7b6c1",
+      "name": "Search Term1",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        -1660,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "={{ $json[\"name\"] }}"
+            },
+            {
+              "name": "creator",
+              "value": "={{ $json[\"creator\"] }}"
+            },
+            {
+              "name": "du",
+              "value": "={{ $json[\"launched_formated\"] }}"
+            },
+            {
+              "name": "au",
+              "value": "={{ $json[\"deadline_formated\"] }}"
+            },
+            {
+              "name": "backers",
+              "value": "={{ $json[\"backers\"] }}"
+            },
+            {
+              "name": "raised (EUR)",
+              "value": "={{ $json[\"pledged_euro\"] }}"
+            },
+            {
+              "name": "forum",
+              "value": "={{ $json[\"forum\"] }}"
+            },
+            {
+              "name": "campaign_url",
+              "value": "={{ $json[\"campaign_url\"] }}"
+            },
+            {
+              "name": "notion",
+              "value": "={{ $json[\"notion\"] }}"
+            },
+            {
+              "name": "blurb",
+              "value": "={{ $json[\"blurb\"] }}"
+            },
+            {
+              "name": "launched_at",
+              "value": "={{ $json[\"launched_at\"] }}"
+            },
+            {
+              "name": "deadline",
+              "value": "={{ $json[\"deadline\"] }}"
+            },
+            {
+              "name": "creator_url",
+              "value": "={{ $json[\"creator_url\"] }}"
+            },
+            {
+              "name": "image_1024",
+              "value": "={{ $json[\"image_1024\"] }}"
+            },
+            {
+              "name": "thumbnail",
+              "value": "={{ $json[\"thumbnail\"] }}"
+            },
+            {
+              "name": "plateforme_id",
+              "value": "={{ $json[\"plateforme_id\"] }}"
+            },
+            {
+              "name": "raised amount",
+              "value": "={{ $json[\"pledged\"] }}"
+            },
+            {
+              "name": "currency",
+              "value": "={{ $json[\"currency\"] }}"
+            },
+            {
+              "name": "country",
+              "value": "={{ $json[\"country\"] }}"
+            },
+            {
+              "name": "creator_api",
+              "value": "={{ $json[\"creator_api\"] }}"
+            },
+            {
+              "name": "goal",
+              "value": "={{ $json[\"goal\"] }}"
+            },
+            {
+              "name": "airtable_id",
+              "value": "={{ $json[\"airtable_rec\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "60e02073-2edf-4fac-9ce1-0247a073463b",
+      "name": "Set Data",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1340
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "1hjIu2o19ibnQmhHYH447jQoUgfrjJJL2ZL53vOqGLxM",
+        "range": "A:S",
+        "options": {
+          "usePathForKeyRow": true
+        }
+      },
+      "id": "5c19f3c0-5e5b-4824-8488-e995ce6ac22b",
+      "name": "Archivage",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        240,
+        1340
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"state\"]}}",
+              "operation": "notEqual",
+              "value2": "successful"
+            }
+          ]
+        }
+      },
+      "id": "a49ae733-87bc-4794-ae0c-4acbd0b49bff",
+      "name": "Funded1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "hour": 1,
+              "minute": 17
+            },
+            {
+              "hour": 13,
+              "minute": 17
+            }
+          ]
+        }
+      },
+      "id": "d207f618-50a0-440e-aa7d-f19c646450b2",
+      "name": "Cron1",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [
+        -3440,
+        980
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "0d2c6a1a-0120-4078-b440-eb0a8ce3f563",
+      "name": "Pas de notion1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -660,
+        700
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"notion\"]}}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "302faec2-45fe-4f1d-8673-6f89b358de8e",
+      "name": "Check si Notion1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "operation": "update",
+        "pageId": "={{$json[\"notion\"]}}",
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Statut|multi_select",
+              "multiSelectValue": [
+                "Closed"
+              ]
+            }
+          ]
+        }
+      },
+      "id": "eb552b49-a31f-4854-94de-4878e86c0d01",
+      "name": "Update Notion1",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        -660,
+        480
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "15",
+          "name": "Notion account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "discourseApi",
+        "url": "={{ $json[\"forum\"] }}",
+        "options": {}
+      },
+      "id": "c253bf75-b8db-4e1f-98dd-71856a1085ce",
+      "name": "Get Discourse Topic1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -620,
+        1300
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "7",
+          "name": "Discourse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "application": "appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "id": "={{$node[\"Merge1\"].json[\"airtable_rec\"]}}",
+        "options": {}
+      },
+      "id": "1434b7ca-cb76-4e96-9cfb-60e1ca1938e9",
+      "name": "Delete",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        460,
+        460
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"start\"] }}",
+        "dataPropertyName": "start",
+        "custom": true,
+        "toFormat": "YYYY-MM-DD HH:mm",
+        "options": {
+          "fromFormat": "Unix Timestamp"
+        }
+      },
+      "id": "2acdce9f-b908-49b6-96c2-d8b7b78c47a6",
+      "name": "Date & Time1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -3020,
+        780
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "functionCode": "let start = Math.floor(Date.now()/1000);\n\nreturn {\n  start\n};"
+      },
+      "id": "25de7ea2-85bc-4b71-8747-9b94ce4ddb1f",
+      "name": "Date.now1",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -3200,
+        780
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "list",
+        "application": "appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "additionalOptions": {
+          "fields": [
+            "deadline"
+          ]
+        }
+      },
+      "id": "378e5103-0982-4bb6-aca9-f71b7fb74093",
+      "name": "Cherche Airtable1",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        -3020,
+        980
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "bfed09f8-04e8-4061-a911-eee840d2c2d2",
+      "name": "Actives1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -2160,
+        1060
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "currentDate",
+              "value": "={{ $json[\"start\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "483d5793-3fbf-4bad-aed9-cef2f2511e83",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -2860,
+        780
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "value": "={{$json[\"deadline\"]}}",
+        "dataPropertyName": "formatedDeadline",
+        "custom": true,
+        "toFormat": "YYYY-MM-DD HH:mm",
+        "options": {}
+      },
+      "id": "5ebcb8c6-b24b-4581-8257-d4a410f7f85e",
+      "name": "Format Airtable Dates1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -2620,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "let airtableID = $json[\"id\"]\r\nlet deadline = $json[\"fields\"][\"deadline\"]\r\nreturn {\r\n  airtableID,\r\n  deadline\r\n}"
+      },
+      "id": "1821143c-af11-469b-8754-4f426307c94c",
+      "name": "Extrait fields",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        -2820,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "3f55eb8c-d350-4903-becc-f9d5701e3d4c",
+      "name": "SplitInBatches3",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        -3220,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "airtable_rec",
+              "value": "={{$json[\"id\"]}}"
+            },
+            {
+              "name": "name",
+              "value": "={{$json[\"fields\"][\"name\"]}}"
+            },
+            {
+              "name": "campaign_url",
+              "value": "={{$json[\"fields\"][\"campaign_url\"]}}"
+            },
+            {
+              "name": "blurb",
+              "value": "={{$json[\"fields\"][\"blurb\"]}}"
+            },
+            {
+              "name": "creator",
+              "value": "={{$json[\"fields\"][\"creator\"]}}"
+            },
+            {
+              "name": "creator_url",
+              "value": "={{$json[\"fields\"][\"creator_url\"]}}"
+            },
+            {
+              "name": "creator_api",
+              "value": "={{$json[\"fields\"][\"creator_api\"]}}"
+            },
+            {
+              "name": "image_1024",
+              "value": "={{$json[\"fields\"][\"image_1024\"][0][\"url\"]}}"
+            },
+            {
+              "name": "thumbnail",
+              "value": "={{$json[\"fields\"][\"image_1024\"][0][\"thumbnails\"][\"small\"][\"url\"]}}"
+            },
+            {
+              "name": "launched_formated",
+              "value": "={{$json[\"fields\"][\"launched_at_formated\"]}}"
+            },
+            {
+              "name": "plateforme_id",
+              "value": "={{$json[\"fields\"][\"plateforme_id\"]}}"
+            },
+            {
+              "name": "forum",
+              "value": "={{$json[\"fields\"][\"forum\"]}}"
+            },
+            {
+              "name": "notion",
+              "value": "={{$json[\"fields\"][\"notion\"]}}"
+            },
+            {
+              "name": "deadline_formated",
+              "value": "={{ $node[\"Switch1\"].json[\"formatedDeadline\"] }}"
+            }
+          ],
+          "number": [
+            {
+              "name": "launched_at",
+              "value": "={{$json[\"fields\"][\"launched_at\"]}}"
+            },
+            {
+              "name": "deadline",
+              "value": "={{$json[\"fields\"][\"deadline\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d71dddd9-12c4-45d1-af2f-57405d802e06",
+      "name": "Simplify Airtable1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -1920,
+        900
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{ $json[\"forum\"] }}",
+              "operation": "isNotEmpty"
+            }
+          ]
+        }
+      },
+      "id": "cd735051-cd06-4ffd-a67b-a76f0006044d",
+      "name": "Check si Forum1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        1320
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "id",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"id\"]}}"
+            },
+            {
+              "name": "state",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"state\"]}}"
+            },
+            {
+              "name": "slug",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"slug\"]}}"
+            },
+            {
+              "name": "country",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"country\"]}}"
+            },
+            {
+              "name": "currency",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"currency\"]}}"
+            }
+          ],
+          "number": [
+            {
+              "name": "goal",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"goal\"]}}"
+            },
+            {
+              "name": "pledged",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"pledged\"]}}"
+            },
+            {
+              "name": "backers",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"backers_count\"]}}"
+            },
+            {
+              "name": "pledged_euro",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"converted_pledged_amount\"]}}"
+            },
+            {
+              "name": "total_hits",
+              "value": "={{$json[\"data\"][\"total_hits\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "25c04432-2312-4d2f-b426-176e4408b895",
+      "name": "Simplify KS Data1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -1280,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "id": "3dc7a383-9782-4693-a27c-4676dad1e90a",
+      "name": "Merge1",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        -1040,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{$json[\"data\"][\"total_hits\"]}} {{ $json[\"total_hits\"] }}",
+              "operation": "larger"
+            }
+          ]
+        }
+      },
+      "id": "2f100f25-3fce-4d6c-9090-3e5f44dd3792",
+      "name": "Got result1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -680,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"0\"][\"id\"]}} {{ $json[\"id\"] }}",
+              "value2": "={{$node[\"Extrait fields\"].json[\"plateforme_id\"]}} {{ $json[\"plateforme_id\"] }}"
+            }
+          ]
+        }
+      },
+      "id": "be2d0bea-dda4-464d-bcbe-56d479ed58ae",
+      "name": "IDs match1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -440,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "={{ $json[\"name\"] }}"
+            },
+            {
+              "name": "creator",
+              "value": "={{ $json[\"creator\"] }}"
+            },
+            {
+              "name": "du",
+              "value": "={{ $json[\"launched_formated\"] }}"
+            },
+            {
+              "name": "au",
+              "value": "={{ $json[\"deadline_formated\"] }}"
+            },
+            {
+              "name": "backers",
+              "value": "={{ $json[\"backers\"] }}"
+            },
+            {
+              "name": "raised (EUR)",
+              "value": "={{ $json[\"pledged_euro\"] }}"
+            },
+            {
+              "name": "forum",
+              "value": "={{ $json[\"forum\"] }}"
+            },
+            {
+              "name": "campaign_url",
+              "value": "={{ $json[\"campaign_url\"] }}"
+            },
+            {
+              "name": "notion",
+              "value": "={{ $json[\"notion\"] }}"
+            },
+            {
+              "name": "blurb",
+              "value": "={{ $json[\"blurb\"] }}"
+            },
+            {
+              "name": "launched_at",
+              "value": "={{ $json[\"launched_at\"] }}"
+            },
+            {
+              "name": "deadline",
+              "value": "={{ $json[\"deadline\"] }}"
+            },
+            {
+              "name": "creator_url",
+              "value": "={{ $json[\"creator_url\"] }}"
+            },
+            {
+              "name": "image_1024",
+              "value": "={{ $json[\"image_1024\"] }}"
+            },
+            {
+              "name": "thumbnail",
+              "value": "={{ $json[\"thumbnail\"] }}"
+            },
+            {
+              "name": "plateforme_id",
+              "value": "={{ $json[\"plateforme_id\"] }}"
+            },
+            {
+              "name": "raised amount",
+              "value": "={{ $json[\"pledged\"] }}"
+            },
+            {
+              "name": "currency",
+              "value": "={{ $json[\"currency\"] }}"
+            },
+            {
+              "name": "country",
+              "value": "={{ $json[\"country\"] }}"
+            },
+            {
+              "name": "creator_api",
+              "value": "={{ $json[\"creator_api\"] }}"
+            },
+            {
+              "name": "goal",
+              "value": "={{ $json[\"goal\"] }}"
+            },
+            {
+              "name": "airtable_id",
+              "value": "={{ $json[\"airtable_rec\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "944e9ac2-67da-4a63-94b4-efae29f50eef",
+      "name": "Set Data5",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        0,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "application": "appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "id": "={{$json[\"airtable_id\"]}}",
+        "options": {}
+      },
+      "id": "22ef6f26-fd46-4383-9125-49441078d3d8",
+      "name": "Delete5",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        660,
+        980
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "application": "appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "id": "={{$json[\"airtable_id\"]}}",
+        "options": {}
+      },
+      "id": "40161650-e86c-4e69-bb55-04c2109bbe4f",
+      "name": "Delete6",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        460,
+        1340
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "1hjIu2o19ibnQmhHYH447jQoUgfrjJJL2ZL53vOqGLxM",
+        "range": "A:S",
+        "options": {
+          "usePathForKeyRow": true
+        }
+      },
+      "id": "0018198a-4569-4619-8bf7-1b0591aec676",
+      "name": "Archivage5",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        240,
+        980
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "={{ $json[\"name\"] }}"
+            },
+            {
+              "name": "creator",
+              "value": "={{ $json[\"creator\"] }}"
+            },
+            {
+              "name": "du",
+              "value": "={{ $json[\"launched_formated\"] }}"
+            },
+            {
+              "name": "au",
+              "value": "={{ $json[\"deadline_formated\"] }}"
+            },
+            {
+              "name": "backers",
+              "value": "={{ $json[\"backers\"] }}"
+            },
+            {
+              "name": "raised (EUR)",
+              "value": "={{ $json[\"pledged_euro\"] }}"
+            },
+            {
+              "name": "forum",
+              "value": "={{ $json[\"forum\"] }}"
+            },
+            {
+              "name": "campaign_url",
+              "value": "={{ $json[\"campaign_url\"] }}"
+            },
+            {
+              "name": "notion",
+              "value": "={{ $json[\"notion\"] }}"
+            },
+            {
+              "name": "blurb",
+              "value": "={{ $json[\"blurb\"] }}"
+            },
+            {
+              "name": "launched_at",
+              "value": "={{ $json[\"launched_at\"] }}"
+            },
+            {
+              "name": "deadline",
+              "value": "={{ $json[\"deadline\"] }}"
+            },
+            {
+              "name": "creator_url",
+              "value": "={{ $json[\"creator_url\"] }}"
+            },
+            {
+              "name": "image_1024",
+              "value": "={{ $json[\"image_1024\"] }}"
+            },
+            {
+              "name": "thumbnail",
+              "value": "={{ $json[\"thumbnail\"] }}"
+            },
+            {
+              "name": "plateforme_id",
+              "value": "={{ $json[\"plateforme_id\"] }}"
+            },
+            {
+              "name": "raised amount",
+              "value": "={{ $json[\"pledged\"] }}"
+            },
+            {
+              "name": "currency",
+              "value": "={{ $json[\"currency\"] }}"
+            },
+            {
+              "name": "country",
+              "value": "={{ $json[\"country\"] }}"
+            },
+            {
+              "name": "creator_api",
+              "value": "={{ $json[\"creator_api\"] }}"
+            },
+            {
+              "name": "goal",
+              "value": "={{ $json[\"goal\"] }}"
+            },
+            {
+              "name": "airtable_id",
+              "value": "={{ $json[\"airtable_rec\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9ef47e3a-bd49-4127-8c86-fe908652621f",
+      "name": "Set Data6",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        0,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "1hjIu2o19ibnQmhHYH447jQoUgfrjJJL2ZL53vOqGLxM",
+        "range": "A:S",
+        "options": {
+          "usePathForKeyRow": true
+        }
+      },
+      "id": "a30b9908-4ef0-4fb9-9d12-5e21adb94784",
+      "name": "Archivage6",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        240,
+        620
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "application": "appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "id": "={{$node[\"Archivage6\"].json[\"airtable_id\"]}}",
+        "options": {}
+      },
+      "id": "7bb73ecc-f7f8-4f17-b551-0c2c1cf2ba30",
+      "name": "Delete7",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        640,
+        620
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Impossible d'archiver campagne ",
+        "message": "=Il manque les infos finales de la campagne {{$json[\"name\"]}}\n\nURL : {{$json[\"campaign_url\"]}}",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {}
+      },
+      "id": "6a5f1c41-21f0-4dbc-99db-559711c8836f",
+      "name": "Manque infos KS1",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        0,
+        820
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Impossible d'archiver campagne ",
+        "message": "=La campagne {{$node[\"Merge1\"].json[\"name\"]}} semble avoir eu lieu ailleurs que sur KS\n\nURL : {{$node[\"Merge1\"].json[\"campaign_url\"]}}",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {}
+      },
+      "id": "bd234b83-4e49-46e0-a302-6fb10d20018b",
+      "name": "Pas trouvé de KS1",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        0,
+        1200
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "discourseApi",
+        "requestMethod": "PUT",
+        "url": "=https://forum.cwowd.com/t/{{$json[\"id\"]}}",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "category_id",
+              "value": "14"
+            }
+          ]
+        }
+      },
+      "id": "285295e6-88f9-4cbb-9212-9dfe5665aeaf",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -260,
+        1440
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "7",
+          "name": "Discourse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "aeeca169-f9ce-4990-b86f-e6c2c3a8edea",
+      "name": "SplitInBatches4",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        460,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 3,
+        "unit": "seconds"
+      },
+      "id": "04f33a70-b836-421f-b567-da8c4bf9d872",
+      "name": "Wait2",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        860,
+        620
+      ],
+      "webhookId": "1e107094-843b-4e39-af36-eccf787c7456"
+    },
+    {
+      "parameters": {
+        "amount": 3,
+        "unit": "seconds"
+      },
+      "id": "4b995865-8e81-4a9d-98cf-7c8141e030b8",
+      "name": "Wait3",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        860,
+        980
+      ],
+      "webhookId": "34f065cb-85a9-49de-9fec-c57e26553ccf"
+    },
+    {
+      "parameters": {
+        "batchSize": 1,
+        "options": {}
+      },
+      "id": "f37bbc1d-3691-4848-8a4a-15f8af37c957",
+      "name": "SplitInBatches5",
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 1,
+      "position": [
+        460,
+        980
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "updatedAt": "2022-11-02T14:05:56.941Z"
+}
