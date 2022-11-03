@@ -1,0 +1,680 @@
+{
+  "active": false,
+  "connections": {
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Item Lists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "reversed localized2": {
+      "main": [
+        [
+          {
+            "node": "format deadline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time2": {
+      "main": [
+        [
+          {
+            "node": "reversed localized2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable2": {
+      "main": [
+        []
+      ]
+    },
+    "Set8": {
+      "main": [
+        [
+          {
+            "node": "Message Décideur2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DeepL2": {
+      "main": [
+        [
+          {
+            "node": "Simplify KS Data",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit URL2": {
+      "main": [
+        [
+          {
+            "node": "DeepL2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists": {
+      "main": [
+        [
+          {
+            "node": "Date & Time2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Launched il y a moins de 20 mn ?": {
+      "main": [
+        [],
+        []
+      ]
+    },
+    "format deadline": {
+      "main": [
+        [
+          {
+            "node": "reversed deadline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "reversed deadline": {
+      "main": [
+        [
+          {
+            "node": "Launched il y a moins de 20 mn ?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "KS Recherche1": {
+      "main": [
+        [
+          {
+            "node": "Simplify KS Data1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Search Term1": {
+      "main": [
+        [
+          {
+            "node": "KS Recherche1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Search Term1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simplify KS Data1": {
+      "main": [
+        [
+          {
+            "node": "Date & Time1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time1": {
+      "main": [
+        [
+          {
+            "node": "Edit URL2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simplify KS Data": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Airtable2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-11-03T01:03:56.265Z",
+  "id": 14,
+  "name": "Cherche Kickstarter à la main",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "http://www.kickstarter.com/projects/search.json",
+        "allowUnauthorizedCerts": true,
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "category_id",
+              "value": "34"
+            },
+            {
+              "name": "sort",
+              "value": "newest"
+            }
+          ]
+        }
+      },
+      "id": "bad58aed-811a-4b24-8969-5b2948c209f5",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -500,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "1SBZkjpUIYF8ay5ni9Hfz_5G3IeZOgolaPNpy6P2c2KU",
+        "range": "A:J",
+        "options": {
+          "usePathForKeyRow": true
+        }
+      },
+      "id": "060d8ee2-d4ad-431e-ba63-6e9bcccfea11",
+      "name": "Google Sheets2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        760,
+        160
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "value": "={{$json[\"launchedAtPlus23\"]}}",
+        "dataPropertyName": "launched_at_unix",
+        "toFormat": "X",
+        "options": {}
+      },
+      "id": "516f7e88-4dce-4f85-85c0-648147bbacea",
+      "name": "reversed localized2",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        100,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "action": "calculate",
+        "value": "={{ $json[\"launched_at\"] }}",
+        "duration": 23,
+        "timeUnit": "minutes",
+        "dataPropertyName": "launchedAtPlus23",
+        "options": {
+          "fromFormat": "X"
+        }
+      },
+      "id": "35f8b51d-5cd0-4f83-8694-4cd089761de9",
+      "name": "Date & Time2",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "application": "appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "options": {
+          "typecast": true
+        }
+      },
+      "id": "a9ab8319-20f6-4746-87d7-1a7f836ee760",
+      "name": "Airtable2",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        760,
+        420
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "airtable_record",
+              "value": "=https://airtable.com/appqMBlpxffjoCDno/pagGtwtetW2boCXHL?U3gJN={{$json[\"id\"]}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": false
+        }
+      },
+      "id": "fc68148d-818e-4c46-85c5-e625820a1fb6",
+      "name": "Set8",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Nouvelle campagne sur KS",
+        "message": "=Pour valider la campagne : {{$json[\"airtable_record\"]}}\n\nNom : {{$node[\"Elimine le gras2\"].json[\"name\"]}}\nPar : {{$node[\"Elimine le gras2\"].json[\"creator\"]}}({{$node[\"Elimine le gras2\"].json[\"creator_url\"]}})\nURL : {{$node[\"Elimine le gras2\"].json[\"campaign_url\"]}}\nDeadline : {{$node[\"Elimine le gras2\"].json[\"deadline\"]}}\n\n<br>\n\n{{$node[\"Elimine le gras2\"].json[\"image_1024\"]}}\nPitch : {{$node[\"Elimine le gras2\"].json[\"blurb\"]}}",
+        "toList": [
+          "contact.cwowd@gmail.com"
+        ],
+        "additionalFields": {}
+      },
+      "id": "2814f45c-62dc-441a-a28a-4da5418ac91d",
+      "name": "Message Décideur2",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        1240,
+        420
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "text": "={{$node[\"Simplify KS Data1\"].json[\"blurb\"]}}",
+        "translateTo": "FR",
+        "additionalFields": {}
+      },
+      "id": "15a0e97a-e997-4131-8e10-ae77b818f32b",
+      "name": "DeepL2",
+      "type": "n8n-nodes-base.deepL",
+      "typeVersion": 1,
+      "position": [
+        240,
+        320
+      ],
+      "credentials": {
+        "deepLApi": {
+          "id": "3",
+          "name": "DeepL Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "let parts = $json[\"campaign_url\"].split('=');\nlet ref = parts.pop();\nlet campaign_url = parts.join('=') + \"=cwowd\";\n\nreturn {\n  campaign_url\n};"
+      },
+      "id": "97f5d3a2-6e8f-4eb9-9249-37fab5c802b9",
+      "name": "Edit URL2",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        60,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "projects",
+        "options": {
+          "disableDotNotation": true
+        }
+      },
+      "id": "9bd09646-1f3d-4300-8eaa-33018642ed79",
+      "name": "Item Lists",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "dateTime": [
+            {
+              "value1": "={{$now}}",
+              "value2": "={{$node[\"Date & Time2\"].json[\"launchedAtPlus23\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "597d3777-cb0f-41a2-bcc1-fa2ae72a41f8",
+      "name": "Launched il y a moins de 20 mn ?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        540,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"deadline\"] }}",
+        "dataPropertyName": "deadline_formated",
+        "custom": true,
+        "toFormat": "YYYY-MM-DD H:mm",
+        "options": {
+          "fromFormat": "X",
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "c861308b-48b3-44de-bd19-237bdd65b3bc",
+      "name": "format deadline",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        240,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"deadline_formated\"] }}",
+        "dataPropertyName": "deadline_local",
+        "toFormat": "X",
+        "options": {}
+      },
+      "id": "838151b6-15d6-464a-b019-947e6b152cfc",
+      "name": "reversed deadline",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        380,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://www.kickstarter.com/projects/search.json?term={{$json[\"newTerms\"]}}",
+        "allowUnauthorizedCerts": true,
+        "responseFormat": "string",
+        "options": {
+          "batchInterval": 3000,
+          "batchSize": 10
+        }
+      },
+      "id": "2ab378ff-dbf0-4fa6-81ef-fbcd73da88cc",
+      "name": "KS Recherche1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -500,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "newTerms = $json[\"name\"].replace(/[^A-Za-z0-9\\_\\s]+/g, '').replace(/\\s/g,'+')\n\nreturn {\n  newTerms\n};"
+      },
+      "id": "c5015d55-14dd-4172-8e1f-fa30d1a4d9ac",
+      "name": "Search Term1",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        -700,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "plateforme_id",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"id\"]}}"
+            },
+            {
+              "name": "name",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"name\"]}}"
+            },
+            {
+              "name": "campaign_url",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"urls\"][\"web\"][\"project\"]}}"
+            },
+            {
+              "name": "blurb",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"blurb\"]}}"
+            },
+            {
+              "name": "launched_at",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"launched_at\"]}}"
+            },
+            {
+              "name": "deadline",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"deadline\"]}}"
+            },
+            {
+              "name": "creator",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"creator\"][\"name\"]}}"
+            },
+            {
+              "name": "creator_url",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"creator\"][\"urls\"][\"web\"][\"user\"]}}"
+            },
+            {
+              "name": "creator_api",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"creator\"][\"urls\"][\"api\"][\"user\"]}}"
+            },
+            {
+              "name": "image_1024",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"photo\"][\"1024x576\"]}}"
+            },
+            {
+              "name": "launched_at_formated"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "04c389af-9bfd-4c24-ac78-f9544249f453",
+      "name": "Simplify KS Data1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -320,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "name",
+              "value": "Roll Player Adventures Expansion: Gulpax's Secret"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "856a51c7-934b-4356-a344-9950777f5e83",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -900,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "action": "calculate",
+        "value": "={{$json[\"launched_at\"]}}",
+        "timeUnit": "minutes",
+        "dataPropertyName": "launched_at_formated",
+        "options": {
+          "fromFormat": "X"
+        }
+      },
+      "id": "6dfcef4f-48f2-4a05-b58b-6bcbedb1dceb",
+      "name": "Date & Time1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -140,
+        320
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "44f14e71-f909-4e96-9481-0e193367c665",
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -1160,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "plateforme_id",
+              "value": "={{$node[\"KS Recherche1\"].json[\"data\"][\"projects\"][0][\"id\"]}}"
+            },
+            {
+              "name": "name",
+              "value": "={{$node[\"KS Recherche1\"].json[\"data\"][\"projects\"][0][\"name\"]}}"
+            },
+            {
+              "name": "campaign_url",
+              "value": "={{$node[\"Edit URL2\"].json[\"campaign_url\"]}}"
+            },
+            {
+              "name": "blurb",
+              "value": "={{$json[\"text\"]}}"
+            },
+            {
+              "name": "launched_at",
+              "value": "={{$node[\"Date & Time1\"].json[\"launched_at\"]}}"
+            },
+            {
+              "name": "deadline",
+              "value": "={{$node[\"Date & Time1\"].json[\"deadline\"]}}"
+            },
+            {
+              "name": "creator",
+              "value": "={{$node[\"KS Recherche1\"].json[\"data\"][\"projects\"][0][\"creator\"][\"name\"]}}"
+            },
+            {
+              "name": "creator_url",
+              "value": "={{$node[\"KS Recherche1\"].json[\"data\"][\"projects\"][0][\"creator\"][\"urls\"][\"web\"][\"user\"]}}"
+            },
+            {
+              "name": "creator_api",
+              "value": "={{$node[\"KS Recherche1\"].json[\"data\"][\"projects\"][0][\"creator\"][\"urls\"][\"api\"][\"user\"]}}"
+            },
+            {
+              "name": "image_1024",
+              "value": "={{$node[\"KS Recherche1\"].json[\"data\"][\"projects\"][0][\"photo\"][\"1024x576\"]}}"
+            },
+            {
+              "name": "launched_at_formated",
+              "value": "={{$node[\"Date & Time1\"].json[\"launched_at_formated\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "bb109342-4b44-45e2-a6ef-f519b9ff4383",
+      "name": "Simplify KS Data",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        420,
+        320
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "updatedAt": "2022-11-03T01:51:36.079Z"
+}
