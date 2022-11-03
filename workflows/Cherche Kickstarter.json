@@ -1,0 +1,728 @@
+{
+  "active": true,
+  "connections": {
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Item Lists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Elimine le gras2": {
+      "main": [
+        [
+          {
+            "node": "Airtable2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "reversed localized2": {
+      "main": [
+        [
+          {
+            "node": "format deadline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cron2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Set3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time2": {
+      "main": [
+        [
+          {
+            "node": "reversed localized2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable2": {
+      "main": [
+        [
+          {
+            "node": "Set8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set8": {
+      "main": [
+        [
+          {
+            "node": "Message Décideur2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DeepL2": {
+      "main": [
+        [
+          {
+            "node": "Set9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set9": {
+      "main": [
+        [
+          {
+            "node": "reversed localized",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit URL2": {
+      "main": [
+        [
+          {
+            "node": "DeepL2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FunctionItem2": {
+      "main": [
+        [
+          {
+            "node": "Set2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set3": {
+      "main": [
+        [
+          {
+            "node": "IF1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists": {
+      "main": [
+        [
+          {
+            "node": "Date & Time2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Launched il y a moins de 20 mn ?": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Edit URL2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "reversed localized": {
+      "main": [
+        [
+          {
+            "node": "Elimine le gras2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Elimine le gras2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "format deadline": {
+      "main": [
+        [
+          {
+            "node": "reversed deadline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "reversed deadline": {
+      "main": [
+        [
+          {
+            "node": "Launched il y a moins de 20 mn ?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-11-01T19:32:06.339Z",
+  "id": 5,
+  "name": "Cherche Kickstarter",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "http://www.kickstarter.com/projects/search.json",
+        "allowUnauthorizedCerts": true,
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "category_id",
+              "value": "34"
+            },
+            {
+              "name": "sort",
+              "value": "newest"
+            }
+          ]
+        }
+      },
+      "id": "c7c8f608-53e0-4e49-94ab-345267f84690",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -500,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "1SBZkjpUIYF8ay5ni9Hfz_5G3IeZOgolaPNpy6P2c2KU",
+        "range": "A:J",
+        "options": {
+          "usePathForKeyRow": true
+        }
+      },
+      "id": "fa469ff1-502b-450c-9e07-5e52293aa82d",
+      "name": "Google Sheets2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        1080,
+        80
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "plateforme_id",
+              "value": "={{$node[\"Item Lists\"].json[\"id\"]}}"
+            },
+            {
+              "name": "name",
+              "value": "={{$node[\"Item Lists\"].json[\"name\"]}}"
+            },
+            {
+              "name": "campaign_url",
+              "value": "={{$node[\"Edit URL2\"].json[\"newURL\"]}}"
+            },
+            {
+              "name": "blurb",
+              "value": "={{ $json[\"blurb\"] }}"
+            },
+            {
+              "name": "launched_at",
+              "value": "={{$node[\"Item Lists\"].json[\"launched_at\"]}}"
+            },
+            {
+              "name": "deadline",
+              "value": "={{$node[\"Date & Time2\"].json[\"deadline\"]}}"
+            },
+            {
+              "name": "creator",
+              "value": "={{$node[\"Item Lists\"].json[\"creator\"][\"name\"]}}"
+            },
+            {
+              "name": "creator_url",
+              "value": "={{$node[\"Item Lists\"].json[\"creator\"][\"urls\"][\"web\"][\"user\"]}}"
+            },
+            {
+              "name": "creator_api",
+              "value": "={{$node[\"Item Lists\"].json[\"creator\"][\"urls\"][\"api\"][\"user\"]}}"
+            },
+            {
+              "name": "image_1024",
+              "value": "={{$node[\"Item Lists\"].json[\"photo\"][\"1024x576\"]}}"
+            },
+            {
+              "name": "launched_at_formated",
+              "value": "={{$json[\"launched_at_formated\"]}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "0992b77c-d016-4787-aa79-23b085af14e2",
+      "name": "Elimine le gras2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{$json[\"launchedAtPlus23\"]}}",
+        "dataPropertyName": "launched_at_unix",
+        "toFormat": "X",
+        "options": {}
+      },
+      "id": "53e167e2-1423-4ce8-b4dd-69347f735e4a",
+      "name": "reversed localized2",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        100,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 17
+            },
+            {
+              "mode": "everyHour",
+              "minute": 37
+            },
+            {
+              "mode": "everyHour",
+              "minute": 57
+            }
+          ]
+        }
+      },
+      "id": "d9f47c82-249a-4469-9757-b2381e26f034",
+      "name": "Cron2",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [
+        -700,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "La requête http fournit aussi un champ status et date de changement de status.\n\nPour suivre l'évolution récente ?"
+      },
+      "id": "15f35ecb-0ec5-4870-9af7-84275533a3a1",
+      "name": "Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -800,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "action": "calculate",
+        "value": "={{ $json[\"launched_at\"] }}",
+        "duration": 23,
+        "timeUnit": "minutes",
+        "dataPropertyName": "launchedAtPlus23",
+        "options": {
+          "fromFormat": "X"
+        }
+      },
+      "id": "4523d878-b391-4249-9309-ca5034e8bd9e",
+      "name": "Date & Time2",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "application": "appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "options": {
+          "typecast": true
+        }
+      },
+      "id": "08e26c12-000f-41b3-b7d6-269aa7331d3c",
+      "name": "Airtable2",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        1760,
+        280
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "airtable_record",
+              "value": "=https://airtable.com/appqMBlpxffjoCDno/pagGtwtetW2boCXHL?U3gJN={{$json[\"id\"]}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": false
+        }
+      },
+      "id": "0444f980-c62e-476f-b50e-2ece3e2757d0",
+      "name": "Set8",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1940,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Nouvelle campagne sur KS",
+        "message": "=Pour valider la campagne : {{$json[\"airtable_record\"]}}\n\nNom : {{$node[\"Elimine le gras2\"].json[\"name\"]}}\nPar : {{$node[\"Elimine le gras2\"].json[\"creator\"]}}({{$node[\"Elimine le gras2\"].json[\"creator_url\"]}})\nURL : {{$node[\"Elimine le gras2\"].json[\"campaign_url\"]}}\nDeadline : {{$node[\"Elimine le gras2\"].json[\"deadline\"]}}\n\n<br>\n\n{{$node[\"Elimine le gras2\"].json[\"image_1024\"]}}\nPitch : {{$node[\"Elimine le gras2\"].json[\"blurb\"]}}",
+        "toList": [
+          "contact.cwowd@gmail.com"
+        ],
+        "additionalFields": {}
+      },
+      "id": "703e0c40-8957-451e-8bd2-5390488c14cb",
+      "name": "Message Décideur2",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        2160,
+        280
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "text": "={{$node[\"Launched il y a moins de 20 mn ?\"].json[\"blurb\"]}}",
+        "translateTo": "FR",
+        "additionalFields": {}
+      },
+      "id": "208f97ca-3491-4fd4-87da-28d0df60f8a5",
+      "name": "DeepL2",
+      "type": "n8n-nodes-base.deepL",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        280
+      ],
+      "credentials": {
+        "deepLApi": {
+          "id": "3",
+          "name": "DeepL Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "blurb",
+              "value": "={{$json[\"text\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "41f1fdae-9e4e-40b7-a559-db9e9cc0ca0f",
+      "name": "Set9",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "let parts = $node[\"Item Lists\"].json[\"urls\"][\"web\"][\"project\"].split('=');\nlet ref = parts.pop();\nlet newURL = parts.join('=') + \"=cwowd\";\n\nreturn {\n  newURL\n};"
+      },
+      "id": "e0753f47-10b4-4d30-b71a-441f39f384bc",
+      "name": "Edit URL2",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        860,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "let now = $now\n\nreturn {\n  now\n}"
+      },
+      "id": "f375223d-3575-42d9-9709-67ba4e9241ae",
+      "name": "FunctionItem2",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "value": "235"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3a92bcf5-c39c-497e-bec2-4b092d825358",
+      "name": "Set2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        180,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "valeur",
+              "value": "papa"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "aab40245-9a48-46de-a9cc-966b637e424e",
+      "name": "Set3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -500,
+        -120
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "7c17fb36-0644-4402-81f6-07754881599a",
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -280,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "projects",
+        "options": {
+          "disableDotNotation": true
+        }
+      },
+      "id": "708e318b-71c6-4f2d-b190-636f84bb1916",
+      "name": "Item Lists",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "dateTime": [
+            {
+              "value1": "={{$now}}",
+              "value2": "={{$node[\"Date & Time2\"].json[\"launchedAtPlus23\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "d7149b68-6c7d-4396-95d1-68d28339901f",
+      "name": "Launched il y a moins de 20 mn ?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        540,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{$node[\"Item Lists\"].json[\"launched_at\"]}}",
+        "dataPropertyName": "launched_at_formated",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY",
+        "options": {
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "9b08b739-9b03-4035-af78-d82f42e078e5",
+      "name": "reversed localized",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        280
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "action": "calculate",
+        "value": "={{$node[\"Item Lists\"].json[\"launched_at\"]}}",
+        "timeUnit": "minutes",
+        "dataPropertyName": "launched_at_formated",
+        "options": {
+          "fromFormat": "X"
+        }
+      },
+      "id": "a90bab76-67dd-4ba2-8116-c7656f57ab52",
+      "name": "Date & Time",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"deadline\"] }}",
+        "dataPropertyName": "deadline_formated",
+        "custom": true,
+        "toFormat": "YYYY-MM-DD H:mm",
+        "options": {
+          "fromFormat": "X",
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "d3c046ce-8fe3-4008-b874-743560cfe160",
+      "name": "format deadline",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        240,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"deadline_formated\"] }}",
+        "dataPropertyName": "deadline_local",
+        "toFormat": "X",
+        "options": {}
+      },
+      "id": "150084a9-a2f4-4cdb-98c3-f5c57e1fb6a9",
+      "name": "reversed deadline",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        380,
+        80
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "updatedAt": "2022-11-02T18:39:49.025Z"
+}
