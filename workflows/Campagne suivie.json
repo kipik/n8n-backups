@@ -1,0 +1,493 @@
+{
+  "active": false,
+  "connections": {
+    "Airtable Trigger on Updated": {
+      "main": [
+        [
+          {
+            "node": "Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "TESTS",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable Trigger on Updated1": {
+      "main": [
+        [
+          {
+            "node": "Airtable1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF1": {
+      "main": [
+        [
+          {
+            "node": "Date & Time1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable1": {
+      "main": [
+        [
+          {
+            "node": "IF1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time1": {
+      "main": [
+        [
+          {
+            "node": "TESTS1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Gmail1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-11-01T21:28:17.721Z",
+  "id": 6,
+  "name": "Campagne suivie",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "718befb9-b557-49ee-9243-86736b947bde",
+      "name": "Start1",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "baseId": "appqMBlpxffjoCDno",
+        "tableId": "tblpdlsFW8elPEBsx",
+        "triggerField": "UpdatedTime",
+        "additionalFields": {
+          "fields": ""
+        }
+      },
+      "id": "843ce6e1-b0ec-44fd-9601-5f0ec2e206ec",
+      "name": "Airtable Trigger on Updated1",
+      "type": "n8n-nodes-base.airtableTrigger",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        620
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"fields\"][\"FollowedStatusValue\"]}}",
+              "value2": "Campagnes suivies"
+            }
+          ]
+        }
+      },
+      "id": "020389c9-427c-4fbd-a6bf-a3d179638bb8",
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        20,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Nouvelle campagne de financement",
+        "includeHtml": true,
+        "htmlMessage": "=<p><IMG SRC=\"{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"image_1024\"][0][\"url\"]}}\" width=\"600\" height=\"auto\"></p>\n<p></p>\n<b>{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"name\"]}}</b> par : <a href=\"{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"creator_url\"]}}\">{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"creator\"]}}</a>\n<p></p>\nLa page de la campagne : {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"campaign_url\"]}}\n<p></p>\nFin de la campagne le :{{$json[\"deadline_formated\"]}}\n\n<br>\n\n<p></p>\n\nPitch : {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"blurb\"]}}",
+        "message": "= La campagne {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"name\"]}}a été ajoutée aux campagnes suivies le {{$node[\"Airtable Trigger on Updated1\"].json[\"createdTime\"]}}.",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {
+          "bccList": [
+            "zoe.feger@gmail.com",
+            "jeanmichel@trayaud.com",
+            "pierre.fiol@free.fr",
+            "jbecousse@gmail.com",
+            "romain.garby@gmail.com",
+            "kimguanter@gmail.com"
+          ]
+        }
+      },
+      "id": "00ea0824-cb0b-40de-aaa3-a2abb8dfef62",
+      "name": "Gmail1",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        460,
+        640
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "database",
+        "databaseId": "77d1d988a3ea41a69ca646934151b134"
+      },
+      "id": "061e655f-7d42-4c1a-ac9f-6c9dc2795660",
+      "name": "Notion1",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        500,
+        820
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "15",
+          "name": "Notion account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Nouvelle campagne de financement",
+        "includeHtml": true,
+        "htmlMessage": "=<p><img src=\"{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"image_1024\"][0][\"url\"]}}\" width=\"600\" height=\"auto\"></p>\n<p></p>\n<b>{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"name\"]}}</b> par : <a href=\"{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"creator_url\"]}}\">{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"creator\"]}}</a>\n<p></p>\t\nLa page de la campagne : {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"campaign_url\"]}} \n<p></p>\nFin de la campagne le :{{$json[\"deadline_formated\"]}}\n\n<br>\n\n<p></p>\n\nPitch : {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"blurb\"]}}\n<p></p>\n<a rel=\"noopener\" target=\"_blank\" href=\"https://www.cwowd.com/\" style=\"background-color: #0083b9; font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; text-decoration: none; padding: 8px 12px; color: #ffffff; border-radius: 5px; display: inline-block; mso-padding-alt: 0;\">\n  <!--[if mso]>\n  <i style=\"letter-spacing: 20px; mso-font-width: -100%; mso-text-raise: 25pt;\">&nbsp;</i>\n  <![endif]-->\n  <span style=\"mso-text-raise: 15pt;\">On en discute &rarr;</span>\n  <!--[if mso]>\n  <i style=\"letter-spacing: 20px; mso-font-width: -100%;\">&nbsp;</i>\n  <![endif]-->\n</a>",
+        "message": "= La campagne {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"name\"]}}a été ajoutée aux campagnes suivies le {{$node[\"Airtable Trigger on Updated1\"].json[\"createdTime\"]}}.",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {
+          "bccList": []
+        }
+      },
+      "id": "9520fab9-1fd5-4a28-8bf0-2cb59589f789",
+      "name": "TESTS1",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        460,
+        460
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "application": "=appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "id": "={{$json[\"id\"]}}"
+      },
+      "id": "679c9639-dd76-4bd4-9ce9-b287a274c668",
+      "name": "Airtable1",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        620
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "value": "={{$node[\"Airtable1\"].json[\"fields\"][\"deadline\"]}}",
+        "dataPropertyName": "deadline_formated",
+        "custom": true,
+        "toFormat": "DD MMMM YYYY à h:mm",
+        "options": {
+          "fromFormat": "X",
+          "toTimezone": "CET"
+        }
+      },
+      "id": "2386c5b6-1036-4c17-a5ef-5e4c8f0c0615",
+      "name": "Date & Time1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        240,
+        600
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "718befb9-b557-49ee-9243-86736b947bde",
+      "name": "Start1",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "baseId": "appqMBlpxffjoCDno",
+        "tableId": "tblpdlsFW8elPEBsx",
+        "triggerField": "UpdatedTime",
+        "additionalFields": {
+          "fields": ""
+        }
+      },
+      "id": "843ce6e1-b0ec-44fd-9601-5f0ec2e206ec",
+      "name": "Airtable Trigger on Updated1",
+      "type": "n8n-nodes-base.airtableTrigger",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        620
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"fields\"][\"FollowedStatusValue\"]}}",
+              "value2": "Campagnes suivies"
+            }
+          ]
+        }
+      },
+      "id": "020389c9-427c-4fbd-a6bf-a3d179638bb8",
+      "name": "IF1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        20,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Nouvelle campagne de financement",
+        "includeHtml": true,
+        "htmlMessage": "=<p><IMG SRC=\"{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"image_1024\"][0][\"url\"]}}\" width=\"600\" height=\"auto\"></p>\n<p></p>\n<b>{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"name\"]}}</b> par : <a href=\"{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"creator_url\"]}}\">{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"creator\"]}}</a>\n<p></p>\nLa page de la campagne : {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"campaign_url\"]}}\n<p></p>\nFin de la campagne le :{{$json[\"deadline_formated\"]}}\n\n<br>\n\n<p></p>\n\nPitch : {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"blurb\"]}}",
+        "message": "= La campagne {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"name\"]}}a été ajoutée aux campagnes suivies le {{$node[\"Airtable Trigger on Updated1\"].json[\"createdTime\"]}}.",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {
+          "bccList": [
+            "zoe.feger@gmail.com",
+            "jeanmichel@trayaud.com",
+            "pierre.fiol@free.fr",
+            "jbecousse@gmail.com",
+            "romain.garby@gmail.com",
+            "kimguanter@gmail.com"
+          ]
+        }
+      },
+      "id": "00ea0824-cb0b-40de-aaa3-a2abb8dfef62",
+      "name": "Gmail1",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        460,
+        640
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "database",
+        "databaseId": "77d1d988a3ea41a69ca646934151b134"
+      },
+      "id": "061e655f-7d42-4c1a-ac9f-6c9dc2795660",
+      "name": "Notion1",
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2,
+      "position": [
+        500,
+        820
+      ],
+      "credentials": {
+        "notionApi": {
+          "id": "15",
+          "name": "Notion account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Nouvelle campagne de financement",
+        "includeHtml": true,
+        "htmlMessage": "=<p><img src=\"{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"image_1024\"][0][\"url\"]}}\" width=\"600\" height=\"auto\"></p>\n<p></p>\n<b>{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"name\"]}}</b> par : <a href=\"{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"creator_url\"]}}\">{{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"creator\"]}}</a>\n<p></p>\t\nLa page de la campagne : {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"campaign_url\"]}} \n<p></p>\nFin de la campagne le :{{$json[\"deadline_formated\"]}}\n\n<br>\n\n<p></p>\n\nPitch : {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"blurb\"]}}\n<p></p>\n<a rel=\"noopener\" target=\"_blank\" href=\"https://www.cwowd.com/\" style=\"background-color: #0083b9; font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; text-decoration: none; padding: 8px 12px; color: #ffffff; border-radius: 5px; display: inline-block; mso-padding-alt: 0;\">\n  <!--[if mso]>\n  <i style=\"letter-spacing: 20px; mso-font-width: -100%; mso-text-raise: 25pt;\">&nbsp;</i>\n  <![endif]-->\n  <span style=\"mso-text-raise: 15pt;\">On en discute &rarr;</span>\n  <!--[if mso]>\n  <i style=\"letter-spacing: 20px; mso-font-width: -100%;\">&nbsp;</i>\n  <![endif]-->\n</a>",
+        "message": "= La campagne {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"name\"]}}a été ajoutée aux campagnes suivies le {{$node[\"Airtable Trigger on Updated1\"].json[\"createdTime\"]}}.",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {
+          "bccList": []
+        }
+      },
+      "id": "9520fab9-1fd5-4a28-8bf0-2cb59589f789",
+      "name": "TESTS1",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        460,
+        460
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "application": "=appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "id": "={{$json[\"id\"]}}"
+      },
+      "id": "679c9639-dd76-4bd4-9ce9-b287a274c668",
+      "name": "Airtable1",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        620
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "value": "={{$node[\"Airtable1\"].json[\"fields\"][\"deadline\"]}}",
+        "dataPropertyName": "deadline_formated",
+        "custom": true,
+        "toFormat": "DD MMMM YYYY à h:mm",
+        "options": {
+          "fromFormat": "X",
+          "toTimezone": "CET"
+        }
+      },
+      "id": "2386c5b6-1036-4c17-a5ef-5e4c8f0c0615",
+      "name": "Date & Time1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        240,
+        600
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "updatedAt": "2022-11-01T21:28:17.721Z"
+}
