@@ -466,7 +466,7 @@
         "subject": "Nouvelle campagne sur KS",
         "message": "=Pour valider la campagne : {{$json[\"airtable_record\"]}}\n\nNom : {{$node[\"Elimine le gras2\"].json[\"name\"]}}\nPar : {{$node[\"Elimine le gras2\"].json[\"creator\"]}}({{$node[\"Elimine le gras2\"].json[\"creator_url\"]}})\nURL : {{$node[\"Elimine le gras2\"].json[\"campaign_url\"]}}\nDeadline : {{$node[\"Elimine le gras2\"].json[\"deadline\"]}}\n\n<br>\n\n{{$node[\"Elimine le gras2\"].json[\"image_1024\"]}}\nPitch : {{$node[\"Elimine le gras2\"].json[\"blurb\"]}}",
         "toList": [
-          "contact.cwowd@gmail.com"
+          "kipik.kipik@gmail.com"
         ],
         "additionalFields": {}
       },
@@ -480,8 +480,8 @@
       ],
       "credentials": {
         "gmailOAuth2": {
-          "id": "1",
-          "name": "Gmail account"
+          "id": "11",
+          "name": "Gmail n8n"
         }
       }
     },
@@ -724,5 +724,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-02T18:39:49.025Z"
+  "updatedAt": "2022-11-03T17:17:35.276Z"
 }
