@@ -1166,8 +1166,8 @@
       ],
       "credentials": {
         "gmailOAuth2": {
-          "id": "1",
-          "name": "Gmail account"
+          "id": "11",
+          "name": "Gmail n8n"
         }
       }
     },
@@ -1252,8 +1252,8 @@
       ],
       "credentials": {
         "gmailOAuth2": {
-          "id": "1",
-          "name": "Gmail account"
+          "id": "11",
+          "name": "Gmail n8n"
         }
       }
     },
@@ -1312,9 +1312,9 @@
   "settings": {},
   "staticData": {
     "node:Airtable Trigger on Updated1": {
-      "lastTimeChecked": "2022-11-03T02:04:56Z"
+      "lastTimeChecked": "2022-11-03T17:16:54Z"
     }
   },
   "tags": [],
-  "updatedAt": "2022-11-03T02:04:56.000Z"
+  "updatedAt": "2022-11-03T17:16:54.000Z"
 }
