@@ -1,0 +1,1853 @@
+{
+  "active": false,
+  "connections": {
+    "Check for new emails": {
+      "main": [
+        [
+          {
+            "node": "If email body contains Nouveau Tip",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML Extract 1er niveau": {
+      "main": [
+        [
+          {
+            "node": "Extract pseudo",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Mise en formes mailSoutien et niveauSoutien",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract pseudo": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mise en formes mailSoutien et niveauSoutien": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Cherche ID et pseudo à partir de mail",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable": {
+      "main": [
+        [
+          {
+            "node": "Gmail2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cherche ID et pseudo à partir de mail": {
+      "main": [
+        [
+          {
+            "node": "IF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF": {
+      "main": [
+        [
+          {
+            "node": "Pseudo Forum",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Cherche ID et pseudo à partir de identifiant",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cherche ID et pseudo à partir de identifiant": {
+      "main": [
+        [
+          {
+            "node": "IF1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF1": {
+      "main": [
+        [
+          {
+            "node": "Pseudo Forum1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Email Pas trouvé membre",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pseudo Forum": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Pseudo Forum1": {
+      "main": [
+        [
+          {
+            "node": "Merge1",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge1": {
+      "main": [
+        [
+          {
+            "node": "Airtable",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Liste les Tipeurs ?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Liste les Tipeurs ?": {
+      "main": [
+        [
+          {
+            "node": "Item Lists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists": {
+      "main": [
+        [
+          {
+            "node": "Set2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set2": {
+      "main": [
+        [
+          {
+            "node": "Function",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function": {
+      "main": [
+        [
+          {
+            "node": "IF3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF3": {
+      "main": [
+        [
+          {
+            "node": "Ajoute au groupe Tipeurs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If email body contains Nouveau Tip": {
+      "main": [
+        [
+          {
+            "node": "HTML Extract 1er niveau",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start1": {
+      "main": [
+        [
+          {
+            "node": "Set3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check for new emails1": {
+      "main": [
+        [
+          {
+            "node": "If email body contains Nouveau Tip1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If email body contains Nouveau Tip1": {
+      "main": [
+        [
+          {
+            "node": "HTML Extract 1er niveau1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML Extract 1er niveau1": {
+      "main": [
+        [
+          {
+            "node": "Extract pseudo1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Mise en formes mailSoutien et niveauSoutien1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract pseudo1": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mise en formes mailSoutien et niveauSoutien1": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Airtable1": {
+      "main": [
+        [
+          {
+            "node": "Gmail5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge2": {
+      "main": [
+        [
+          {
+            "node": "Cherche ID et pseudo à partir de mail1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF4": {
+      "main": [
+        [
+          {
+            "node": "Pseudo Forum2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Cherche ID et pseudo à partir de identifiant1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cherche ID et pseudo à partir de mail1": {
+      "main": [
+        [
+          {
+            "node": "IF4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pseudo Forum2": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Cherche ID et pseudo à partir de identifiant1": {
+      "main": [
+        [
+          {
+            "node": "IF5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF5": {
+      "main": [
+        [
+          {
+            "node": "Pseudo Forum3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Email Pas trouvé membre1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pseudo Forum3": {
+      "main": [
+        [
+          {
+            "node": "Merge3",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge3": {
+      "main": [
+        [
+          {
+            "node": "Airtable1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Liste les Tipeurs ?1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Liste les Tipeurs ?1": {
+      "main": [
+        [
+          {
+            "node": "Item Lists1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists1": {
+      "main": [
+        [
+          {
+            "node": "Set5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set5": {
+      "main": [
+        [
+          {
+            "node": "Function3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Function3": {
+      "main": [
+        [
+          {
+            "node": "IF7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF7": {
+      "main": [
+        [
+          {
+            "node": "Ajoute au groupe Tipeurs1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-11-04T00:18:45.324Z",
+  "id": 18,
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "2faaa9d6-2aae-459c-a5de-295d320242db",
+      "name": "Start1",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        -1460,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "mailbox": "Inbox",
+        "postProcessAction": "nothing",
+        "options": {
+          "allowUnauthorizedCerts": true
+        }
+      },
+      "name": "Check for new emails1",
+      "type": "n8n-nodes-base.emailReadImap",
+      "position": [
+        -1460,
+        560
+      ],
+      "typeVersion": 1,
+      "id": "a346c85c-0c63-4dbe-8c4e-9c9b3e269a7d",
+      "credentials": {
+        "imap": {
+          "id": "18",
+          "name": "n8n IMAP account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"textHtml\"].toLowerCase()}}",
+              "operation": "contains",
+              "value2": "nouveau tip de"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "name": "If email body contains Nouveau Tip1",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -1260,
+        560
+      ],
+      "typeVersion": 1,
+      "id": "3ba079be-6c7e-4237-93df-9ec32a75dd2b"
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Tip me one more time",
+        "includeHtml": true,
+        "htmlMessage": "=",
+        "message": "Yeah baby",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {}
+      },
+      "id": "3cb72f9a-8f08-49de-a1bf-1410f006ea2e",
+      "name": "Gmail3",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        -380,
+        980
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "=textHtml",
+              "value": "=<html> <body> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"background-color:#dce0e1\"> <tbody> <tr> <td style=\"opacity:0;height:50px;\">Nouveau Tip de 20 € </td> </tr> <tr> <td style=\"text-align:center\"> <img src=\"https://api.tipeee.com/img/mails/tipeee-logo.png\" alt=\"Tipeee\" height=\"35\"> </td> </tr> <tr> <td style=\"height: 35px;\"></td> </tr> <tr> <td> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" style=\"width:540px;border-collapse:separate;\"> <tbody> <tr> <td style=\"height:160px;text-align:center;\"> <div style=\"height:80px;\"> <img src=\"https://www.tipeeestream.com/cdn-cgi/image/onerror=redirect,width=400,height=400,fit=cover/https://api.tipeee.com/uploads/media/image/jpeg/20220905/202209056315e82d8543f.jpeg\" alt=\"Tipeee\" width=\"160\" height=\"160\" style=\"border-radius:50%;\"> </div> <div style=\"height:80px;background-color:#ffffff;\"> </div> </td> </tr> <tr> <td> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" style='width:540px;border-collapse:separate;background-color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Roboto\",\"Oxygen\",\"Ubuntu\",\"Cantarell\",\"Fira Sans\",\"Droid Sans\",\"Helvetica Neue\",sans-serif;'> <tr> <td colspan=\"3\" style=\"height:15px\"></td> </tr> <tr> <td width=\"35\"></td> <td> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\"> <tbody> <tr> <td style='margin:0;padding-bottom:0;line-height: 1.4;font-size:30px;font-weight:700;color:#f21a2f;text-align:center;text-decoration:none;'> gatorette </td> </tr> <tr> <td style=\"height:15px\"></td> </tr> <tr> <td style=\"margin:0;padding-bottom:0;line-height: 1.2;font-size:32px;font-weight:500;color:#1b1b1b;text-align:center;text-decoration:none;\"> Nouveau Tip de<br> <span style=\"color:#f21a2f;font-weight:700;\"> 20 € </span> </td> </tr> <tr> <td style=\"height:25px\"></td> </tr> <tr> <td style=\"margin:0;padding-bottom:0;line-height: 1.2;font-size:16px;font-weight:400;color:#1b1b1b;text-align:center;text-decoration:none;\"><strong>Contreparties(s)&nbsp;: </strong><span style=\"color:#f21a2f;\">Mon hewo !!!</span></td> </tr> <tr> <td style=\"height:25px\"></td> </tr> <tr> <td style=\"margin:0;padding-bottom:0;line-height: 1.2;font-size:16px;font-weight:400;color:#1b1b1b;text-align:center;text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/message.png\" style=\"vertical-align:middle;\"> <a style=\"color:#3f75ff;font-weight:700;\" href=\"https://www.tipeee.com/inbox/new-thread/?user=1853334\">Envoyer un message</a> </td> </tr> <tr> <td style=\"height:5px\"></td> </tr> <tr> <td style=\"margin:0;padding-bottom:0;line-height: 1.2;font-size:16px;font-weight:400;color:#1b1b1b;text-align:center;text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/enveloppe.png\" style=\"vertical-align:middle;\"> <a style=\"color:#3f75ff;font-weight:700;\" href=\"mailto:gatorette@free.fr\">Contacter par e-mail</a> </td> </tr> </tbody> </table> </td> <td width=\"35\"></td> </tr> <tr> <td colspan=\"3\" style=\"height:30px;\"></td> </tr> </table> </td> </tr> <tr> <td style=\"height:35px\"></td> </tr> <tr> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" style='width:540px;border-collapse:separate;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Roboto\",\"Oxygen\",\"Ubuntu\",\"Cantarell\",\"Fira Sans\",\"Droid Sans\",\"Helvetica Neue\",sans-serif;'> <tbody> <tr> <td style=\"text-align:center;color:#a5aaad;font-size:15px;font-weight:bold;\"> Suivez Tipeee sur : </td> </tr> <tr> <td style=\"height:10px\"></td> </tr> <tr> <td style=\"text-align: center;\"> <a href=\"https://www.facebook.com/TipeeeOfficiel\" style=\"margin-right: 10px; text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/facebook.png\" alt=\"Facebook\" width=\"39\"> </a> <a href=\"https://twitter.com/tipeee_officiel\" style=\"margin-right: 10px; text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/twitter.png\" alt=\"Twitter\" width=\"39\"> </a> <a href=\"https://www.youtube.com/channel/UCLJadsl33hJwT9jtzftRDRw\" style=\"text-decoration:none; margin-right: 10px;\"> <img src=\"https://api.tipeee.com/img/mails/youtube.png\" alt=\"YouTube\" width=\"39\"> </a> <a href=\"https://www.instagram.com/tipeee_officiel/\" style=\"text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/instagram.png\" alt=\"Instagram\" width=\"39\"> </a> </td> </tr> <tr> <td style=\"height:10px\"></td> </tr> <tr> <td style=\"text-align: center;color:#a5aaad;font-size:13px;font-weight:bold;\"> Pour gérer vos e-mails de notification, rendez-vous dans<br>les <a href=\"https://www.tipeee.com/account/notifications\" style=\"color:#a5aaad;font-weight:bold;text-decoration:underline;\">paramètres de votre compte</a>. </td> </tr> <tr> <td style=\"height:35px\"></td> </tr> </tbody> </table> </td> </tbody> </table> </td> </tr> <tbody> </table> <img src=\"http://tracker.nmp1.com/WBS?RAUihPGri0uC8qaJVGNXBfDwSqSZmVneI-KjDzj31qHVJsvUDbzyO8All3kdo4wrnjwJtgZEEXKohWC-DS-cbA/G2auLBXa31K4jZ4QdxWO0w.gif\" border=\"0\" alt=\"\" width=\"1\" height=\"1\" /></body> </html>\"textPlain\": \"Thierry TREGARO *Administrateur* cwowd - le participatif par ses utilisateurs p: 06 01 330 313 w: www.cwowd.com e: contact.cwowd@gmail.com <https://www.facebook.com/cwowdcom/> <https://twitter.com/cwowdRedac/> Retrouvez toutes les semaines toute l'actualité du participatif ludique. <https://www.cwowd.com/jeux-en-financement-participatif-la-revue-de-la-semaine-2020629/> ---------- Forwarded message --------- De : Tipeee <noreply@notification.tipeee.com> Date: dim. 4 sept. 2022 à 21:49 Subject: cwowd - Yoann vous a envoyé un Tip de 5 € To: kipik.kipik@gmail.com <kipik.kipik@gmail.com> Nouveau Tip de 5 € [image: Tipeee] [image: Tipeee] Yoann Nouveau Tip de 5 € *Contreparties(s) : *CONTWOL THE CWOWD ! Envoyer un message <https://www.tipeee.com/inbox/new-thread/?user=696987> Contacter par e-mail <yoann.terradura@gmail.com> Suivez Tipeee sur : [image: Facebook] <https://www.facebook.com/TipeeeOfficiel> [image: Twitter] <https://twitter.com/tipeee_officiel> [image: YouTube] <https://www.youtube.com/channel/UCLJadsl33hJwT9jtzftRDRw> [image: Instagram] <https://www.instagram.com/tipeee_officiel/> Pour gérer vos e-mails de notification, rendez-vous dans les paramètres de votre compte <https://www.tipeee.com/account/notifications>. \",\n\"metadata\": {\n\"delivered-to\": \"n8n.cwowd@gmail.com\",\n\"received\": \"by 2002:a05:6a20:41e:b0:92:7589:9d4d with SMTP id a30csp3205207pza; Sun, 4 Sep 2022 16:21:43 -0700 (PDT)\",\n\"x-received\": \"by 2002:a05:6512:1527:b0:48b:99:f3ff with SMTP id bq39-20020a056512152700b0048b0099f3ffmr15391069lfb.81.1662333703155; Sun, 04 Sep 2022 16:21:43 -0700 (PDT)\",\n\"arc-seal\": \"i=1; a=rsa-sha256; t=1662333703; cv=none; d=google.com; s=arc-20160816; b=yqDocgL2HfgRrUSsaKfkUoiSrxQSrti+u1GTIKOCw6BIt/iq1W+YNbO0Pwq8l6Sz99 SzhWN6VqiztEGF9noCkP8jvqCG0CZZB50x/Z7jtD1XVI6xDZpjR44G30DP0kvygEjU+K TIkWWmtovpmQOx1fyO/rpYIm2VRBesh78duqpj+2IsF8eCpFCrkk80U7bM53sUYiRJrK hLbQdLwDX767Af3JuCT2R86grbZusKbeaaBZ8ORCxLU29MzL6MQ4NALu80hPcEgPVDLl P42XQ1OJ+msc71ZF17SumHUD7Xg8Zv2kTmdx0e5sr40yXQyrJo1OKfZVu5hNsMQbix1K ZyHw==\",\n\"arc-message-signature\": \"i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :dkim-signature; bh=gWFDnVkqd97wiZv1U7Ak6qi5BVRhir+KgMOg+0UahCw=; b=CMcK/aSd9/kRfUJMfxL3T5laYrjbE5JstlkOiwXDse+fnp0OZbth+s5CKO9Vq8hrfc 3L3r28nYQWdvP20gXDg1yRv+E4JF8tOfjVHFQeLyqRScBU95Q1m7ZS7oTS8FXx6vyBIy 8BxLrFlEaAGHLwzY0tqelkQJMB0/UgRnxheE6byp/ayR7FqpiKdVaVNdvbA1SHkUjUhN ajr7tObRkVVo98fOwA5jnMmnPeaNjS6KG4mrR+DoYPnpMcK19jdV6OgtbxQfghby3igt Y1r7LE+6AL930VyiYd/Aur8qLvTZbqhV4fD3YELuTKNyEp+P1TiGXUVIcdggO4UfIWI0 QZ4Q==\",\n\"arc-authentication-results\": \"i=1; mx.google.com; dkim=pass header.i=@gmail.com header.s=20210112 header.b=O1YMLtNb; spf=pass (google.com: domain of kipik.kipik@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=kipik.kipik@gmail.com; dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com\",\n\"return-path\": \"<kipik.kipik@gmail.com>\",\n\"received-spf\": \"pass (google.com: domain of kipik.kipik@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;\",\n\"authentication-results\": \"mx.google.com; dkim=pass header.i=@gmail.com header.s=20210112 header.b=O1YMLtNb; spf=pass (google.com: domain of kipik.kipik@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=kipik.kipik@gmail.com; dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com\",\n\"dkim-signature\": \"v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :from:to:cc:subject:date; bh=gWFDnVkqd97wiZv1U7Ak6qi5BVRhir+KgMOg+0UahCw=; b=O1YMLtNbElVo1nXDZVCmrqneP6gkH95W2z4X+Xd+ET2eXXm5etH191b26RVwriIwWL Thzt4BxI1ARiH9/jds06/jLhsSREFgyIzxwuMwoVmAEaX66KrGbIK450UJvR1SizvyWa 52SAeM+LSL0rkfWu6AEVCe56HpH77lziVlcssnIzGGQuHdJNuneATQYdPYjUtsy/bp8z vytV8FcfybzvwQ8joai+PLTR61jBGVw6zCzFBsWB3NtiKHpkljKbOROql1L6qY5ZgfwK ypRlOjMzzj4VrCCyFUgYg3G/hmrThu8V67mOjEzbeOS3LZFCF9bZMUNlqTEim6g5lIem OsPw==\",\n\"x-google-dkim-signature\": \"v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20210112; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :x-gm-message-state:from:to:cc:subject:date; bh=gWFDnVkqd97wiZv1U7Ak6qi5BVRhir+KgMOg+0UahCw=; b=wQjX9B2to2KhAYWr3C6seS4/Tu/s9ACIFeqLmUzyRopyPiRZIipI7+I0bm70axR8Nz QPmR8Zoaddbm62zWElcMfNoRmZxGj3ijmGDrB6NIZPKddyG//Eswmdjch3YYEFlt+iuR JGpHHU+wgLwV0Nl56OtPLj+Ehm/hlGSPL+XI1QHmtnggss50gZdwmSw6+u/xllPTIKea 3idvqrVY7sISuIPTqk3H8dx5PL/hgHZEzLIhx7u8NpvU6/2X/d5DwxODGrBPht0YQoOI Q7ox1VmsUgzd3I9LGUUlJa2IBPu7xyZM3sLvRQ3RWKB5bJkzzesjCaK5nHLvlYCECFMt jkgw==\",\n\"x-gm-message-state\": \"ACgBeo21R9ne3c9uHltiwGg42PgNGFCyMvwnM9UuULfNdPHReSba85Y/ PB9TKK5YhnBPrXWXd3LAuBHQr6b9z/KnHbf/xOTpGYvLbUk=\",\n\"x-google-smtp-source\": \"AA6agR703pu556dgtPyaQsA/rAZTUTsqK18HMcikmoDV0t6QnH+2ghgGu7HPXJXCGfg2ztPvI+UnoGRkaNhAG+E8+3w=\",\n\"mime-version\": \"1.0\",\n\"references\": \"<2.2.2.1101002363.1740740.1662320966105@notification.tipeee.com>\",\n\"in-reply-to\": \"<2.2.2.1101002363.1740740.1662320966105@notification.tipeee.com>\",\n\"message-id\": \"<CALCaUXE7Fw+X8n4VK422Cd7x7a-q9zknwUrGDFGefYg=azSF0g@mail.gmail.com>\",\n\"content-type\": \"multipart/alternative; boundary=\"000000000000d1ad9705e7e2391c\"\"\n},\n\"from\": \"\"Thierry Tregaro | cwowd.com\" <contact.cwowd@gmail.com>\",\n\"date\": \"Mon, 5 Sep 2022 01:21:31 +0200\",\n\"subject\": \"Fwd: cwowd - Yoann vous a envoyé un Tip de 5 €\",\n\"to\": \"n8n.cwowd@gmail.com\""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3d5ac4a5-2da6-4cca-85ae-2ae4c55131e0",
+      "name": "Set3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -1260,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "dataPropertyName": "Tableau",
+        "extractionValues": {
+          "values": [
+            {
+              "cssSelector": "div:nth-child(2)",
+              "returnValue": "html",
+              "returnArray": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a1b71cfa-d401-4c5d-a710-26b74c47291b",
+      "name": "HTML Extract",
+      "type": "n8n-nodes-base.htmlExtract",
+      "typeVersion": 1,
+      "position": [
+        -1060,
+        960
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "test parse email",
+        "message": "={{ $json[\"Tableau\"] }}",
+        "additionalFields": {}
+      },
+      "id": "21a527f8-ea6b-463b-83de-4ab2c9432b9a",
+      "name": "Gmail4",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        980
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Im my pocket !",
+        "message": "=Contrepartie : {{$node[\"Merge3\"].json[\"Montant des Tips\"]}}\nEmail tipeur : {{$node[\"Merge2\"].json[\"Email\"]}}\nPseudo : {{$node[\"Merge2\"].json[\"Identifiant\"]}}",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {}
+      },
+      "id": "cab566ab-41a1-4535-897f-e6486121e89e",
+      "name": "Gmail5",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        920,
+        340
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "let test = \"\";\n\nconst pseudo = $item(0).$node[\"HTML Extract2\"].json[\"pseudo\"];\nniveau = tableau.replace(/€.*$/,'');\n\nconst mail = $item(0).$node[\"HTML Extract2\"].json[\"mail\"];\nemail = mail[1].split(\":\")[1];\n\nreturn {\n  mailSoutien : email,\n  niveauSoutien : niveau\n};\n"
+      },
+      "id": "497da983-3189-481d-b628-58ce97fe2416",
+      "name": "Function2",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -600,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "dataPropertyName": "textHtml",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "Tableau",
+              "cssSelector": "span"
+            },
+            {
+              "key": "mail",
+              "cssSelector": "a",
+              "returnValue": "attribute",
+              "attribute": "href",
+              "returnArray": true
+            },
+            {
+              "key": "pseudo",
+              "cssSelector": "table > tbody > tr > td:nth-child(2)",
+              "returnValue": "html",
+              "returnArray": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3b5a381e-674c-49e3-a0c2-4b6c679a5b32",
+      "name": "HTML Extract 1er niveau1",
+      "type": "n8n-nodes-base.htmlExtract",
+      "typeVersion": 1,
+      "position": [
+        -1060,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "dataPropertyName": "pseudo",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "Identifiant",
+              "cssSelector": "tr:first-child"
+            },
+            {
+              "key": "Pseudo Forum"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "071be829-4c50-4adf-a14b-c65b0d5f45dc",
+      "name": "Extract pseudo1",
+      "type": "n8n-nodes-base.htmlExtract",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "let niveau = \"\";\nlet email = \"\";\n\nconst tableau = $item(0).$node[\"HTML Extract 1er niveau\"].json[\"Tableau\"];\nniveau = parseInt(tableau.replace(/€.*$/,''), 10);\n\nconst mail = $item(0).$node[\"HTML Extract 1er niveau\"].json[\"mail\"];\nemail = mail[1].split(\":\")[1];\n\nreturn {\n  Email : email,\n  \"Montant des Tips\" : niveau\n};\n"
+      },
+      "id": "47ed9fc7-3b3b-49b4-ba4d-999505b243ba",
+      "name": "Mise en formes mailSoutien et niveauSoutien1",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "application": "appX87LVPNK91hFX0",
+        "table": "tblLwIh17DMXvuYh1",
+        "options": {}
+      },
+      "id": "d47d216a-a31b-454b-b90c-533e8637157a",
+      "name": "Airtable1",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        760,
+        340
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Identifiant",
+              "value": "={{$json[\"pseudo\"][0]}}"
+            },
+            {
+              "name": "Email",
+              "value": "={{$node[\"Mise en formes mailSoutien et niveauSoutien1\"].json[\"mailSoutien\"]}}"
+            },
+            {
+              "name": "Montant des Tips",
+              "value": "={{$node[\"Mise en formes mailSoutien et niveauSoutien1\"].json[\"niveauSoutien\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d25b9fc7-c1e0-4ee6-8a45-768bb9594270",
+      "name": "Set4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -140,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "id": "e5c80322-a391-4022-9843-7b89dd19ad1e",
+      "name": "Merge2",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        -600,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json[\"0\"][\"active\"]}}",
+              "value2": "={{true}}"
+            }
+          ]
+        }
+      },
+      "id": "05b68f69-28a4-4a2e-88de-f3d2d59f6cad",
+      "name": "IF4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -300,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "discourseApi",
+        "requestMethod": "PUT",
+        "url": "https://forum.cwowd.com/groups/41/members.json",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "usernames",
+              "value": "={{$node[\"Merge3\"].json[\"Pseudo Forum\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "90e8f39b-44b1-4498-b72a-570be5ad16db",
+      "name": "Ajoute au groupe Tipeurs1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1820,
+        580
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "7",
+          "name": "Discourse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "discourseApi",
+        "url": "https://forum.cwowd.com/admin/users/list/active.json?",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "filter",
+              "value": "={{$json[\"Email\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "fd44674f-6916-405c-9dce-bcdfc21f7da4",
+      "name": "Cherche ID et pseudo à partir de mail1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -440,
+        660
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "7",
+          "name": "Discourse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Pseudo Forum",
+              "value": "={{$json[\"0\"][\"username\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4c2cad7b-1362-475a-9fb4-963c070c3584",
+      "name": "Pseudo Forum2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "discourseApi",
+        "url": "https://forum.cwowd.com/admin/users/list/active.json?",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "filter",
+              "value": "={{$node[\"Merge2\"].json[\"Identifiant\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "954f5b7c-aecf-495e-9ed4-16c58df49ffb",
+      "name": "Cherche ID et pseudo à partir de identifiant1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -120,
+        780
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "7",
+          "name": "Discourse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json[\"0\"][\"active\"]}}",
+              "value2": "={{true}}"
+            }
+          ]
+        }
+      },
+      "id": "51c59d4e-97ee-4f14-97a6-3a8588c55409",
+      "name": "IF5",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        0,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Pseudo Forum",
+              "value": "={{$json[\"0\"][\"username\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7bf81d56-8820-4854-9f57-de428844d592",
+      "name": "Pseudo Forum3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        220,
+        680
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "id": "16cd4ac0-27d7-4e91-a7a3-fb90f523e492",
+      "name": "Merge3",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        460,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Im my pocket !",
+        "message": "=Rien trouvé dans les membres à propos de :\n\nContrepartie : {{$node[\"Merge2\"].json[\"Montant des Tips\"]}}\nEmail tipeur : {{$node[\"Merge2\"].json[\"Email\"]}}\nPseudo : {{$node[\"Merge2\"].json[\"Identifiant\"]}}",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {}
+      },
+      "id": "bac1ad91-cf84-4bde-ba51-9cfe6e1eb24e",
+      "name": "Email Pas trouvé membre1",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        440,
+        800
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "discourseApi",
+        "url": "=https://forum.cwowd.com/groups/Tipeurs/members.json",
+        "options": {
+          "fullResponse": false
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {}
+          ]
+        },
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      },
+      "id": "4791aa7a-b0bf-49e1-ab69-406b9c7d1514",
+      "name": "Liste les Tipeurs ?1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        700,
+        540
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "7",
+          "name": "Discourse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "members",
+        "options": {}
+      },
+      "id": "c251887c-ffc5-4db5-938f-dd478351e45e",
+      "name": "Item Lists1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        880,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "username",
+              "value": "={{ $json[\"username\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": false
+        }
+      },
+      "id": "d261c519-7011-462a-a610-99b5f574dba2",
+      "name": "Set5",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1060,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"username\"]}}",
+              "operation": "contains",
+              "value2": "={{$node[\"Merge3\"].json[\"Pseudo Forum\"]}}"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "1de9acd6-1c23-4640-acf1-52de5500f35a",
+      "name": "IF6",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "var pseudo = $node[\"Merge1\"].json[\"Pseudo Forum\"];\n\nlet test = $node[\"Set2\"].json[\"username\"].includes(pseudo);\n\nreturn {\n  test\n};"
+      },
+      "id": "1f9952aa-84ce-4dc8-80fb-dc5f7fc311d5",
+      "name": "Function3",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"test\"] }}",
+              "value2": "={{true}}"
+            }
+          ]
+        }
+      },
+      "id": "069abc2b-eb41-47dd-b1ad-a5f346294ea0",
+      "name": "IF7",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1620,
+        780
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "2faaa9d6-2aae-459c-a5de-295d320242db",
+      "name": "Start1",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        -1460,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "mailbox": "Inbox",
+        "postProcessAction": "nothing",
+        "options": {
+          "allowUnauthorizedCerts": true
+        }
+      },
+      "name": "Check for new emails1",
+      "type": "n8n-nodes-base.emailReadImap",
+      "position": [
+        -1460,
+        560
+      ],
+      "typeVersion": 1,
+      "id": "a346c85c-0c63-4dbe-8c4e-9c9b3e269a7d",
+      "credentials": {
+        "imap": {
+          "id": "18",
+          "name": "n8n IMAP account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"textHtml\"].toLowerCase()}}",
+              "operation": "contains",
+              "value2": "nouveau tip de"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "name": "If email body contains Nouveau Tip1",
+      "type": "n8n-nodes-base.if",
+      "position": [
+        -1260,
+        560
+      ],
+      "typeVersion": 1,
+      "id": "3ba079be-6c7e-4237-93df-9ec32a75dd2b"
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Tip me one more time",
+        "includeHtml": true,
+        "htmlMessage": "=",
+        "message": "Yeah baby",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {}
+      },
+      "id": "3cb72f9a-8f08-49de-a1bf-1410f006ea2e",
+      "name": "Gmail3",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        -380,
+        980
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "=textHtml",
+              "value": "=<html> <body> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"background-color:#dce0e1\"> <tbody> <tr> <td style=\"opacity:0;height:50px;\">Nouveau Tip de 20 € </td> </tr> <tr> <td style=\"text-align:center\"> <img src=\"https://api.tipeee.com/img/mails/tipeee-logo.png\" alt=\"Tipeee\" height=\"35\"> </td> </tr> <tr> <td style=\"height: 35px;\"></td> </tr> <tr> <td> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" style=\"width:540px;border-collapse:separate;\"> <tbody> <tr> <td style=\"height:160px;text-align:center;\"> <div style=\"height:80px;\"> <img src=\"https://www.tipeeestream.com/cdn-cgi/image/onerror=redirect,width=400,height=400,fit=cover/https://api.tipeee.com/uploads/media/image/jpeg/20220905/202209056315e82d8543f.jpeg\" alt=\"Tipeee\" width=\"160\" height=\"160\" style=\"border-radius:50%;\"> </div> <div style=\"height:80px;background-color:#ffffff;\"> </div> </td> </tr> <tr> <td> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" style='width:540px;border-collapse:separate;background-color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Roboto\",\"Oxygen\",\"Ubuntu\",\"Cantarell\",\"Fira Sans\",\"Droid Sans\",\"Helvetica Neue\",sans-serif;'> <tr> <td colspan=\"3\" style=\"height:15px\"></td> </tr> <tr> <td width=\"35\"></td> <td> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\"> <tbody> <tr> <td style='margin:0;padding-bottom:0;line-height: 1.4;font-size:30px;font-weight:700;color:#f21a2f;text-align:center;text-decoration:none;'> gatorette </td> </tr> <tr> <td style=\"height:15px\"></td> </tr> <tr> <td style=\"margin:0;padding-bottom:0;line-height: 1.2;font-size:32px;font-weight:500;color:#1b1b1b;text-align:center;text-decoration:none;\"> Nouveau Tip de<br> <span style=\"color:#f21a2f;font-weight:700;\"> 20 € </span> </td> </tr> <tr> <td style=\"height:25px\"></td> </tr> <tr> <td style=\"margin:0;padding-bottom:0;line-height: 1.2;font-size:16px;font-weight:400;color:#1b1b1b;text-align:center;text-decoration:none;\"><strong>Contreparties(s)&nbsp;: </strong><span style=\"color:#f21a2f;\">Mon hewo !!!</span></td> </tr> <tr> <td style=\"height:25px\"></td> </tr> <tr> <td style=\"margin:0;padding-bottom:0;line-height: 1.2;font-size:16px;font-weight:400;color:#1b1b1b;text-align:center;text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/message.png\" style=\"vertical-align:middle;\"> <a style=\"color:#3f75ff;font-weight:700;\" href=\"https://www.tipeee.com/inbox/new-thread/?user=1853334\">Envoyer un message</a> </td> </tr> <tr> <td style=\"height:5px\"></td> </tr> <tr> <td style=\"margin:0;padding-bottom:0;line-height: 1.2;font-size:16px;font-weight:400;color:#1b1b1b;text-align:center;text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/enveloppe.png\" style=\"vertical-align:middle;\"> <a style=\"color:#3f75ff;font-weight:700;\" href=\"mailto:gatorette@free.fr\">Contacter par e-mail</a> </td> </tr> </tbody> </table> </td> <td width=\"35\"></td> </tr> <tr> <td colspan=\"3\" style=\"height:30px;\"></td> </tr> </table> </td> </tr> <tr> <td style=\"height:35px\"></td> </tr> <tr> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" style='width:540px;border-collapse:separate;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Roboto\",\"Oxygen\",\"Ubuntu\",\"Cantarell\",\"Fira Sans\",\"Droid Sans\",\"Helvetica Neue\",sans-serif;'> <tbody> <tr> <td style=\"text-align:center;color:#a5aaad;font-size:15px;font-weight:bold;\"> Suivez Tipeee sur : </td> </tr> <tr> <td style=\"height:10px\"></td> </tr> <tr> <td style=\"text-align: center;\"> <a href=\"https://www.facebook.com/TipeeeOfficiel\" style=\"margin-right: 10px; text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/facebook.png\" alt=\"Facebook\" width=\"39\"> </a> <a href=\"https://twitter.com/tipeee_officiel\" style=\"margin-right: 10px; text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/twitter.png\" alt=\"Twitter\" width=\"39\"> </a> <a href=\"https://www.youtube.com/channel/UCLJadsl33hJwT9jtzftRDRw\" style=\"text-decoration:none; margin-right: 10px;\"> <img src=\"https://api.tipeee.com/img/mails/youtube.png\" alt=\"YouTube\" width=\"39\"> </a> <a href=\"https://www.instagram.com/tipeee_officiel/\" style=\"text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/instagram.png\" alt=\"Instagram\" width=\"39\"> </a> </td> </tr> <tr> <td style=\"height:10px\"></td> </tr> <tr> <td style=\"text-align: center;color:#a5aaad;font-size:13px;font-weight:bold;\"> Pour gérer vos e-mails de notification, rendez-vous dans<br>les <a href=\"https://www.tipeee.com/account/notifications\" style=\"color:#a5aaad;font-weight:bold;text-decoration:underline;\">paramètres de votre compte</a>. </td> </tr> <tr> <td style=\"height:35px\"></td> </tr> </tbody> </table> </td> </tbody> </table> </td> </tr> <tbody> </table> <img src=\"http://tracker.nmp1.com/WBS?RAUihPGri0uC8qaJVGNXBfDwSqSZmVneI-KjDzj31qHVJsvUDbzyO8All3kdo4wrnjwJtgZEEXKohWC-DS-cbA/G2auLBXa31K4jZ4QdxWO0w.gif\" border=\"0\" alt=\"\" width=\"1\" height=\"1\" /></body> </html>\"textPlain\": \"Thierry TREGARO *Administrateur* cwowd - le participatif par ses utilisateurs p: 06 01 330 313 w: www.cwowd.com e: contact.cwowd@gmail.com <https://www.facebook.com/cwowdcom/> <https://twitter.com/cwowdRedac/> Retrouvez toutes les semaines toute l'actualité du participatif ludique. <https://www.cwowd.com/jeux-en-financement-participatif-la-revue-de-la-semaine-2020629/> ---------- Forwarded message --------- De : Tipeee <noreply@notification.tipeee.com> Date: dim. 4 sept. 2022 à 21:49 Subject: cwowd - Yoann vous a envoyé un Tip de 5 € To: kipik.kipik@gmail.com <kipik.kipik@gmail.com> Nouveau Tip de 5 € [image: Tipeee] [image: Tipeee] Yoann Nouveau Tip de 5 € *Contreparties(s) : *CONTWOL THE CWOWD ! Envoyer un message <https://www.tipeee.com/inbox/new-thread/?user=696987> Contacter par e-mail <yoann.terradura@gmail.com> Suivez Tipeee sur : [image: Facebook] <https://www.facebook.com/TipeeeOfficiel> [image: Twitter] <https://twitter.com/tipeee_officiel> [image: YouTube] <https://www.youtube.com/channel/UCLJadsl33hJwT9jtzftRDRw> [image: Instagram] <https://www.instagram.com/tipeee_officiel/> Pour gérer vos e-mails de notification, rendez-vous dans les paramètres de votre compte <https://www.tipeee.com/account/notifications>. \",\n\"metadata\": {\n\"delivered-to\": \"n8n.cwowd@gmail.com\",\n\"received\": \"by 2002:a05:6a20:41e:b0:92:7589:9d4d with SMTP id a30csp3205207pza; Sun, 4 Sep 2022 16:21:43 -0700 (PDT)\",\n\"x-received\": \"by 2002:a05:6512:1527:b0:48b:99:f3ff with SMTP id bq39-20020a056512152700b0048b0099f3ffmr15391069lfb.81.1662333703155; Sun, 04 Sep 2022 16:21:43 -0700 (PDT)\",\n\"arc-seal\": \"i=1; a=rsa-sha256; t=1662333703; cv=none; d=google.com; s=arc-20160816; b=yqDocgL2HfgRrUSsaKfkUoiSrxQSrti+u1GTIKOCw6BIt/iq1W+YNbO0Pwq8l6Sz99 SzhWN6VqiztEGF9noCkP8jvqCG0CZZB50x/Z7jtD1XVI6xDZpjR44G30DP0kvygEjU+K TIkWWmtovpmQOx1fyO/rpYIm2VRBesh78duqpj+2IsF8eCpFCrkk80U7bM53sUYiRJrK hLbQdLwDX767Af3JuCT2R86grbZusKbeaaBZ8ORCxLU29MzL6MQ4NALu80hPcEgPVDLl P42XQ1OJ+msc71ZF17SumHUD7Xg8Zv2kTmdx0e5sr40yXQyrJo1OKfZVu5hNsMQbix1K ZyHw==\",\n\"arc-message-signature\": \"i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :dkim-signature; bh=gWFDnVkqd97wiZv1U7Ak6qi5BVRhir+KgMOg+0UahCw=; b=CMcK/aSd9/kRfUJMfxL3T5laYrjbE5JstlkOiwXDse+fnp0OZbth+s5CKO9Vq8hrfc 3L3r28nYQWdvP20gXDg1yRv+E4JF8tOfjVHFQeLyqRScBU95Q1m7ZS7oTS8FXx6vyBIy 8BxLrFlEaAGHLwzY0tqelkQJMB0/UgRnxheE6byp/ayR7FqpiKdVaVNdvbA1SHkUjUhN ajr7tObRkVVo98fOwA5jnMmnPeaNjS6KG4mrR+DoYPnpMcK19jdV6OgtbxQfghby3igt Y1r7LE+6AL930VyiYd/Aur8qLvTZbqhV4fD3YELuTKNyEp+P1TiGXUVIcdggO4UfIWI0 QZ4Q==\",\n\"arc-authentication-results\": \"i=1; mx.google.com; dkim=pass header.i=@gmail.com header.s=20210112 header.b=O1YMLtNb; spf=pass (google.com: domain of kipik.kipik@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=kipik.kipik@gmail.com; dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com\",\n\"return-path\": \"<kipik.kipik@gmail.com>\",\n\"received-spf\": \"pass (google.com: domain of kipik.kipik@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;\",\n\"authentication-results\": \"mx.google.com; dkim=pass header.i=@gmail.com header.s=20210112 header.b=O1YMLtNb; spf=pass (google.com: domain of kipik.kipik@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=kipik.kipik@gmail.com; dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com\",\n\"dkim-signature\": \"v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :from:to:cc:subject:date; bh=gWFDnVkqd97wiZv1U7Ak6qi5BVRhir+KgMOg+0UahCw=; b=O1YMLtNbElVo1nXDZVCmrqneP6gkH95W2z4X+Xd+ET2eXXm5etH191b26RVwriIwWL Thzt4BxI1ARiH9/jds06/jLhsSREFgyIzxwuMwoVmAEaX66KrGbIK450UJvR1SizvyWa 52SAeM+LSL0rkfWu6AEVCe56HpH77lziVlcssnIzGGQuHdJNuneATQYdPYjUtsy/bp8z vytV8FcfybzvwQ8joai+PLTR61jBGVw6zCzFBsWB3NtiKHpkljKbOROql1L6qY5ZgfwK ypRlOjMzzj4VrCCyFUgYg3G/hmrThu8V67mOjEzbeOS3LZFCF9bZMUNlqTEim6g5lIem OsPw==\",\n\"x-google-dkim-signature\": \"v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20210112; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :x-gm-message-state:from:to:cc:subject:date; bh=gWFDnVkqd97wiZv1U7Ak6qi5BVRhir+KgMOg+0UahCw=; b=wQjX9B2to2KhAYWr3C6seS4/Tu/s9ACIFeqLmUzyRopyPiRZIipI7+I0bm70axR8Nz QPmR8Zoaddbm62zWElcMfNoRmZxGj3ijmGDrB6NIZPKddyG//Eswmdjch3YYEFlt+iuR JGpHHU+wgLwV0Nl56OtPLj+Ehm/hlGSPL+XI1QHmtnggss50gZdwmSw6+u/xllPTIKea 3idvqrVY7sISuIPTqk3H8dx5PL/hgHZEzLIhx7u8NpvU6/2X/d5DwxODGrBPht0YQoOI Q7ox1VmsUgzd3I9LGUUlJa2IBPu7xyZM3sLvRQ3RWKB5bJkzzesjCaK5nHLvlYCECFMt jkgw==\",\n\"x-gm-message-state\": \"ACgBeo21R9ne3c9uHltiwGg42PgNGFCyMvwnM9UuULfNdPHReSba85Y/ PB9TKK5YhnBPrXWXd3LAuBHQr6b9z/KnHbf/xOTpGYvLbUk=\",\n\"x-google-smtp-source\": \"AA6agR703pu556dgtPyaQsA/rAZTUTsqK18HMcikmoDV0t6QnH+2ghgGu7HPXJXCGfg2ztPvI+UnoGRkaNhAG+E8+3w=\",\n\"mime-version\": \"1.0\",\n\"references\": \"<2.2.2.1101002363.1740740.1662320966105@notification.tipeee.com>\",\n\"in-reply-to\": \"<2.2.2.1101002363.1740740.1662320966105@notification.tipeee.com>\",\n\"message-id\": \"<CALCaUXE7Fw+X8n4VK422Cd7x7a-q9zknwUrGDFGefYg=azSF0g@mail.gmail.com>\",\n\"content-type\": \"multipart/alternative; boundary=\"000000000000d1ad9705e7e2391c\"\"\n},\n\"from\": \"\"Thierry Tregaro | cwowd.com\" <contact.cwowd@gmail.com>\",\n\"date\": \"Mon, 5 Sep 2022 01:21:31 +0200\",\n\"subject\": \"Fwd: cwowd - Yoann vous a envoyé un Tip de 5 €\",\n\"to\": \"n8n.cwowd@gmail.com\""
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3d5ac4a5-2da6-4cca-85ae-2ae4c55131e0",
+      "name": "Set3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -1260,
+        800
+      ]
+    },
+    {
+      "parameters": {
+        "dataPropertyName": "Tableau",
+        "extractionValues": {
+          "values": [
+            {
+              "cssSelector": "div:nth-child(2)",
+              "returnValue": "html",
+              "returnArray": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a1b71cfa-d401-4c5d-a710-26b74c47291b",
+      "name": "HTML Extract",
+      "type": "n8n-nodes-base.htmlExtract",
+      "typeVersion": 1,
+      "position": [
+        -1060,
+        960
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "test parse email",
+        "message": "={{ $json[\"Tableau\"] }}",
+        "additionalFields": {}
+      },
+      "id": "21a527f8-ea6b-463b-83de-4ab2c9432b9a",
+      "name": "Gmail4",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        980
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Im my pocket !",
+        "message": "=Contrepartie : {{$node[\"Merge3\"].json[\"Montant des Tips\"]}}\nEmail tipeur : {{$node[\"Merge2\"].json[\"Email\"]}}\nPseudo : {{$node[\"Merge2\"].json[\"Identifiant\"]}}",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {}
+      },
+      "id": "cab566ab-41a1-4535-897f-e6486121e89e",
+      "name": "Gmail5",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        920,
+        340
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "let test = \"\";\n\nconst pseudo = $item(0).$node[\"HTML Extract2\"].json[\"pseudo\"];\nniveau = tableau.replace(/€.*$/,'');\n\nconst mail = $item(0).$node[\"HTML Extract2\"].json[\"mail\"];\nemail = mail[1].split(\":\")[1];\n\nreturn {\n  mailSoutien : email,\n  niveauSoutien : niveau\n};\n"
+      },
+      "id": "497da983-3189-481d-b628-58ce97fe2416",
+      "name": "Function2",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -600,
+        980
+      ]
+    },
+    {
+      "parameters": {
+        "dataPropertyName": "textHtml",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "Tableau",
+              "cssSelector": "span"
+            },
+            {
+              "key": "mail",
+              "cssSelector": "a",
+              "returnValue": "attribute",
+              "attribute": "href",
+              "returnArray": true
+            },
+            {
+              "key": "pseudo",
+              "cssSelector": "table > tbody > tr > td:nth-child(2)",
+              "returnValue": "html",
+              "returnArray": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3b5a381e-674c-49e3-a0c2-4b6c679a5b32",
+      "name": "HTML Extract 1er niveau1",
+      "type": "n8n-nodes-base.htmlExtract",
+      "typeVersion": 1,
+      "position": [
+        -1060,
+        540
+      ]
+    },
+    {
+      "parameters": {
+        "dataPropertyName": "pseudo",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "Identifiant",
+              "cssSelector": "tr:first-child"
+            },
+            {
+              "key": "Pseudo Forum"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "071be829-4c50-4adf-a14b-c65b0d5f45dc",
+      "name": "Extract pseudo1",
+      "type": "n8n-nodes-base.htmlExtract",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "let niveau = \"\";\nlet email = \"\";\n\nconst tableau = $item(0).$node[\"HTML Extract 1er niveau\"].json[\"Tableau\"];\nniveau = parseInt(tableau.replace(/€.*$/,''), 10);\n\nconst mail = $item(0).$node[\"HTML Extract 1er niveau\"].json[\"mail\"];\nemail = mail[1].split(\":\")[1];\n\nreturn {\n  Email : email,\n  \"Montant des Tips\" : niveau\n};\n"
+      },
+      "id": "47ed9fc7-3b3b-49b4-ba4d-999505b243ba",
+      "name": "Mise en formes mailSoutien et niveauSoutien1",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "application": "appX87LVPNK91hFX0",
+        "table": "tblLwIh17DMXvuYh1",
+        "options": {}
+      },
+      "id": "d47d216a-a31b-454b-b90c-533e8637157a",
+      "name": "Airtable1",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        760,
+        340
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Identifiant",
+              "value": "={{$json[\"pseudo\"][0]}}"
+            },
+            {
+              "name": "Email",
+              "value": "={{$node[\"Mise en formes mailSoutien et niveauSoutien1\"].json[\"mailSoutien\"]}}"
+            },
+            {
+              "name": "Montant des Tips",
+              "value": "={{$node[\"Mise en formes mailSoutien et niveauSoutien1\"].json[\"niveauSoutien\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "d25b9fc7-c1e0-4ee6-8a45-768bb9594270",
+      "name": "Set4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -140,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "id": "e5c80322-a391-4022-9843-7b89dd19ad1e",
+      "name": "Merge2",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        -600,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json[\"0\"][\"active\"]}}",
+              "value2": "={{true}}"
+            }
+          ]
+        }
+      },
+      "id": "05b68f69-28a4-4a2e-88de-f3d2d59f6cad",
+      "name": "IF4",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -300,
+        660
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "discourseApi",
+        "requestMethod": "PUT",
+        "url": "https://forum.cwowd.com/groups/41/members.json",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "usernames",
+              "value": "={{$node[\"Merge3\"].json[\"Pseudo Forum\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "90e8f39b-44b1-4498-b72a-570be5ad16db",
+      "name": "Ajoute au groupe Tipeurs1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        1820,
+        580
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "7",
+          "name": "Discourse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "discourseApi",
+        "url": "https://forum.cwowd.com/admin/users/list/active.json?",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "filter",
+              "value": "={{$json[\"Email\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "fd44674f-6916-405c-9dce-bcdfc21f7da4",
+      "name": "Cherche ID et pseudo à partir de mail1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -440,
+        660
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "7",
+          "name": "Discourse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Pseudo Forum",
+              "value": "={{$json[\"0\"][\"username\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4c2cad7b-1362-475a-9fb4-963c070c3584",
+      "name": "Pseudo Forum2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -40,
+        620
+      ]
+    },
+    {
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "discourseApi",
+        "url": "https://forum.cwowd.com/admin/users/list/active.json?",
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "filter",
+              "value": "={{$node[\"Merge2\"].json[\"Identifiant\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "954f5b7c-aecf-495e-9ed4-16c58df49ffb",
+      "name": "Cherche ID et pseudo à partir de identifiant1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -120,
+        780
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "7",
+          "name": "Discourse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json[\"0\"][\"active\"]}}",
+              "value2": "={{true}}"
+            }
+          ]
+        }
+      },
+      "id": "51c59d4e-97ee-4f14-97a6-3a8588c55409",
+      "name": "IF5",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        0,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "Pseudo Forum",
+              "value": "={{$json[\"0\"][\"username\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7bf81d56-8820-4854-9f57-de428844d592",
+      "name": "Pseudo Forum3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        220,
+        680
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "mergeByIndex"
+      },
+      "id": "16cd4ac0-27d7-4e91-a7a3-fb90f523e492",
+      "name": "Merge3",
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 1,
+      "position": [
+        460,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Im my pocket !",
+        "message": "=Rien trouvé dans les membres à propos de :\n\nContrepartie : {{$node[\"Merge2\"].json[\"Montant des Tips\"]}}\nEmail tipeur : {{$node[\"Merge2\"].json[\"Email\"]}}\nPseudo : {{$node[\"Merge2\"].json[\"Identifiant\"]}}",
+        "toList": [
+          "kipik.kipik@gmail.com"
+        ],
+        "additionalFields": {}
+      },
+      "id": "bac1ad91-cf84-4bde-ba51-9cfe6e1eb24e",
+      "name": "Email Pas trouvé membre1",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        440,
+        800
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "discourseApi",
+        "url": "=https://forum.cwowd.com/groups/Tipeurs/members.json",
+        "options": {
+          "fullResponse": false
+        },
+        "headerParametersUi": {
+          "parameter": [
+            {}
+          ]
+        },
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "limit",
+              "value": "100"
+            }
+          ]
+        }
+      },
+      "id": "4791aa7a-b0bf-49e1-ab69-406b9c7d1514",
+      "name": "Liste les Tipeurs ?1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        700,
+        540
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "7",
+          "name": "Discourse account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "members",
+        "options": {}
+      },
+      "id": "c251887c-ffc5-4db5-938f-dd478351e45e",
+      "name": "Item Lists1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        880,
+        760
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "username",
+              "value": "={{ $json[\"username\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": false
+        }
+      },
+      "id": "d261c519-7011-462a-a610-99b5f574dba2",
+      "name": "Set5",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1060,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"username\"]}}",
+              "operation": "contains",
+              "value2": "={{$node[\"Merge3\"].json[\"Pseudo Forum\"]}}"
+            }
+          ]
+        },
+        "combineOperation": "any"
+      },
+      "id": "1de9acd6-1c23-4640-acf1-52de5500f35a",
+      "name": "IF6",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        1020
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "var pseudo = $node[\"Merge1\"].json[\"Pseudo Forum\"];\n\nlet test = $node[\"Set2\"].json[\"username\"].includes(pseudo);\n\nreturn {\n  test\n};"
+      },
+      "id": "1f9952aa-84ce-4dc8-80fb-dc5f7fc311d5",
+      "name": "Function3",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        1400,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{ $json[\"test\"] }}",
+              "value2": "={{true}}"
+            }
+          ]
+        }
+      },
+      "id": "069abc2b-eb41-47dd-b1ad-a5f346294ea0",
+      "name": "IF7",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        1620,
+        780
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "updatedAt": "2022-11-04T00:18:45.324Z"
+}
