@@ -1,5 +1,5 @@
 {
-  "active": true,
+  "active": false,
   "connections": {
     "Switch1": {
       "main": [
@@ -1685,5 +1685,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-04T01:59:36.636Z"
+  "updatedAt": "2022-11-05T12:34:41.124Z"
 }
