@@ -41,11 +41,6 @@
             "node": "HTTP Request2",
             "type": "main",
             "index": 0
-          },
-          {
-            "node": "Set3",
-            "type": "main",
-            "index": 0
           }
         ]
       ]
@@ -126,17 +121,6 @@
         [
           {
             "node": "Set2",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Set3": {
-      "main": [
-        [
-          {
-            "node": "IF1",
             "type": "main",
             "index": 0
           }
@@ -466,7 +450,7 @@
         "subject": "Nouvelle campagne sur KS",
         "message": "=Pour valider la campagne : {{$json[\"airtable_record\"]}}\n\nNom : {{$node[\"Elimine le gras2\"].json[\"name\"]}}\nPar : {{$node[\"Elimine le gras2\"].json[\"creator\"]}}({{$node[\"Elimine le gras2\"].json[\"creator_url\"]}})\nURL : {{$node[\"Elimine le gras2\"].json[\"campaign_url\"]}}\nDeadline : {{$node[\"Elimine le gras2\"].json[\"deadline\"]}}\n\n<br>\n\n{{$node[\"Elimine le gras2\"].json[\"image_1024\"]}}\nPitch : {{$node[\"Elimine le gras2\"].json[\"blurb\"]}}",
         "toList": [
-          "kipik.kipik@gmail.com"
+          "contact.cwowd@gmail.com"
         ],
         "additionalFields": {}
       },
@@ -573,38 +557,6 @@
       "position": [
         180,
         300
-      ]
-    },
-    {
-      "parameters": {
-        "values": {
-          "string": [
-            {
-              "name": "valeur",
-              "value": "papa"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "aab40245-9a48-46de-a9cc-966b637e424e",
-      "name": "Set3",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 1,
-      "position": [
-        -500,
-        -120
-      ]
-    },
-    {
-      "parameters": {},
-      "id": "7c17fb36-0644-4402-81f6-07754881599a",
-      "name": "IF1",
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 1,
-      "position": [
-        -280,
-        -120
       ]
     },
     {
@@ -724,5 +676,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-03T17:17:35.276Z"
+  "updatedAt": "2022-11-05T18:54:58.299Z"
 }
