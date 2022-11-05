@@ -74,7 +74,7 @@
         ],
         [
           {
-            "node": "IF JDR1",
+            "node": "IF Figs",
             "type": "main",
             "index": 0
           }
@@ -92,7 +92,18 @@
         ]
       ]
     },
-    "IF JDR1": {
+    "Google Sheets2": {
+      "main": [
+        [
+          {
+            "node": "Airtable2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Figs": {
       "main": [
         [
           {
@@ -100,14 +111,32 @@
             "type": "main",
             "index": 0
           }
+        ],
+        [
+          {
+            "node": "IF Figs1",
+            "type": "main",
+            "index": 0
+          }
         ]
       ]
     },
-    "Google Sheets2": {
+    "Google Sheets3": {
       "main": [
         [
           {
-            "node": "Airtable2",
+            "node": "Airtable3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Figs1": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets3",
             "type": "main",
             "index": 0
           }
@@ -396,31 +425,6 @@
     },
     {
       "parameters": {
-        "conditions": {
-          "string": [
-            {
-              "value1": "={{$json[\"Status\"]}}",
-              "operation": "notEqual",
-              "value2": "Campagnes suivies"
-            },
-            {
-              "value1": "={{ $json[\"genre\"] }}",
-              "value2": "Figurinisme"
-            }
-          ]
-        }
-      },
-      "id": "389d6421-834d-4de4-9e82-f5dbb5b83570",
-      "name": "IF JDR1",
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 1,
-      "position": [
-        -1240,
-        1240
-      ]
-    },
-    {
-      "parameters": {
         "operation": "append",
         "sheetId": "16b5i7saYyEhRacgxKVWyVSS00T5KbtTMA2UubYN8g0s",
         "range": "A:I",
@@ -471,6 +475,109 @@
           "name": "Airtable Thierry"
         }
       }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"Status\"]}}",
+              "operation": "notEqual",
+              "value2": "Campagnes suivies"
+            },
+            {
+              "value1": "={{ $json[\"genre\"] }}",
+              "value2": "Figurinisme"
+            }
+          ]
+        }
+      },
+      "id": "389d6421-834d-4de4-9e82-f5dbb5b83570",
+      "name": "IF Figs",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1240,
+        1240
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "1Ro2dCZ78MFh9HREJNMLxyV1NwsKKlDm4gQZqKtRf2NI",
+        "range": "A:I",
+        "options": {}
+      },
+      "id": "01f5a2a3-7dd1-4ccd-a823-aeb34bf45111",
+      "name": "Google Sheets3",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        -760,
+        1400
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "application": {
+          "__rl": true,
+          "value": "appqMBlpxffjoCDno",
+          "mode": "id"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblpdlsFW8elPEBsx",
+          "mode": "id"
+        },
+        "id": "={{ $json[\"airtable_id\"] }}",
+        "options": {}
+      },
+      "id": "3ed69143-637e-468c-916a-89c693dbe108",
+      "name": "Airtable3",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        -520,
+        1400
+      ],
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json[\"Status\"]}}",
+              "operation": "notEqual",
+              "value2": "Campagnes suivies"
+            },
+            {
+              "value1": "={{ $json[\"genre\"] }}",
+              "value2": "Accessoires"
+            }
+          ]
+        }
+      },
+      "id": "46b08754-8009-473c-99ca-dc47eaca497a",
+      "name": "IF Figs1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        1420
+      ]
     }
   ],
   "pinData": {},
@@ -480,9 +587,9 @@
       "lastTimeChecked": "2022-11-02T21:51:05Z"
     },
     "node:Trigger on added Genre": {
-      "lastTimeChecked": "2022-11-04T19:57:47Z"
+      "lastTimeChecked": "2022-11-05T18:56:12Z"
     }
   },
   "tags": [],
-  "updatedAt": "2022-11-04T19:57:47.000Z"
+  "updatedAt": "2022-11-05T18:56:12.000Z"
 }
