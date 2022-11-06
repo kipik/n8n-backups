@@ -34,11 +34,6 @@
         ]
       ]
     },
-    "Airtable2": {
-      "main": [
-        []
-      ]
-    },
     "Set8": {
       "main": [
         [
@@ -81,12 +76,6 @@
             "index": 0
           }
         ]
-      ]
-    },
-    "Launched il y a moins de 20 mn ?": {
-      "main": [
-        [],
-        []
       ]
     },
     "format deadline": {
@@ -564,7 +553,7 @@
           "string": [
             {
               "name": "name",
-              "value": "Roll Player Adventures Expansion: Gulpax's Secret"
+              "value": "bloodrunes"
             }
           ]
         },
@@ -676,5 +665,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-03T01:51:36.079Z"
+  "updatedAt": "2022-11-06T22:58:49.148Z"
 }
