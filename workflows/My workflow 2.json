@@ -1,36 +1,200 @@
 {
-  "active": true,
+  "active": false,
   "connections": {
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Item Lists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists": {
+      "main": [
+        [
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Only last campaign": {
+      "main": [
+        [
+          {
+            "node": "Get its launched date",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Elimine le gras": {
+      "main": [
+        [
+          {
+            "node": "Launched il y a moins de 60 mn ?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "format deadline": {
+      "main": [
+        [
+          {
+            "node": "reversed deadline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "reversed deadline": {
+      "main": [
+        [
+          {
+            "node": "Elimine le gras",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Launched il y a moins de 60 mn ?": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Airtable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "reversed localized",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "reversed localized": {
+      "main": [
+        [
+          {
+            "node": "format deadline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Message Décideur",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Start": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "HTML Extract",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML Extract": {
+      "main": [
+        [
+          {
+            "node": "HTML Extract1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTML Extract1": {
+      "main": [
+        [
+          {
+            "node": "Set2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set2": {
+      "main": [
+        [
+          {
+            "node": "FunctionItem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
     "Start1": {
       "main": [
         [
           {
-            "node": "Set3",
+            "node": "HTTP Request3",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "IF5": {
-      "main": [
-        [
-          {
-            "node": "Pseudo Forum",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Email Pas trouvé membre1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Liste les Tipeurs ?1": {
+    "HTTP Request2": {
       "main": [
         [
           {
@@ -45,6 +209,100 @@
       "main": [
         [
           {
+            "node": "Date & Time1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Only last campaign1": {
+      "main": [
+        [
+          {
+            "node": "Get its launched date1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Elimine le gras1": {
+      "main": [
+        [
+          {
+            "node": "Launched il y a moins de 60 mn ?1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "reversed localized1": {
+      "main": [
+        [
+          {
+            "node": "format deadline1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "format deadline1": {
+      "main": [
+        [
+          {
+            "node": "reversed deadline1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "reversed deadline1": {
+      "main": [
+        [
+          {
+            "node": "Elimine le gras1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Launched il y a moins de 60 mn ?1": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Airtable1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time1": {
+      "main": [
+        [
+          {
+            "node": "reversed localized1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable1": {
+      "main": [
+        [
+          {
             "node": "Set5",
             "type": "main",
             "index": 0
@@ -56,150 +314,51 @@
       "main": [
         [
           {
-            "node": "Function3",
+            "node": "Message Décideur1",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Function3": {
+    "HTTP Request3": {
       "main": [
         [
           {
-            "node": "IF7",
+            "node": "HTML Extract3",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Gmail Trigger": {
+    "HTML Extract3": {
       "main": [
         [
           {
-            "node": "HTML 1st pass",
+            "node": "HTML Extract4",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Extract Identifiant": {
+    "HTML Extract4": {
       "main": [
         [
           {
-            "node": "Merge",
+            "node": "Set6",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Extrait mail & Tip": {
+    "Set6": {
       "main": [
         [
           {
-            "node": "Merge",
-            "type": "main",
-            "index": 1
-          }
-        ]
-      ]
-    },
-    "Active Member": {
-      "main": [
-        [
-          {
-            "node": "Pseudo Forum2",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Cherche ID à partir de identifiant",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Cherche ID à partir de mail": {
-      "main": [
-        [
-          {
-            "node": "Active Member",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Merge": {
-      "main": [
-        [
-          {
-            "node": "Cherche ID à partir de mail",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "HTML 1st pass": {
-      "main": [
-        [
-          {
-            "node": "Extract Identifiant",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Extrait mail & Tip",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Pseudo Forum2": {
-      "main": [
-        [
-          {
-            "node": "Mail trouvé",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Ajoute au groupe Tipeurs1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Cherche ID à partir de identifiant": {
-      "main": [
-        [
-          {
-            "node": "IF5",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Pseudo Forum": {
-      "main": [
-        [
-          {
-            "node": "Mail trouvé1",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Ajoute au groupe Tipeurs",
+            "node": "FunctionItem1",
             "type": "main",
             "index": 0
           }
@@ -207,50 +366,125 @@
       ]
     }
   },
-  "createdAt": "2022-11-04T01:24:01.697Z",
-  "id": 19,
+  "createdAt": "2022-11-05T23:15:34.323Z",
+  "id": 21,
   "name": "My workflow 2",
   "nodes": [
     {
-      "parameters": {
-        "pollTimes": {
-          "item": [
-            {
-              "mode": "everyHour"
-            }
-          ]
-        },
-        "simple": false,
-        "filters": {
-          "q": "vous+a+envoyé+un+Tip",
-          "sender": "noreply@notification.tipeee.com"
-        },
-        "options": {}
-      },
-      "id": "33f77149-2721-4fe1-9ce1-623293f0bfa5",
-      "name": "Gmail Trigger",
-      "type": "n8n-nodes-base.gmailTrigger",
-      "typeVersion": 1,
-      "position": [
-        -1420,
-        320
-      ],
-      "credentials": {
-        "gmailOAuth2": {
-          "id": "11",
-          "name": "Gmail n8n"
-        }
-      }
-    },
-    {
       "parameters": {},
-      "id": "199fd6e2-9393-4532-b470-97adacabb369",
+      "id": "2d7a882c-f0c5-4c7d-95ad-33f55d4c597f",
       "name": "Start1",
       "type": "n8n-nodes-base.start",
       "typeVersion": 1,
       "position": [
-        -1420,
-        840
+        -1520,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://gamefound.com/",
+        "allowUnauthorizedCerts": true,
+        "responseFormat": "string",
+        "options": {}
+      },
+      "id": "978328b5-2c5d-449e-b326-60df4ff1612b",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -1020,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "projects",
+        "options": {
+          "disableDotNotation": true
+        }
+      },
+      "id": "78ab1be5-d1f8-4206-abd0-31f31122d1a5",
+      "name": "Item Lists1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "1SBZkjpUIYF8ay5ni9Hfz_5G3IeZOgolaPNpy6P2c2KU",
+        "range": "A:J",
+        "options": {
+          "usePathForKeyRow": true
+        }
+      },
+      "id": "3924af01-c7b7-4862-80da-5e460f0f264c",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        460,
+        620
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "number": [
+            {
+              "name": "ref",
+              "value": "={{$node[\"Get its launched date1\"].json[\"lastLaunched\"]}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "3dbe0497-ea0b-435e-9572-ef30de7946db",
+      "name": "Set4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        40,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "command": "mkdir -p  /home/node/.cache/scrapper/"
+      },
+      "id": "fdb973e4-e3b7-45dc-88a7-a7585829e1ce",
+      "name": "Execute Command1",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        220,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit"
+      },
+      "id": "1b054bbb-a55f-4f43-a376-de2cd1cb7a91",
+      "name": "Only last campaign1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        -560,
+        1160
       ]
     },
     {
@@ -259,37 +493,301 @@
         "values": {
           "string": [
             {
-              "name": "=textHtml",
-              "value": "=<html> <body> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\" style=\"background-color:#dce0e1\"> <tbody> <tr> <td style=\"opacity:0;height:50px;\">Nouveau Tip de 20 € </td> </tr> <tr> <td style=\"text-align:center\"> <img src=\"https://api.tipeee.com/img/mails/tipeee-logo.png\" alt=\"Tipeee\" height=\"35\"> </td> </tr> <tr> <td style=\"height: 35px;\"></td> </tr> <tr> <td> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" style=\"width:540px;border-collapse:separate;\"> <tbody> <tr> <td style=\"height:160px;text-align:center;\"> <div style=\"height:80px;\"> <img src=\"https://www.tipeeestream.com/cdn-cgi/image/onerror=redirect,width=400,height=400,fit=cover/https://api.tipeee.com/uploads/media/image/jpeg/20220905/202209056315e82d8543f.jpeg\" alt=\"Tipeee\" width=\"160\" height=\"160\" style=\"border-radius:50%;\"> </div> <div style=\"height:80px;background-color:#ffffff;\"> </div> </td> </tr> <tr> <td> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" style='width:540px;border-collapse:separate;background-color:#ffffff;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Roboto\",\"Oxygen\",\"Ubuntu\",\"Cantarell\",\"Fira Sans\",\"Droid Sans\",\"Helvetica Neue\",sans-serif;'> <tr> <td colspan=\"3\" style=\"height:15px\"></td> </tr> <tr> <td width=\"35\"></td> <td> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" width=\"100%\"> <tbody> <tr> <td style='margin:0;padding-bottom:0;line-height: 1.4;font-size:30px;font-weight:700;color:#f21a2f;text-align:center;text-decoration:none;'> gatorette </td> </tr> <tr> <td style=\"height:15px\"></td> </tr> <tr> <td style=\"margin:0;padding-bottom:0;line-height: 1.2;font-size:32px;font-weight:500;color:#1b1b1b;text-align:center;text-decoration:none;\"> Nouveau Tip de<br> <span style=\"color:#f21a2f;font-weight:700;\"> 20 € </span> </td> </tr> <tr> <td style=\"height:25px\"></td> </tr> <tr> <td style=\"margin:0;padding-bottom:0;line-height: 1.2;font-size:16px;font-weight:400;color:#1b1b1b;text-align:center;text-decoration:none;\"><strong>Contreparties(s)&nbsp;: </strong><span style=\"color:#f21a2f;\">Mon hewo !!!</span></td> </tr> <tr> <td style=\"height:25px\"></td> </tr> <tr> <td style=\"margin:0;padding-bottom:0;line-height: 1.2;font-size:16px;font-weight:400;color:#1b1b1b;text-align:center;text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/message.png\" style=\"vertical-align:middle;\"> <a style=\"color:#3f75ff;font-weight:700;\" href=\"https://www.tipeee.com/inbox/new-thread/?user=1853334\">Envoyer un message</a> </td> </tr> <tr> <td style=\"height:5px\"></td> </tr> <tr> <td style=\"margin:0;padding-bottom:0;line-height: 1.2;font-size:16px;font-weight:400;color:#1b1b1b;text-align:center;text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/enveloppe.png\" style=\"vertical-align:middle;\"> <a style=\"color:#3f75ff;font-weight:700;\" href=\"mailto:gatorette@free.fr\">Contacter par e-mail</a> </td> </tr> </tbody> </table> </td> <td width=\"35\"></td> </tr> <tr> <td colspan=\"3\" style=\"height:30px;\"></td> </tr> </table> </td> </tr> <tr> <td style=\"height:35px\"></td> </tr> <tr> <table border=\"0\" cellspacing=\"0\" cellpadding=\"0\" align=\"center\" style='width:540px;border-collapse:separate;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",\"Roboto\",\"Oxygen\",\"Ubuntu\",\"Cantarell\",\"Fira Sans\",\"Droid Sans\",\"Helvetica Neue\",sans-serif;'> <tbody> <tr> <td style=\"text-align:center;color:#a5aaad;font-size:15px;font-weight:bold;\"> Suivez Tipeee sur : </td> </tr> <tr> <td style=\"height:10px\"></td> </tr> <tr> <td style=\"text-align: center;\"> <a href=\"https://www.facebook.com/TipeeeOfficiel\" style=\"margin-right: 10px; text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/facebook.png\" alt=\"Facebook\" width=\"39\"> </a> <a href=\"https://twitter.com/tipeee_officiel\" style=\"margin-right: 10px; text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/twitter.png\" alt=\"Twitter\" width=\"39\"> </a> <a href=\"https://www.youtube.com/channel/UCLJadsl33hJwT9jtzftRDRw\" style=\"text-decoration:none; margin-right: 10px;\"> <img src=\"https://api.tipeee.com/img/mails/youtube.png\" alt=\"YouTube\" width=\"39\"> </a> <a href=\"https://www.instagram.com/tipeee_officiel/\" style=\"text-decoration:none;\"> <img src=\"https://api.tipeee.com/img/mails/instagram.png\" alt=\"Instagram\" width=\"39\"> </a> </td> </tr> <tr> <td style=\"height:10px\"></td> </tr> <tr> <td style=\"text-align: center;color:#a5aaad;font-size:13px;font-weight:bold;\"> Pour gérer vos e-mails de notification, rendez-vous dans<br>les <a href=\"https://www.tipeee.com/account/notifications\" style=\"color:#a5aaad;font-weight:bold;text-decoration:underline;\">paramètres de votre compte</a>. </td> </tr> <tr> <td style=\"height:35px\"></td> </tr> </tbody> </table> </td> </tbody> </table> </td> </tr> <tbody> </table> <img src=\"http://tracker.nmp1.com/WBS?RAUihPGri0uC8qaJVGNXBfDwSqSZmVneI-KjDzj31qHVJsvUDbzyO8All3kdo4wrnjwJtgZEEXKohWC-DS-cbA/G2auLBXa31K4jZ4QdxWO0w.gif\" border=\"0\" alt=\"\" width=\"1\" height=\"1\" /></body> </html>\"textPlain\": \"Thierry TREGARO *Administrateur* cwowd - le participatif par ses utilisateurs p: 06 01 330 313 w: www.cwowd.com e: contact.cwowd@gmail.com <https://www.facebook.com/cwowdcom/> <https://twitter.com/cwowdRedac/> Retrouvez toutes les semaines toute l'actualité du participatif ludique. <https://www.cwowd.com/jeux-en-financement-participatif-la-revue-de-la-semaine-2020629/> ---------- Forwarded message --------- De : Tipeee <noreply@notification.tipeee.com> Date: dim. 4 sept. 2022 à 21:49 Subject: cwowd - Yoann vous a envoyé un Tip de 5 € To: kipik.kipik@gmail.com <kipik.kipik@gmail.com> Nouveau Tip de 5 € [image: Tipeee] [image: Tipeee] Yoann Nouveau Tip de 5 € *Contreparties(s) : *CONTWOL THE CWOWD ! Envoyer un message <https://www.tipeee.com/inbox/new-thread/?user=696987> Contacter par e-mail <yoann.terradura@gmail.com> Suivez Tipeee sur : [image: Facebook] <https://www.facebook.com/TipeeeOfficiel> [image: Twitter] <https://twitter.com/tipeee_officiel> [image: YouTube] <https://www.youtube.com/channel/UCLJadsl33hJwT9jtzftRDRw> [image: Instagram] <https://www.instagram.com/tipeee_officiel/> Pour gérer vos e-mails de notification, rendez-vous dans les paramètres de votre compte <https://www.tipeee.com/account/notifications>. \",\n\"metadata\": {\n\"delivered-to\": \"n8n.cwowd@gmail.com\",\n\"received\": \"by 2002:a05:6a20:41e:b0:92:7589:9d4d with SMTP id a30csp3205207pza; Sun, 4 Sep 2022 16:21:43 -0700 (PDT)\",\n\"x-received\": \"by 2002:a05:6512:1527:b0:48b:99:f3ff with SMTP id bq39-20020a056512152700b0048b0099f3ffmr15391069lfb.81.1662333703155; Sun, 04 Sep 2022 16:21:43 -0700 (PDT)\",\n\"arc-seal\": \"i=1; a=rsa-sha256; t=1662333703; cv=none; d=google.com; s=arc-20160816; b=yqDocgL2HfgRrUSsaKfkUoiSrxQSrti+u1GTIKOCw6BIt/iq1W+YNbO0Pwq8l6Sz99 SzhWN6VqiztEGF9noCkP8jvqCG0CZZB50x/Z7jtD1XVI6xDZpjR44G30DP0kvygEjU+K TIkWWmtovpmQOx1fyO/rpYIm2VRBesh78duqpj+2IsF8eCpFCrkk80U7bM53sUYiRJrK hLbQdLwDX767Af3JuCT2R86grbZusKbeaaBZ8ORCxLU29MzL6MQ4NALu80hPcEgPVDLl P42XQ1OJ+msc71ZF17SumHUD7Xg8Zv2kTmdx0e5sr40yXQyrJo1OKfZVu5hNsMQbix1K ZyHw==\",\n\"arc-message-signature\": \"i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :dkim-signature; bh=gWFDnVkqd97wiZv1U7Ak6qi5BVRhir+KgMOg+0UahCw=; b=CMcK/aSd9/kRfUJMfxL3T5laYrjbE5JstlkOiwXDse+fnp0OZbth+s5CKO9Vq8hrfc 3L3r28nYQWdvP20gXDg1yRv+E4JF8tOfjVHFQeLyqRScBU95Q1m7ZS7oTS8FXx6vyBIy 8BxLrFlEaAGHLwzY0tqelkQJMB0/UgRnxheE6byp/ayR7FqpiKdVaVNdvbA1SHkUjUhN ajr7tObRkVVo98fOwA5jnMmnPeaNjS6KG4mrR+DoYPnpMcK19jdV6OgtbxQfghby3igt Y1r7LE+6AL930VyiYd/Aur8qLvTZbqhV4fD3YELuTKNyEp+P1TiGXUVIcdggO4UfIWI0 QZ4Q==\",\n\"arc-authentication-results\": \"i=1; mx.google.com; dkim=pass header.i=@gmail.com header.s=20210112 header.b=O1YMLtNb; spf=pass (google.com: domain of kipik.kipik@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=kipik.kipik@gmail.com; dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com\",\n\"return-path\": \"<kipik.kipik@gmail.com>\",\n\"received-spf\": \"pass (google.com: domain of kipik.kipik@gmail.com designates 209.85.220.41 as permitted sender) client-ip=209.85.220.41;\",\n\"authentication-results\": \"mx.google.com; dkim=pass header.i=@gmail.com header.s=20210112 header.b=O1YMLtNb; spf=pass (google.com: domain of kipik.kipik@gmail.com designates 209.85.220.41 as permitted sender) smtp.mailfrom=kipik.kipik@gmail.com; dmarc=pass (p=NONE sp=QUARANTINE dis=NONE) header.from=gmail.com\",\n\"dkim-signature\": \"v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20210112; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :from:to:cc:subject:date; bh=gWFDnVkqd97wiZv1U7Ak6qi5BVRhir+KgMOg+0UahCw=; b=O1YMLtNbElVo1nXDZVCmrqneP6gkH95W2z4X+Xd+ET2eXXm5etH191b26RVwriIwWL Thzt4BxI1ARiH9/jds06/jLhsSREFgyIzxwuMwoVmAEaX66KrGbIK450UJvR1SizvyWa 52SAeM+LSL0rkfWu6AEVCe56HpH77lziVlcssnIzGGQuHdJNuneATQYdPYjUtsy/bp8z vytV8FcfybzvwQ8joai+PLTR61jBGVw6zCzFBsWB3NtiKHpkljKbOROql1L6qY5ZgfwK ypRlOjMzzj4VrCCyFUgYg3G/hmrThu8V67mOjEzbeOS3LZFCF9bZMUNlqTEim6g5lIem OsPw==\",\n\"x-google-dkim-signature\": \"v=1; a=rsa-sha256; c=relaxed/relaxed; d=1e100.net; s=20210112; h=to:subject:message-id:date:from:in-reply-to:references:mime-version :x-gm-message-state:from:to:cc:subject:date; bh=gWFDnVkqd97wiZv1U7Ak6qi5BVRhir+KgMOg+0UahCw=; b=wQjX9B2to2KhAYWr3C6seS4/Tu/s9ACIFeqLmUzyRopyPiRZIipI7+I0bm70axR8Nz QPmR8Zoaddbm62zWElcMfNoRmZxGj3ijmGDrB6NIZPKddyG//Eswmdjch3YYEFlt+iuR JGpHHU+wgLwV0Nl56OtPLj+Ehm/hlGSPL+XI1QHmtnggss50gZdwmSw6+u/xllPTIKea 3idvqrVY7sISuIPTqk3H8dx5PL/hgHZEzLIhx7u8NpvU6/2X/d5DwxODGrBPht0YQoOI Q7ox1VmsUgzd3I9LGUUlJa2IBPu7xyZM3sLvRQ3RWKB5bJkzzesjCaK5nHLvlYCECFMt jkgw==\",\n\"x-gm-message-state\": \"ACgBeo21R9ne3c9uHltiwGg42PgNGFCyMvwnM9UuULfNdPHReSba85Y/ PB9TKK5YhnBPrXWXd3LAuBHQr6b9z/KnHbf/xOTpGYvLbUk=\",\n\"x-google-smtp-source\": \"AA6agR703pu556dgtPyaQsA/rAZTUTsqK18HMcikmoDV0t6QnH+2ghgGu7HPXJXCGfg2ztPvI+UnoGRkaNhAG+E8+3w=\",\n\"mime-version\": \"1.0\",\n\"references\": \"<2.2.2.1101002363.1740740.1662320966105@notification.tipeee.com>\",\n\"in-reply-to\": \"<2.2.2.1101002363.1740740.1662320966105@notification.tipeee.com>\",\n\"message-id\": \"<CALCaUXE7Fw+X8n4VK422Cd7x7a-q9zknwUrGDFGefYg=azSF0g@mail.gmail.com>\",\n\"content-type\": \"multipart/alternative; boundary=\"000000000000d1ad9705e7e2391c\"\"\n},\n\"from\": \"\"Thierry Tregaro | cwowd.com\" <contact.cwowd@gmail.com>\",\n\"date\": \"Mon, 5 Sep 2022 01:21:31 +0200\",\n\"subject\": \"Fwd: cwowd - Yoann vous a envoyé un Tip de 5 €\",\n\"to\": \"n8n.cwowd@gmail.com\""
+              "name": "plateforme_id",
+              "value": "={{ $json[\"id\"] }}"
+            },
+            {
+              "name": "name",
+              "value": "={{$json[\"name\"]}}"
+            },
+            {
+              "name": "campaign_url",
+              "value": "={{$json[\"urls\"][\"web\"][\"project\"]}}"
+            },
+            {
+              "name": "blurb",
+              "value": "={{ $json[\"blurb\"] }}"
+            },
+            {
+              "name": "launched_at",
+              "value": "={{$json[\"launched_at_unix\"]}}"
+            },
+            {
+              "name": "deadline",
+              "value": "={{$json[\"deadline_formated\"]}}"
+            },
+            {
+              "name": "creator",
+              "value": "={{$json[\"creator\"][\"name\"]}}"
+            },
+            {
+              "name": "creator_url",
+              "value": "={{$json[\"creator\"][\"urls\"][\"web\"][\"user\"]}}"
+            },
+            {
+              "name": "creator_api",
+              "value": "={{$json[\"creator\"][\"urls\"][\"api\"][\"user\"]}}"
+            },
+            {
+              "name": "image_1024",
+              "value": "={{$json[\"photo\"][\"1024x576\"]}}"
+            },
+            {
+              "name": "launched_at_formated",
+              "value": "={{ $json[\"launched_at\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "c287237e-0c42-454c-8280-f5f7f82546e1",
+      "name": "Elimine le gras1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -20,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "number": [
+            {
+              "name": "lastLaunched",
+              "value": "={{ $json[\"launched_at\"] }}"
             }
           ]
         },
         "options": {}
       },
-      "id": "152753c1-48cb-4868-932a-52f1a44e64b3",
-      "name": "Set3",
+      "id": "3dd2a284-d1db-4b1b-a4bf-8d28ff82125b",
+      "name": "Get its launched date1",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        -1220,
-        840
+        -360,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"launched_at\"] }}",
+        "dataPropertyName": "launched_at_formated",
+        "custom": true,
+        "toFormat": "YYYY-MM-DD H:mm",
+        "options": {
+          "fromFormat": "X",
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "1a7e996c-fa40-48c6-8e8c-433df5e151d5",
+      "name": "format launched date1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{$json[\"launched_at\"]}}",
+        "dataPropertyName": "launched_at_unix",
+        "toFormat": "X",
+        "options": {}
+      },
+      "id": "b9dc8823-0b25-4896-a117-251d7d9bcd67",
+      "name": "reversed localized1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -500,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"deadline\"] }}",
+        "dataPropertyName": "deadline_formated",
+        "custom": true,
+        "toFormat": "YYYY-MM-DD H:mm",
+        "options": {
+          "fromFormat": "X",
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "fbcd8e82-b447-437c-a774-74505aad0fe4",
+      "name": "format deadline1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"deadline_formated\"] }}",
+        "dataPropertyName": "deadline_local",
+        "toFormat": "X",
+        "options": {}
+      },
+      "id": "0a735c66-80e7-4246-98aa-ef97e5ace4a8",
+      "name": "reversed deadline1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "dateTime": [
+            {
+              "value1": "={{Date.now()}}",
+              "value2": "={{$json[\"launched_at_formated\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "8934d2cd-6dcd-402e-87b8-ffae14fc6756",
+      "name": "Launched il y a moins de 60 mn ?1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        160,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 15
+            },
+            {
+              "mode": "everyHour",
+              "minute": 45
+            }
+          ]
+        }
+      },
+      "id": "01933389-a721-4045-853c-a15d3b09a8e8",
+      "name": "Cron1",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [
+        -1540,
+        560
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "La requête http fournit aussi un champ status et date de changement de status.\n\nPour suivre l'évolution récente ?"
+      },
+      "id": "15e3722b-c236-4a9e-9e04-05d1e00dcc2a",
+      "name": "Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1380,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "number": [
+            {
+              "name": "actual_time",
+              "value": "={{Date.now()}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": false
+        }
+      },
+      "id": "4b8277c7-b159-47a3-a37d-a810d70e3e2e",
+      "name": "Set actual time1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -1060,
+        1160
+      ],
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"actual_plus_60_minutes\"] }}",
+        "dataPropertyName": "actual_formated",
+        "custom": true,
+        "toFormat": "YYYY-MM-DD H:mm",
+        "options": {
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "971df947-de1a-45b6-a201-fb8474903c50",
+      "name": "format actual date1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -780,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "action": "calculate",
+        "value": "={{ $json[\"launched_at\"] }}",
+        "duration": 30,
+        "timeUnit": "minutes",
+        "dataPropertyName": "launched_at",
+        "options": {
+          "fromFormat": "X"
+        }
+      },
+      "id": "d1494cf3-9907-4f78-9f91-3ba636621df6",
+      "name": "Date & Time1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        560
       ]
     },
     {
       "parameters": {
         "operation": "append",
-        "application": "appX87LVPNK91hFX0",
-        "table": "tblLwIh17DMXvuYh1",
-        "options": {}
+        "application": "appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "options": {
+          "typecast": true
+        }
       },
-      "id": "a00ed94e-9920-4cec-8fc7-45b82a559356",
+      "id": "6ae3aa39-8152-4e0d-968a-ca9218d30d6f",
       "name": "Airtable1",
       "type": "n8n-nodes-base.airtable",
       "typeVersion": 1,
       "position": [
-        1020,
-        640
+        460,
+        460
       ],
+      "alwaysOutputData": true,
       "credentials": {
         "airtableApi": {
           "id": "2",
@@ -299,161 +797,11 @@
     },
     {
       "parameters": {
-        "authentication": "predefinedCredentialType",
-        "nodeCredentialType": "discourseApi",
-        "requestMethod": "PUT",
-        "url": "https://forum.cwowd.com/groups/41/members.json",
-        "options": {},
-        "queryParametersUi": {
-          "parameter": [
-            {
-              "name": "usernames",
-              "value": "={{$json[\"Pseudo Forum\"]}}"
-            }
-          ]
-        }
-      },
-      "id": "1674a3f3-9a00-4886-90f8-d0d8ab42eec2",
-      "name": "Ajoute au groupe Tipeurs1",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 2,
-      "position": [
-        260,
-        240
-      ],
-      "credentials": {
-        "discourseApi": {
-          "id": "8",
-          "name": "Discourse n8n"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "keepOnlySet": true,
         "values": {
           "string": [
             {
-              "name": "Pseudo Forum",
-              "value": "={{$json[\"0\"][\"username\"]}}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "3f15e79e-b7d3-434e-a366-8e318a80807a",
-      "name": "Pseudo Forum2",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 1,
-      "position": [
-        60,
-        140
-      ]
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "boolean": [
-            {
-              "value1": "={{$json[\"0\"][\"active\"]}}",
-              "value2": "={{true}}"
-            }
-          ]
-        }
-      },
-      "id": "3e0d4681-e8f7-4f42-9575-31f62d7de3c1",
-      "name": "IF5",
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 1,
-      "position": [
-        260,
-        500
-      ]
-    },
-    {
-      "parameters": {
-        "resource": "message",
-        "subject": "Bienfaiteur introuvable",
-        "message": "=Rien trouvé dans les membres à propos de :\n\nContrepartie : {{$node[\"Merge\"].json[\"Montant des Tips\"]}}\nEmail tipeur : {{$node[\"Merge\"].json[\"Email\"]}}\nPseudo : {{$node[\"Merge\"].json[\"Identifiant\"]}}",
-        "toList": [
-          "kipik.kipik@gmail.com"
-        ],
-        "additionalFields": {}
-      },
-      "id": "40bc13b1-943a-4504-aaa6-b867bde1e791",
-      "name": "Email Pas trouvé membre1",
-      "type": "n8n-nodes-base.gmail",
-      "typeVersion": 1,
-      "position": [
-        480,
-        600
-      ],
-      "credentials": {
-        "gmailOAuth2": {
-          "id": "11",
-          "name": "Gmail n8n"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "authentication": "predefinedCredentialType",
-        "nodeCredentialType": "discourseApi",
-        "url": "=https://forum.cwowd.com/groups/Tipeurs/members.json",
-        "options": {
-          "fullResponse": false
-        },
-        "headerParametersUi": {
-          "parameter": [
-            {}
-          ]
-        },
-        "queryParametersUi": {
-          "parameter": [
-            {
-              "name": "limit",
-              "value": "100"
-            }
-          ]
-        }
-      },
-      "id": "b5474558-4762-44b5-9cae-15ecfdec9e48",
-      "name": "Liste les Tipeurs ?1",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 2,
-      "position": [
-        760,
-        840
-      ],
-      "credentials": {
-        "discourseApi": {
-          "id": "7",
-          "name": "Discourse account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "fieldToSplitOut": "members",
-        "options": {}
-      },
-      "id": "f30e9074-8d71-4e89-b8e8-d7d0d79e9502",
-      "name": "Item Lists1",
-      "type": "n8n-nodes-base.itemLists",
-      "typeVersion": 1,
-      "position": [
-        920,
-        800
-      ]
-    },
-    {
-      "parameters": {
-        "keepOnlySet": true,
-        "values": {
-          "string": [
-            {
-              "name": "username",
-              "value": "={{ $json[\"username\"] }}"
+              "name": "airtable_record",
+              "value": "=https://airtable.com/appqMBlpxffjoCDno/pagGtwtetW2boCXHL?U3gJN={{$json[\"id\"]}}"
             }
           ]
         },
@@ -461,200 +809,98 @@
           "dotNotation": false
         }
       },
-      "id": "f0518931-516d-40a6-9134-a248e7da2762",
+      "id": "304edadc-ece5-4912-8a21-25385d7e5ced",
       "name": "Set5",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1100,
-        820
+        620,
+        460
       ]
     },
     {
       "parameters": {
-        "conditions": {
-          "string": [
-            {
-              "value1": "={{$json[\"username\"]}}",
-              "operation": "contains",
-              "value2": "={{$node[\"Merge3\"].json[\"Pseudo Forum\"]}}"
-            }
-          ]
-        },
-        "combineOperation": "any"
+        "resource": "message",
+        "subject": "Nouvelle campagne sur KS",
+        "message": "=Pour valider la campagne : {{$json[\"airtable_record\"]}}\n\nNom : {{$node[\"Elimine le gras1\"].json[\"name\"]}}\nPar : {{$node[\"Elimine le gras1\"].json[\"creator\"]}}({{$node[\"Elimine le gras1\"].json[\"creator_url\"]}})\nURL : {{$node[\"Elimine le gras1\"].json[\"campaign_url\"]}}\nDeadline : {{$node[\"Elimine le gras1\"].json[\"deadline\"]}}\n\n<br>\n\n{{$node[\"Elimine le gras1\"].json[\"image_1024\"]}}\nPitch : {{$node[\"Elimine le gras1\"].json[\"blurb\"]}}",
+        "toList": [
+          "contact.cwowd@gmail.com"
+        ],
+        "additionalFields": {}
       },
-      "id": "f7fa7114-1048-4b10-a591-89f92e743aae",
-      "name": "IF6",
-      "type": "n8n-nodes-base.if",
+      "id": "0512129d-88b9-4d18-9cc1-9b387b03e40b",
+      "name": "Message Décideur1",
+      "type": "n8n-nodes-base.gmail",
       "typeVersion": 1,
       "position": [
-        1440,
-        1060
-      ]
-    },
-    {
-      "parameters": {
-        "functionCode": "var pseudo = $node[\"Merge1\"].json[\"Pseudo Forum\"];\n\nlet test = $node[\"Set2\"].json[\"username\"].includes(pseudo);\n\nreturn {\n  test\n};"
-      },
-      "id": "078300b0-c9c6-48ad-ae42-13247bc81a28",
-      "name": "Function3",
-      "type": "n8n-nodes-base.function",
-      "typeVersion": 1,
-      "position": [
-        1440,
-        820
-      ]
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "boolean": [
-            {
-              "value1": "={{ $json[\"test\"] }}",
-              "value2": "={{true}}"
-            }
-          ]
-        }
-      },
-      "id": "429e4a84-ebaa-4c89-b765-9a93c2d160e6",
-      "name": "IF7",
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 1,
-      "position": [
-        1660,
-        820
-      ]
-    },
-    {
-      "parameters": {
-        "dataPropertyName": "pseudo",
-        "extractionValues": {
-          "values": [
-            {
-              "key": "Identifiant",
-              "cssSelector": "tr:first-child"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "71d942cf-71d9-4049-994d-e99234ca8c9c",
-      "name": "Extract Identifiant",
-      "type": "n8n-nodes-base.htmlExtract",
-      "typeVersion": 1,
-      "position": [
-        -880,
-        220
-      ]
-    },
-    {
-      "parameters": {
-        "keepOnlySet": true,
-        "values": {
-          "string": [
-            {
-              "name": "email",
-              "value": "={{$json[\"mail\"][1].split(':')[1]}}"
-            },
-            {
-              "name": "soutien",
-              "value": "={{$json[\"Tableau\"].split(\"€\")[0]}}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "id": "18c088d2-f3ba-490e-934f-2f5601a809d6",
-      "name": "Extrait mail & Tip",
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 1,
-      "position": [
-        -880,
-        440
-      ]
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "boolean": [
-            {
-              "value1": "={{$json[\"0\"][\"active\"]}}",
-              "value2": "={{true}}"
-            }
-          ]
-        }
-      },
-      "id": "3412212f-e242-4178-8326-632654510c9f",
-      "name": "Active Member",
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 1,
-      "position": [
-        -200,
-        320
-      ]
-    },
-    {
-      "parameters": {
-        "authentication": "predefinedCredentialType",
-        "nodeCredentialType": "discourseApi",
-        "url": "https://forum.cwowd.com/admin/users/list/active.json?",
-        "options": {},
-        "queryParametersUi": {
-          "parameter": [
-            {
-              "name": "filter",
-              "value": "={{$json[\"email\"]}}"
-            }
-          ]
-        }
-      },
-      "id": "7e47dcc5-6e0b-4d9e-b582-09692a04856c",
-      "name": "Cherche ID à partir de mail",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 2,
-      "position": [
-        -400,
-        320
+        800,
+        460
       ],
       "credentials": {
-        "discourseApi": {
-          "id": "7",
-          "name": "Discourse account"
+        "gmailOAuth2": {
+          "id": "1",
+          "name": "Gmail account"
         }
       }
     },
     {
       "parameters": {
-        "mode": "mergeByIndex"
+        "url": "https://gamefound.com/projects/search?ProjectPhaseSearchTypes=Crowdfunding",
+        "allowUnauthorizedCerts": true,
+        "responseFormat": "string",
+        "options": {
+          "fullResponse": false,
+          "followAllRedirects": false,
+          "useQueryString": false
+        },
+        "queryParametersUi": {
+          "parameter": [
+            {}
+          ]
+        }
       },
-      "id": "17e5ca86-68fb-4f66-94ec-25a97821afd5",
-      "name": "Merge",
-      "type": "n8n-nodes-base.merge",
-      "typeVersion": 1,
+      "id": "6e1a1f74-0729-4fd3-a785-adc7f5fe1513",
+      "name": "HTTP Request3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
       "position": [
-        -620,
-        320
+        -1020,
+        780
       ]
     },
     {
       "parameters": {
-        "dataPropertyName": "html",
         "extractionValues": {
           "values": [
             {
-              "key": "Tableau",
-              "cssSelector": "span"
-            },
-            {
-              "key": "mail",
-              "cssSelector": "a",
-              "returnValue": "attribute",
-              "attribute": "href",
+              "key": "projects",
+              "cssSelector": "=body > div.gfu-layout.js-layout > div.gfu-layout__content",
+              "returnValue": "html",
               "returnArray": true
-            },
+            }
+          ]
+        },
+        "options": {
+          "trimValues": false
+        }
+      },
+      "id": "785504af-e861-4f9e-9ce3-f9a1cd316d3e",
+      "name": "HTML Extract3",
+      "type": "n8n-nodes-base.htmlExtract",
+      "typeVersion": 1,
+      "position": [
+        -800,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "dataPropertyName": "projects",
+        "extractionValues": {
+          "values": [
             {
-              "key": "pseudo",
-              "cssSelector": "table > tbody > tr > td:nth-child(2)",
+              "key": "scriptless",
+              "cssSelector": "script",
               "returnValue": "html",
               "returnArray": true
             }
@@ -662,100 +908,36 @@
         },
         "options": {}
       },
-      "id": "49b928b3-5be7-478b-b47f-d56e5b8aefdd",
-      "name": "HTML 1st pass",
+      "id": "de1446af-e677-4b4e-9471-1b80c4897dd9",
+      "name": "HTML Extract4",
       "type": "n8n-nodes-base.htmlExtract",
       "typeVersion": 1,
       "position": [
-        -1160,
-        320
+        -580,
+        780
       ]
     },
     {
       "parameters": {
-        "resource": "message",
-        "subject": "Im my pocket !",
-        "message": "=Contrepartie : {{$node[\"Merge\"].json[\"soutien\"]}}€\nEmail tipeur : {{$node[\"Merge\"].json[\"email\"]}}\nPseudo : {{$json[\"Pseudo Forum\"]}} (Identifiant Tipeee : {{$node[\"Merge\"].json[\"Identifiant\"]}} )",
-        "toList": [
-          "kipik.kipik@gmail.com"
-        ],
-        "additionalFields": {}
+        "dataPropertyName": "liste",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "projets",
+              "cssSelector": "projects"
+            }
+          ]
+        },
+        "options": {}
       },
-      "id": "7ce692fe-1a74-46df-807d-24c5e1a8c983",
-      "name": "Mail trouvé",
-      "type": "n8n-nodes-base.gmail",
+      "id": "341ed572-56fe-4360-b009-733c0925aa60",
+      "name": "HTML Extract5",
+      "type": "n8n-nodes-base.htmlExtract",
       "typeVersion": 1,
       "position": [
-        260,
-        40
-      ],
-      "credentials": {
-        "gmailOAuth2": {
-          "id": "11",
-          "name": "Gmail n8n"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "authentication": "predefinedCredentialType",
-        "nodeCredentialType": "discourseApi",
-        "url": "https://forum.cwowd.com/admin/users/list/active.json?",
-        "options": {},
-        "queryParametersUi": {
-          "parameter": [
-            {
-              "name": "filter",
-              "value": "={{$node[\"Merge\"].json[\"Identifiant\"]}}"
-            }
-          ]
-        }
-      },
-      "id": "ffbb0140-e231-49fc-b446-207df1c692ef",
-      "name": "Cherche ID à partir de identifiant",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 2,
-      "position": [
-        60,
-        500
-      ],
-      "credentials": {
-        "discourseApi": {
-          "id": "7",
-          "name": "Discourse account"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "authentication": "predefinedCredentialType",
-        "nodeCredentialType": "discourseApi",
-        "requestMethod": "PUT",
-        "url": "https://forum.cwowd.com/groups/41/members.json",
-        "options": {},
-        "queryParametersUi": {
-          "parameter": [
-            {
-              "name": "usernames",
-              "value": "={{$json[\"Pseudo Forum\"]}}"
-            }
-          ]
-        }
-      },
-      "id": "d513d4fd-47ef-46f7-aa69-38380f5afce4",
-      "name": "Ajoute au groupe Tipeurs",
-      "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 2,
-      "position": [
-        680,
-        460
-      ],
-      "credentials": {
-        "discourseApi": {
-          "id": "8",
-          "name": "Discourse n8n"
-        }
-      }
+        580,
+        880
+      ]
     },
     {
       "parameters": {
@@ -763,55 +945,717 @@
         "values": {
           "string": [
             {
-              "name": "Pseudo Forum",
-              "value": "={{$json[\"0\"][\"username\"]}}"
+              "name": "=scriptless2",
+              "value": "={{$json[\"scriptless\"]}}.toString()"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "3c377074-85e3-47e0-862c-6a4c81c915c1",
+      "name": "Set6",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "court",
+              "value": "== {{$json[\"scriptless2\"]}}.substr(0,{{$json[\"scriptless2\"]}}.indexOf(')'));"
             }
           ]
         },
         "options": {}
       },
-      "id": "b2e2c911-9bd4-4633-878f-c283857f9fb3",
-      "name": "Pseudo Forum",
+      "id": "05335812-fb42-4ab0-ae79-10288c19ce02",
+      "name": "Set7",
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        480,
-        360
+        300,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "var raccourci = scriptless2.substr(0, scriptless2.indexOf(',')); \r\n"
+      },
+      "id": "0f7f92d7-03c2-4ffd-80b3-855b6bc40c41",
+      "name": "Function1",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        80,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "item.projets = item.split('paged')[0];\r\nreturn item\r\n\r\n"
+      },
+      "id": "48d962e1-6e5b-43f9-b513-f7727f27dcfb",
+      "name": "FunctionItem1",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        780
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "2d7a882c-f0c5-4c7d-95ad-33f55d4c597f",
+      "name": "Start1",
+      "type": "n8n-nodes-base.start",
+      "typeVersion": 1,
+      "position": [
+        -1520,
+        740
+      ]
+    },
+    {
+      "parameters": {
+        "url": "https://gamefound.com/",
+        "allowUnauthorizedCerts": true,
+        "responseFormat": "string",
+        "options": {}
+      },
+      "id": "978328b5-2c5d-449e-b326-60df4ff1612b",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -1020,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "projects",
+        "options": {
+          "disableDotNotation": true
+        }
+      },
+      "id": "78ab1be5-d1f8-4206-abd0-31f31122d1a5",
+      "name": "Item Lists1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        -840,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "1SBZkjpUIYF8ay5ni9Hfz_5G3IeZOgolaPNpy6P2c2KU",
+        "range": "A:J",
+        "options": {
+          "usePathForKeyRow": true
+        }
+      },
+      "id": "3924af01-c7b7-4862-80da-5e460f0f264c",
+      "name": "Google Sheets1",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        460,
+        620
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "number": [
+            {
+              "name": "ref",
+              "value": "={{$node[\"Get its launched date1\"].json[\"lastLaunched\"]}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "3dbe0497-ea0b-435e-9572-ef30de7946db",
+      "name": "Set4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        40,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "command": "mkdir -p  /home/node/.cache/scrapper/"
+      },
+      "id": "fdb973e4-e3b7-45dc-88a7-a7585829e1ce",
+      "name": "Execute Command1",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [
+        220,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "limit"
+      },
+      "id": "1b054bbb-a55f-4f43-a376-de2cd1cb7a91",
+      "name": "Only last campaign1",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        -560,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "plateforme_id",
+              "value": "={{ $json[\"id\"] }}"
+            },
+            {
+              "name": "name",
+              "value": "={{$json[\"name\"]}}"
+            },
+            {
+              "name": "campaign_url",
+              "value": "={{$json[\"urls\"][\"web\"][\"project\"]}}"
+            },
+            {
+              "name": "blurb",
+              "value": "={{ $json[\"blurb\"] }}"
+            },
+            {
+              "name": "launched_at",
+              "value": "={{$json[\"launched_at_unix\"]}}"
+            },
+            {
+              "name": "deadline",
+              "value": "={{$json[\"deadline_formated\"]}}"
+            },
+            {
+              "name": "creator",
+              "value": "={{$json[\"creator\"][\"name\"]}}"
+            },
+            {
+              "name": "creator_url",
+              "value": "={{$json[\"creator\"][\"urls\"][\"web\"][\"user\"]}}"
+            },
+            {
+              "name": "creator_api",
+              "value": "={{$json[\"creator\"][\"urls\"][\"api\"][\"user\"]}}"
+            },
+            {
+              "name": "image_1024",
+              "value": "={{$json[\"photo\"][\"1024x576\"]}}"
+            },
+            {
+              "name": "launched_at_formated",
+              "value": "={{ $json[\"launched_at\"] }}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "c287237e-0c42-454c-8280-f5f7f82546e1",
+      "name": "Elimine le gras1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -20,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "number": [
+            {
+              "name": "lastLaunched",
+              "value": "={{ $json[\"launched_at\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3dd2a284-d1db-4b1b-a4bf-8d28ff82125b",
+      "name": "Get its launched date1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"launched_at\"] }}",
+        "dataPropertyName": "launched_at_formated",
+        "custom": true,
+        "toFormat": "YYYY-MM-DD H:mm",
+        "options": {
+          "fromFormat": "X",
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "1a7e996c-fa40-48c6-8e8c-433df5e151d5",
+      "name": "format launched date1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{$json[\"launched_at\"]}}",
+        "dataPropertyName": "launched_at_unix",
+        "toFormat": "X",
+        "options": {}
+      },
+      "id": "b9dc8823-0b25-4896-a117-251d7d9bcd67",
+      "name": "reversed localized1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -500,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"deadline\"] }}",
+        "dataPropertyName": "deadline_formated",
+        "custom": true,
+        "toFormat": "YYYY-MM-DD H:mm",
+        "options": {
+          "fromFormat": "X",
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "fbcd8e82-b447-437c-a774-74505aad0fe4",
+      "name": "format deadline1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"deadline_formated\"] }}",
+        "dataPropertyName": "deadline_local",
+        "toFormat": "X",
+        "options": {}
+      },
+      "id": "0a735c66-80e7-4246-98aa-ef97e5ace4a8",
+      "name": "reversed deadline1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -240,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "dateTime": [
+            {
+              "value1": "={{Date.now()}}",
+              "value2": "={{$json[\"launched_at_formated\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "8934d2cd-6dcd-402e-87b8-ffae14fc6756",
+      "name": "Launched il y a moins de 60 mn ?1",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        160,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "mode": "everyHour",
+              "minute": 15
+            },
+            {
+              "mode": "everyHour",
+              "minute": 45
+            }
+          ]
+        }
+      },
+      "id": "01933389-a721-4045-853c-a15d3b09a8e8",
+      "name": "Cron1",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [
+        -1540,
+        560
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "La requête http fournit aussi un champ status et date de changement de status.\n\nPour suivre l'évolution récente ?"
+      },
+      "id": "15e3722b-c236-4a9e-9e04-05d1e00dcc2a",
+      "name": "Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -1380,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "number": [
+            {
+              "name": "actual_time",
+              "value": "={{Date.now()}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": false
+        }
+      },
+      "id": "4b8277c7-b159-47a3-a37d-a810d70e3e2e",
+      "name": "Set actual time1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -1060,
+        1160
+      ],
+      "executeOnce": true
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"actual_plus_60_minutes\"] }}",
+        "dataPropertyName": "actual_formated",
+        "custom": true,
+        "toFormat": "YYYY-MM-DD H:mm",
+        "options": {
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "971df947-de1a-45b6-a201-fb8474903c50",
+      "name": "format actual date1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -780,
+        1160
+      ]
+    },
+    {
+      "parameters": {
+        "action": "calculate",
+        "value": "={{ $json[\"launched_at\"] }}",
+        "duration": 30,
+        "timeUnit": "minutes",
+        "dataPropertyName": "launched_at",
+        "options": {
+          "fromFormat": "X"
+        }
+      },
+      "id": "d1494cf3-9907-4f78-9f91-3ba636621df6",
+      "name": "Date & Time1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -640,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "application": "appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "options": {
+          "typecast": true
+        }
+      },
+      "id": "6ae3aa39-8152-4e0d-968a-ca9218d30d6f",
+      "name": "Airtable1",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        460,
+        460
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "airtable_record",
+              "value": "=https://airtable.com/appqMBlpxffjoCDno/pagGtwtetW2boCXHL?U3gJN={{$json[\"id\"]}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": false
+        }
+      },
+      "id": "304edadc-ece5-4912-8a21-25385d7e5ced",
+      "name": "Set5",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        620,
+        460
       ]
     },
     {
       "parameters": {
         "resource": "message",
-        "subject": "Im my pocket !",
-        "message": "=Contrepartie : {{$node[\"Merge\"].json[\"soutien\"]}}€\nEmail tipeur : {{$node[\"Merge\"].json[\"email\"]}}\nPseudo : {{$json[\"Pseudo Forum\"]}} (Identifiant Tipeee : {{$node[\"Merge\"].json[\"Identifiant\"]}} )",
+        "subject": "Nouvelle campagne sur KS",
+        "message": "=Pour valider la campagne : {{$json[\"airtable_record\"]}}\n\nNom : {{$node[\"Elimine le gras1\"].json[\"name\"]}}\nPar : {{$node[\"Elimine le gras1\"].json[\"creator\"]}}({{$node[\"Elimine le gras1\"].json[\"creator_url\"]}})\nURL : {{$node[\"Elimine le gras1\"].json[\"campaign_url\"]}}\nDeadline : {{$node[\"Elimine le gras1\"].json[\"deadline\"]}}\n\n<br>\n\n{{$node[\"Elimine le gras1\"].json[\"image_1024\"]}}\nPitch : {{$node[\"Elimine le gras1\"].json[\"blurb\"]}}",
         "toList": [
-          "kipik.kipik@gmail.com"
+          "contact.cwowd@gmail.com"
         ],
         "additionalFields": {}
       },
-      "id": "e209bba8-a3a3-400d-bb15-4b8cbd610566",
-      "name": "Mail trouvé1",
+      "id": "0512129d-88b9-4d18-9cc1-9b387b03e40b",
+      "name": "Message Décideur1",
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 1,
       "position": [
-        680,
-        260
+        800,
+        460
       ],
       "credentials": {
         "gmailOAuth2": {
-          "id": "11",
-          "name": "Gmail n8n"
+          "id": "1",
+          "name": "Gmail account"
         }
       }
+    },
+    {
+      "parameters": {
+        "url": "https://gamefound.com/projects/search?ProjectPhaseSearchTypes=Crowdfunding",
+        "allowUnauthorizedCerts": true,
+        "responseFormat": "string",
+        "options": {
+          "fullResponse": false,
+          "followAllRedirects": false,
+          "useQueryString": false
+        },
+        "queryParametersUi": {
+          "parameter": [
+            {}
+          ]
+        }
+      },
+      "id": "6e1a1f74-0729-4fd3-a785-adc7f5fe1513",
+      "name": "HTTP Request3",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -1020,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "extractionValues": {
+          "values": [
+            {
+              "key": "projects",
+              "cssSelector": "=body > div.gfu-layout.js-layout > div.gfu-layout__content",
+              "returnValue": "html",
+              "returnArray": true
+            }
+          ]
+        },
+        "options": {
+          "trimValues": false
+        }
+      },
+      "id": "785504af-e861-4f9e-9ce3-f9a1cd316d3e",
+      "name": "HTML Extract3",
+      "type": "n8n-nodes-base.htmlExtract",
+      "typeVersion": 1,
+      "position": [
+        -800,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "dataPropertyName": "projects",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "scriptless",
+              "cssSelector": "script",
+              "returnValue": "html",
+              "returnArray": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "de1446af-e677-4b4e-9471-1b80c4897dd9",
+      "name": "HTML Extract4",
+      "type": "n8n-nodes-base.htmlExtract",
+      "typeVersion": 1,
+      "position": [
+        -580,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "dataPropertyName": "liste",
+        "extractionValues": {
+          "values": [
+            {
+              "key": "projets",
+              "cssSelector": "projects"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "341ed572-56fe-4360-b009-733c0925aa60",
+      "name": "HTML Extract5",
+      "type": "n8n-nodes-base.htmlExtract",
+      "typeVersion": 1,
+      "position": [
+        580,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "=scriptless2",
+              "value": "={{$json[\"scriptless\"]}}.toString()"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "3c377074-85e3-47e0-862c-6a4c81c915c1",
+      "name": "Set6",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -360,
+        780
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "court",
+              "value": "== {{$json[\"scriptless2\"]}}.substr(0,{{$json[\"scriptless2\"]}}.indexOf(')'));"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "05335812-fb42-4ab0-ae79-10288c19ce02",
+      "name": "Set7",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        300,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "var raccourci = scriptless2.substr(0, scriptless2.indexOf(',')); \r\n"
+      },
+      "id": "0f7f92d7-03c2-4ffd-80b3-855b6bc40c41",
+      "name": "Function1",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        80,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "item.projets = item.split('paged')[0];\r\nreturn item\r\n\r\n"
+      },
+      "id": "48d962e1-6e5b-43f9-b513-f7727f27dcfb",
+      "name": "FunctionItem1",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        -160,
+        780
+      ]
     }
   ],
   "pinData": {},
   "settings": {},
-  "staticData": {
-    "node:Gmail Trigger": {
-      "lastTimeChecked": "1667526495"
-    }
-  },
+  "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-04T01:48:15.000Z"
+  "updatedAt": "2022-11-05T23:15:34.323Z"
 }
