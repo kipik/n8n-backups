@@ -780,7 +780,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        -400,
+        -180,
         580
       ]
     },
@@ -828,7 +828,7 @@
       "type": "n8n-nodes-base.functionItem",
       "typeVersion": 1,
       "position": [
-        -200,
+        20,
         580
       ],
       "disabled": true
@@ -842,7 +842,7 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 1,
       "position": [
-        20,
+        240,
         580
       ]
     },
@@ -872,14 +872,15 @@
     },
     {
       "parameters": {
-        "jsCode": "// Loop over input items and add a new field\n// called 'myNewField' to the JSON of each one\nfor (const item of $input.all()) {\n  item.json.myNewField = 1;\n}\n\nreturn $input.all();"
+        "mode": "runOnceForEachItem",
+        "jsCode": "let parts = \n$('HTML Extract4').item.json.scriptless.split(\"result\")\nreturn {\n  parts\n};"
       },
       "id": "924f71bb-5c39-4503-89ca-00c8d956cd9c",
       "name": "Code1",
       "type": "n8n-nodes-base.code",
       "typeVersion": 1,
       "position": [
-        -400,
+        -180,
         720
       ]
     }
@@ -888,5 +889,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-06T00:12:40.743Z"
+  "updatedAt": "2022-11-06T21:01:44.892Z"
 }
