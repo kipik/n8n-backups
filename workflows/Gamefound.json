@@ -873,7 +873,7 @@
     {
       "parameters": {
         "mode": "runOnceForEachItem",
-        "jsCode": "let parts = \n$('HTML Extract4').item.json.scriptless.split(\"result\")\nreturn {\n  parts\n};"
+        "jsCode": "myArray = $prevNode.json.split(\":\")"
       },
       "id": "924f71bb-5c39-4503-89ca-00c8d956cd9c",
       "name": "Code1",
@@ -889,5 +889,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-06T21:01:44.892Z"
+  "updatedAt": "2022-11-07T00:57:42.872Z"
 }
