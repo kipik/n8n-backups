@@ -1138,7 +1138,7 @@
     {
       "parameters": {
         "resource": "message",
-        "subject": "Nouvelle campagne de financement",
+        "subject": "=Nouvelle campagne intéressante : {{$node[\"Merge1\"].json[\"name\"]}}",
         "includeHtml": true,
         "htmlMessage": "=<p><img src=\"{{$node[\"Merge1\"].json[\"image_url\"]}}\" width=\"600\" height=\"auto\"></p>\n<p></p>\n<b>{{$node[\"Merge1\"].json[\"name\"]}}</b> par {{$node[\"Merge1\"].json[\"creator\"]}}\n<p></p>\n<a href=\"{{$node[\"Merge1\"].json[\"campaign_url\"]}}\">La page de la campagne</a> \n<p></p>\nFin de la campagne le : {{$json[\"deadline\"]}}\n\n<br>\n\n<p></p>\n\nPitch : {{$node[\"Lit campagne ID1\"].json[\"fields\"][\"blurb\"]}}\n<p></p>\n<a rel=\"noopener\" target=\"_blank\" href=\"{{$json[\"property_forum\"]}}\" style=\"background-color: #0083b9; font-size: 16px; font-family: Helvetica, Arial, sans-serif; font-weight: bold; text-decoration: none; padding: 8px 12px; color: #ffffff; border-radius: 5px; display: inline-block; mso-padding-alt: 0;\">\n  <!--[if mso]>\n  <i style=\"letter-spacing: 20px; mso-font-width: -100%; mso-text-raise: 25pt;\">&nbsp;</i>\n  <![endif]-->\n  <span style=\"mso-text-raise: 15pt;\">On en discute &rarr;</span>\n  <!--[if mso]>\n  <i style=\"letter-spacing: 20px; mso-font-width: -100%;\">&nbsp;</i>\n  <![endif]-->\n</a>",
         "message": "= La campagne {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"name\"]}}a été ajoutée aux campagnes suivies le {{$node[\"Airtable Trigger on Updated1\"].json[\"createdTime\"]}}.",
@@ -1224,7 +1224,7 @@
     {
       "parameters": {
         "resource": "message",
-        "subject": "Nouvelle campagne de financement",
+        "subject": "=Nouvelle campagne intéressante : {{$node[\"Merge1\"].json[\"name\"]}}",
         "includeHtml": true,
         "htmlMessage": "=<p><img src=\"{{$node[\"Merge1\"].json[\"image_url\"]}}\" width=\"600\" height=\"auto\"></p>\n<p></p>\n<b>{{$node[\"Merge1\"].json[\"name\"]}}</b> par {{$node[\"Merge1\"].json[\"creator\"]}}\n<p></p>\n<a href=\"{{$node[\"Merge1\"].json[\"campaign_url\"]}}\">La page de la campagne</a> \n<p></p>\nFin de la campagne le : {{$json[\"deadline\"]}}\n\n<br>\n\n<p></p>\n\nPitch : {{$node[\"Lit campagne ID1\"].json[\"fields\"][\"blurb\"]}}\n<p></p>",
         "message": "= La campagne {{$node[\"Airtable Trigger on Updated1\"].json[\"fields\"][\"name\"]}}a été ajoutée aux campagnes suivies le {{$node[\"Airtable Trigger on Updated1\"].json[\"createdTime\"]}}.",
@@ -1312,9 +1312,9 @@
   "settings": {},
   "staticData": {
     "node:Airtable Trigger on Updated1": {
-      "lastTimeChecked": "2022-11-06T22:54:37Z"
+      "lastTimeChecked": "2022-11-07T00:10:59Z"
     }
   },
   "tags": [],
-  "updatedAt": "2022-11-06T22:54:37.000Z"
+  "updatedAt": "2022-11-07T00:11:00.000Z"
 }
