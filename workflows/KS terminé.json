@@ -696,7 +696,7 @@
       "credentials": {
         "discourseApi": {
           "id": "8",
-          "name": "Discourse n8n"
+          "name": "Discourse n8nAuto"
         }
       }
     },
@@ -1400,8 +1400,8 @@
       ],
       "credentials": {
         "discourseApi": {
-          "id": "7",
-          "name": "Discourse account"
+          "id": "8",
+          "name": "Discourse n8nAuto"
         }
       }
     },
@@ -1553,5 +1553,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-08T23:22:13.740Z"
+  "updatedAt": "2022-11-09T17:53:14.159Z"
 }
