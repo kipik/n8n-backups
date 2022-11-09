@@ -172,12 +172,12 @@
             "index": 0
           },
           {
-            "node": "Check si Notion1",
+            "node": "Check si Forum1",
             "type": "main",
             "index": 0
           },
           {
-            "node": "Check si Forum1",
+            "node": "Check si Notion1",
             "type": "main",
             "index": 0
           }
@@ -1553,5 +1553,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-05T16:28:14.261Z"
+  "updatedAt": "2022-11-08T23:22:13.740Z"
 }
