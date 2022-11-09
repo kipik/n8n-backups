@@ -721,7 +721,7 @@
       "credentials": {
         "discourseApi": {
           "id": "8",
-          "name": "Discourse n8n"
+          "name": "Discourse n8nAuto"
         }
       }
     },
@@ -1312,9 +1312,9 @@
   "settings": {},
   "staticData": {
     "node:Airtable Trigger on Updated1": {
-      "lastTimeChecked": "2022-11-09T01:55:38Z"
+      "lastTimeChecked": "2022-11-09T19:01:04Z"
     }
   },
   "tags": [],
-  "updatedAt": "2022-11-09T01:55:38.000Z"
+  "updatedAt": "2022-11-09T19:01:04.000Z"
 }
