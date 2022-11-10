@@ -1,0 +1,155 @@
+{
+  "active": false,
+  "connections": {
+    "On clicking 'execute'": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Discourse",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Discourse Topic1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2022-11-10T11:33:56.330Z",
+  "id": 23,
+  "name": "API forum",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "177f9f7a-8376-4c04-b866-b9d80ebed169",
+      "name": "On clicking 'execute'",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        180,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "postId": "https://forum.cwowd.com/t/ettin-de-kenneth-c-shannon-par-wizkids-vf-par-origames/39460"
+      },
+      "id": "147210d3-9aa2-4845-b34e-4c2469898dca",
+      "name": "Discourse",
+      "type": "n8n-nodes-base.discourse",
+      "typeVersion": 1,
+      "position": [
+        820,
+        320
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "13",
+          "name": "Discourse Big Bad Bot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "https://forum.cwowd.com/t/ettin-de-kenneth-c-shannon-par-wizkids-vf-par-origames/39460",
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "discourseApi",
+        "options": {}
+      },
+      "id": "21ccf2ff-ec4f-4893-b674-9ae9afc50f26",
+      "name": "HTTP Request",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 3,
+      "position": [
+        400,
+        320
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "13",
+          "name": "Discourse Big Bad Bot"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "discourseApi",
+        "url": "https://forum.cwowd.com/t/ettin-de-kenneth-c-shannon-par-wizkids-vf-par-origames/39460",
+        "allowUnauthorizedCerts": true,
+        "options": {}
+      },
+      "id": "c75fd77b-96d5-4386-b6d9-01169f022f06",
+      "name": "Get Discourse Topic1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        420,
+        540
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "8",
+          "name": "Discourse n8nAuto"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "authentication": "predefinedCredentialType",
+        "nodeCredentialType": "discourseApi",
+        "requestMethod": "PUT",
+        "url": "=https://forum.cwowd.com/t/{{$json[\"id\"]}}",
+        "options": {},
+        "bodyParametersUi": {
+          "parameter": [
+            {
+              "name": "hidden",
+              "value": "false"
+            }
+          ]
+        }
+      },
+      "id": "84b49b30-1cbd-4d37-a2e1-58290607f62e",
+      "name": "HTTP Request1",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        600,
+        540
+      ],
+      "credentials": {
+        "discourseApi": {
+          "id": "8",
+          "name": "Discourse n8nAuto"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "updatedAt": "2022-11-10T12:50:01.510Z"
+}
