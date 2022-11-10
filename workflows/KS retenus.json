@@ -1043,8 +1043,8 @@
       ],
       "credentials": {
         "discourseApi": {
-          "id": "7",
-          "name": "Discourse account"
+          "id": "13",
+          "name": "Discourse Big Bad Bot"
         }
       }
     },
@@ -1312,9 +1312,9 @@
   "settings": {},
   "staticData": {
     "node:Airtable Trigger on Updated1": {
-      "lastTimeChecked": "2022-11-09T19:01:04Z"
+      "lastTimeChecked": "2022-11-10T18:29:35Z"
     }
   },
   "tags": [],
-  "updatedAt": "2022-11-09T19:01:04.000Z"
+  "updatedAt": "2022-11-10T18:29:35.000Z"
 }
