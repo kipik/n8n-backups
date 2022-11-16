@@ -134,6 +134,11 @@
             "node": "Date & Time2",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "Elimine le gras",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
@@ -670,11 +675,80 @@
         380,
         80
       ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "plateforme_id",
+              "value": "={{$node[\"Item Lists\"].json[\"id\"]}}"
+            },
+            {
+              "name": "name",
+              "value": "={{$node[\"Item Lists\"].json[\"name\"]}}"
+            },
+            {
+              "name": "campaign_url",
+              "value": "={{$node[\"Edit URL2\"].json[\"newURL\"]}}"
+            },
+            {
+              "name": "blurb",
+              "value": "={{ $json[\"blurb\"] }}"
+            },
+            {
+              "name": "launched_at",
+              "value": "={{$node[\"Item Lists\"].json[\"launched_at\"]}}"
+            },
+            {
+              "name": "deadline",
+              "value": "={{$node[\"Date & Time2\"].json[\"deadline\"]}}"
+            },
+            {
+              "name": "creator",
+              "value": "={{$node[\"Item Lists\"].json[\"creator\"][\"name\"]}}"
+            },
+            {
+              "name": "creator_url",
+              "value": "={{$node[\"Item Lists\"].json[\"creator\"][\"urls\"][\"web\"][\"user\"]}}"
+            },
+            {
+              "name": "creator_api",
+              "value": "={{$node[\"Item Lists\"].json[\"creator\"][\"urls\"][\"api\"][\"user\"]}}"
+            },
+            {
+              "name": "image_1024",
+              "value": "={{$node[\"Item Lists\"].json[\"photo\"][\"1024x576\"]}}"
+            },
+            {
+              "name": "launched_at_formated",
+              "value": "={{$json[\"launched_at_formated\"]}}"
+            },
+            {
+              "name": "image_url",
+              "value": "={{$json[\"photo\"][\"1024x576\"]}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "5a8a0d44-3d71-48f4-bcc2-a81b0596b21a",
+      "name": "Elimine le gras",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        100,
+        680
+      ],
+      "disabled": true
     }
   ],
   "pinData": {},
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-06T00:14:51.508Z"
+  "updatedAt": "2022-11-16T00:53:22.040Z"
 }
