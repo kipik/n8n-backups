@@ -908,7 +908,7 @@
             },
             {
               "name": "image_url",
-              "value": "={{$json[\"fields\"][\"image_1024\"][0][\"url\"]}}"
+              "value": "={{$json[\"fields\"][\"image_url\"]}}"
             },
             {
               "name": "plateforme_id",
@@ -1195,8 +1195,8 @@
       ],
       "credentials": {
         "gmailOAuth2": {
-          "id": "1",
-          "name": "Gmail account"
+          "id": "11",
+          "name": "Gmail n8n"
         }
       },
       "disabled": true
@@ -1281,8 +1281,8 @@
       ],
       "credentials": {
         "gmailOAuth2": {
-          "id": "1",
-          "name": "Gmail account"
+          "id": "11",
+          "name": "Gmail n8n"
         }
       },
       "disabled": true
@@ -1312,9 +1312,9 @@
   "settings": {},
   "staticData": {
     "node:Airtable Trigger on Updated1": {
-      "lastTimeChecked": "2022-11-17T21:11:35Z"
+      "lastTimeChecked": "2022-11-22T09:34:22Z"
     }
   },
   "tags": [],
-  "updatedAt": "2022-11-17T21:11:35.000Z"
+  "updatedAt": "2022-11-22T09:34:22.000Z"
 }
