@@ -308,6 +308,10 @@
             {
               "name": "launched_at_formated",
               "value": "={{$json[\"launched_at_formated\"]}}"
+            },
+            {
+              "name": "image_url",
+              "value": "={{$node[\"Item Lists\"].json[\"photo\"][\"1024x576\"]}}"
             }
           ]
         },
@@ -750,5 +754,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-16T00:53:22.040Z"
+  "updatedAt": "2022-11-22T09:10:37.059Z"
 }
