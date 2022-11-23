@@ -324,7 +324,7 @@
       "credentials": {
         "discourseApi": {
           "id": "8",
-          "name": "Discourse n8n"
+          "name": "Discourse n8nAuto"
         }
       }
     },
@@ -618,8 +618,8 @@
       ],
       "credentials": {
         "discourseApi": {
-          "id": "7",
-          "name": "Discourse account"
+          "id": "8",
+          "name": "Discourse n8nAuto"
         }
       }
     },
@@ -721,8 +721,8 @@
       ],
       "credentials": {
         "discourseApi": {
-          "id": "7",
-          "name": "Discourse account"
+          "id": "8",
+          "name": "Discourse n8nAuto"
         }
       }
     },
@@ -753,7 +753,7 @@
       "credentials": {
         "discourseApi": {
           "id": "8",
-          "name": "Discourse n8n"
+          "name": "Discourse n8nAuto"
         }
       }
     },
@@ -809,9 +809,9 @@
   "settings": {},
   "staticData": {
     "node:Gmail Trigger": {
-      "lastTimeChecked": "1669168800"
+      "lastTimeChecked": "1669215791"
     }
   },
   "tags": [],
-  "updatedAt": "2022-11-23T02:00:00.000Z"
+  "updatedAt": "2022-11-23T15:03:11.000Z"
 }
