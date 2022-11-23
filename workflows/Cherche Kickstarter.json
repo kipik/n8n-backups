@@ -93,11 +93,6 @@
       "main": [
         [
           {
-            "node": "reversed localized",
-            "type": "main",
-            "index": 0
-          },
-          {
             "node": "Date & Time",
             "type": "main",
             "index": 0
@@ -162,13 +157,7 @@
     },
     "reversed localized": {
       "main": [
-        [
-          {
-            "node": "Elimine le gras2",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
       ]
     },
     "Date & Time": {
@@ -619,8 +608,8 @@
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        1300,
-        280
+        1320,
+        220
       ],
       "disabled": true
     },
@@ -754,5 +743,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-22T18:15:32.384Z"
+  "updatedAt": "2022-11-23T15:25:10.403Z"
 }
