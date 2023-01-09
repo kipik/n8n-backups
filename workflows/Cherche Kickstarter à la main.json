@@ -533,6 +533,10 @@
             },
             {
               "name": "launched_at_formated"
+            },
+            {
+              "name": "image_url",
+              "value": "={{$json[\"data\"][\"projects\"][0][\"photo\"][\"1024x576\"]}}"
             }
           ]
         },
@@ -665,5 +669,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-06T22:58:49.148Z"
+  "updatedAt": "2023-01-09T11:19:04.534Z"
 }
