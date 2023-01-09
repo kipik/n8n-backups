@@ -45,17 +45,6 @@
         ]
       ]
     },
-    "Date & Time2": {
-      "main": [
-        [
-          {
-            "node": "reversed localized2",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Airtable2": {
       "main": [
         [
@@ -126,12 +115,12 @@
       "main": [
         [
           {
-            "node": "Date & Time2",
+            "node": "Elimine le gras",
             "type": "main",
             "index": 0
           },
           {
-            "node": "Elimine le gras",
+            "node": "Set",
             "type": "main",
             "index": 0
           }
@@ -153,11 +142,6 @@
             "index": 0
           }
         ]
-      ]
-    },
-    "reversed localized": {
-      "main": [
-        []
       ]
     },
     "Date & Time": {
@@ -187,6 +171,28 @@
         [
           {
             "node": "Launched il y a moins de 20 mn ?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time3": {
+      "main": [
+        [
+          {
+            "node": "reversed localized2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Date & Time3",
             "type": "main",
             "index": 0
           }
@@ -239,7 +245,7 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 2,
       "position": [
-        1080,
+        1300,
         80
       ],
       "credentials": {
@@ -313,7 +319,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1520,
+        1740,
         280
       ]
     },
@@ -322,14 +328,17 @@
         "value": "={{$json[\"launchedAtPlus23\"]}}",
         "dataPropertyName": "launched_at_unix",
         "toFormat": "X",
-        "options": {}
+        "options": {
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
       },
       "id": "53e167e2-1423-4ce8-b4dd-69347f735e4a",
       "name": "reversed localized2",
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        100,
+        320,
         80
       ]
     },
@@ -390,9 +399,10 @@
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        -40,
-        80
-      ]
+        80,
+        -180
+      ],
+      "disabled": true
     },
     {
       "parameters": {
@@ -408,7 +418,7 @@
       "type": "n8n-nodes-base.airtable",
       "typeVersion": 1,
       "position": [
-        1760,
+        1980,
         280
       ],
       "alwaysOutputData": true,
@@ -438,7 +448,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1940,
+        2160,
         280
       ]
     },
@@ -457,7 +467,7 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 1,
       "position": [
-        2160,
+        2380,
         280
       ],
       "credentials": {
@@ -478,7 +488,7 @@
       "type": "n8n-nodes-base.deepL",
       "typeVersion": 1,
       "position": [
-        1000,
+        1220,
         280
       ],
       "credentials": {
@@ -506,7 +516,7 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        1140,
+        1380,
         280
       ]
     },
@@ -519,7 +529,7 @@
       "type": "n8n-nodes-base.functionItem",
       "typeVersion": 1,
       "position": [
-        860,
+        1080,
         280
       ]
     },
@@ -532,8 +542,8 @@
       "type": "n8n-nodes-base.functionItem",
       "typeVersion": 1,
       "position": [
-        -40,
-        300
+        380,
+        320
       ]
     },
     {
@@ -553,8 +563,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        180,
-        300
+        580,
+        320
       ]
     },
     {
@@ -579,7 +589,7 @@
           "dateTime": [
             {
               "value1": "={{$now}}",
-              "value2": "={{$node[\"Date & Time2\"].json[\"launchedAtPlus23\"]}}"
+              "value2": "={{$json[\"launchedAtPlus23\"]}}"
             }
           ]
         }
@@ -589,7 +599,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        540,
+        760,
         80
       ]
     },
@@ -608,8 +618,8 @@
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        1320,
-        220
+        1700,
+        -40
       ],
       "disabled": true
     },
@@ -628,7 +638,7 @@
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        1300,
+        1520,
         520
       ]
     },
@@ -649,7 +659,7 @@
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        240,
+        460,
         80
       ]
     },
@@ -665,7 +675,7 @@
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        380,
+        600,
         80
       ]
     },
@@ -733,15 +743,56 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        100,
+        320,
         680
       ],
       "disabled": true
+    },
+    {
+      "parameters": {
+        "value": "={{$json[\"launchedAtPlus23\"]}}",
+        "dataPropertyName": "launchedAtPlus23",
+        "custom": true,
+        "options": {
+          "fromFormat": "X",
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "fd6a253a-e9f7-4448-bdad-14d754a8e44e",
+      "name": "Date & Time3",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        440,
+        -180
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "launchedAtPlus23",
+              "value": "={{$json[\"launched_at\"]+1380}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "c097e194-2433-4a91-a5f4-b85257dcd0fd",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -60,
+        80
+      ]
     }
   ],
   "pinData": {},
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2022-11-23T15:25:10.403Z"
+  "updatedAt": "2023-01-09T17:55:42.563Z"
 }
