@@ -23,17 +23,6 @@
         ]
       ]
     },
-    "reversed localized2": {
-      "main": [
-        [
-          {
-            "node": "format deadline",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Cron2": {
       "main": [
         [
@@ -115,29 +104,7 @@
       "main": [
         [
           {
-            "node": "Elimine le gras",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Set",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Launched il y a moins de 20 mn ?": {
-      "main": [
-        [],
-        [
-          {
-            "node": "Google Sheets2",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "Edit URL2",
+            "node": "Date & Time4",
             "type": "main",
             "index": 0
           }
@@ -170,7 +137,12 @@
       "main": [
         [
           {
-            "node": "Launched il y a moins de 20 mn ?",
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Edit URL2",
             "type": "main",
             "index": 0
           }
@@ -193,6 +165,28 @@
         [
           {
             "node": "Date & Time3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time4": {
+      "main": [
+        [
+          {
+            "node": "Launched il y a moins de 23 mn ?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Launched il y a moins de 23 mn ?": {
+      "main": [
+        [
+          {
+            "node": "format deadline",
             "type": "main",
             "index": 0
           }
@@ -245,8 +239,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 2,
       "position": [
-        1300,
-        80
+        1060,
+        -160
       ],
       "credentials": {
         "googleSheetsOAuth2Api": {
@@ -338,8 +332,8 @@
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        320,
-        80
+        280,
+        -120
       ]
     },
     {
@@ -347,16 +341,9 @@
         "triggerTimes": {
           "item": [
             {
-              "mode": "everyHour",
-              "minute": 17
-            },
-            {
-              "mode": "everyHour",
-              "minute": 37
-            },
-            {
-              "mode": "everyHour",
-              "minute": 57
+              "mode": "everyX",
+              "value": 10,
+              "unit": "minutes"
             }
           ]
         }
@@ -399,8 +386,8 @@
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        80,
-        -180
+        120,
+        -320
       ],
       "disabled": true
     },
@@ -496,7 +483,8 @@
           "id": "3",
           "name": "DeepL Thierry"
         }
-      }
+      },
+      "disabled": true
     },
     {
       "parameters": {
@@ -542,8 +530,8 @@
       "type": "n8n-nodes-base.functionItem",
       "typeVersion": 1,
       "position": [
-        380,
-        320
+        440,
+        560
       ]
     },
     {
@@ -563,8 +551,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        580,
-        320
+        640,
+        560
       ]
     },
     {
@@ -599,9 +587,10 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        760,
+        880,
         80
-      ]
+      ],
+      "disabled": true
     },
     {
       "parameters": {
@@ -743,8 +732,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        320,
-        680
+        440,
+        1120
       ],
       "disabled": true
     },
@@ -764,8 +753,8 @@
       "type": "n8n-nodes-base.dateTime",
       "typeVersion": 1,
       "position": [
-        440,
-        -180
+        120,
+        -120
       ]
     },
     {
@@ -785,8 +774,91 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 1,
       "position": [
-        -60,
-        80
+        -80,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{$json[\"launched_at\"]}}",
+        "dataPropertyName": "launchedAtPlus23",
+        "custom": true,
+        "options": {
+          "fromFormat": "X",
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "ba68680e-929f-4d88-8060-2c984d884e78",
+      "name": "Date & Time4",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [
+            {
+              "name": "Nouveau",
+              "value": "={{true}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "394ee867-bace-43bc-87e5-df32436972de",
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        80,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [
+            {
+              "name": "Nouveau",
+              "value": "={{false}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "cfa96392-572e-4ebf-a410-919bed702dd0",
+      "name": "Set3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "dateTime": [
+            {
+              "value1": "={{$now-1380000}}",
+              "operation": "before",
+              "value2": "={{$json[\"launched_at\"]*1000}}"
+            }
+          ]
+        }
+      },
+      "id": "2b377a25-f7ca-420e-8f09-892de0f6fb25",
+      "name": "Launched il y a moins de 23 mn ?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        60,
+        240
       ]
     }
   ],
@@ -794,5 +866,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2023-01-09T17:55:42.563Z"
+  "updatedAt": "2023-01-10T18:26:49.524Z"
 }
