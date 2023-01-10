@@ -1,0 +1,870 @@
+{
+  "active": false,
+  "connections": {
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Item Lists",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Elimine le gras2": {
+      "main": [
+        [
+          {
+            "node": "Airtable2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cron2": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Airtable2": {
+      "main": [
+        [
+          {
+            "node": "Set8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set8": {
+      "main": [
+        [
+          {
+            "node": "Message Décideur2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DeepL2": {
+      "main": [
+        [
+          {
+            "node": "Set9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set9": {
+      "main": [
+        [
+          {
+            "node": "Date & Time",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit URL2": {
+      "main": [
+        [
+          {
+            "node": "DeepL2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FunctionItem2": {
+      "main": [
+        [
+          {
+            "node": "Set2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Item Lists": {
+      "main": [
+        [
+          {
+            "node": "Date & Time4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time": {
+      "main": [
+        [
+          {
+            "node": "Elimine le gras2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "format deadline": {
+      "main": [
+        [
+          {
+            "node": "reversed deadline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "reversed deadline": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Edit URL2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time3": {
+      "main": [
+        [
+          {
+            "node": "reversed localized2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "Date & Time3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Date & Time4": {
+      "main": [
+        [
+          {
+            "node": "Launched il y a moins de 23 mn ?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Launched il y a moins de 23 mn ?": {
+      "main": [
+        [
+          {
+            "node": "format deadline",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2023-01-10T19:27:05.828Z",
+  "id": 24,
+  "name": "Cherche Kickstarter copy",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "http://www.kickstarter.com/projects/search.json",
+        "allowUnauthorizedCerts": true,
+        "options": {},
+        "queryParametersUi": {
+          "parameter": [
+            {
+              "name": "category_id",
+              "value": "34"
+            },
+            {
+              "name": "sort",
+              "value": "newest"
+            }
+          ]
+        }
+      },
+      "id": "e781c296-e923-40c0-8687-18c55762b818",
+      "name": "HTTP Request2",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 2,
+      "position": [
+        -500,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "sheetId": "1SBZkjpUIYF8ay5ni9Hfz_5G3IeZOgolaPNpy6P2c2KU",
+        "range": "A:J",
+        "options": {
+          "usePathForKeyRow": true
+        }
+      },
+      "id": "af95a9b1-b974-4f35-969f-d2f6fc3c615a",
+      "name": "Google Sheets2",
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 2,
+      "position": [
+        1060,
+        -160
+      ],
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "4",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "plateforme_id",
+              "value": "={{$node[\"Item Lists\"].json[\"id\"]}}"
+            },
+            {
+              "name": "name",
+              "value": "={{$node[\"Item Lists\"].json[\"name\"]}}"
+            },
+            {
+              "name": "campaign_url",
+              "value": "={{$node[\"Edit URL2\"].json[\"newURL\"]}}"
+            },
+            {
+              "name": "blurb",
+              "value": "={{ $json[\"blurb\"] }}"
+            },
+            {
+              "name": "launched_at",
+              "value": "={{$node[\"Item Lists\"].json[\"launched_at\"]}}"
+            },
+            {
+              "name": "deadline",
+              "value": "={{$node[\"Date & Time2\"].json[\"deadline\"]}}"
+            },
+            {
+              "name": "creator",
+              "value": "={{$node[\"Item Lists\"].json[\"creator\"][\"name\"]}}"
+            },
+            {
+              "name": "creator_url",
+              "value": "={{$node[\"Item Lists\"].json[\"creator\"][\"urls\"][\"web\"][\"user\"]}}"
+            },
+            {
+              "name": "creator_api",
+              "value": "={{$node[\"Item Lists\"].json[\"creator\"][\"urls\"][\"api\"][\"user\"]}}"
+            },
+            {
+              "name": "image_1024",
+              "value": "={{$node[\"Item Lists\"].json[\"photo\"][\"1024x576\"]}}"
+            },
+            {
+              "name": "launched_at_formated",
+              "value": "={{$json[\"launched_at_formated\"]}}"
+            },
+            {
+              "name": "image_url",
+              "value": "={{$node[\"Item Lists\"].json[\"photo\"][\"1024x576\"]}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "386c168b-3361-4472-993b-73e50f8bb052",
+      "name": "Elimine le gras2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{$json[\"launchedAtPlus23\"]}}",
+        "dataPropertyName": "launched_at_unix",
+        "toFormat": "X",
+        "options": {
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "a490fd9c-cf9b-4c04-85af-1737555c4b91",
+      "name": "reversed localized2",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        280,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "triggerTimes": {
+          "item": [
+            {
+              "mode": "everyX",
+              "value": 10,
+              "unit": "minutes"
+            }
+          ]
+        }
+      },
+      "id": "ae55449b-5be6-4bc6-a327-cfd001a513e4",
+      "name": "Cron2",
+      "type": "n8n-nodes-base.cron",
+      "typeVersion": 1,
+      "position": [
+        -700,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "La requête http fournit aussi un champ status et date de changement de status.\n\nPour suivre l'évolution récente ?"
+      },
+      "id": "a7c141cd-6282-4ec0-8bff-4a3216fbe34c",
+      "name": "Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -800,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "action": "calculate",
+        "value": "={{ $json[\"launched_at\"] }}",
+        "duration": 23,
+        "timeUnit": "minutes",
+        "dataPropertyName": "launchedAtPlus23",
+        "options": {
+          "fromFormat": "X"
+        }
+      },
+      "id": "d6bad117-78ff-4e1b-b131-1dca071b09fe",
+      "name": "Date & Time2",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        120,
+        -320
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "application": "appqMBlpxffjoCDno",
+        "table": "tblpdlsFW8elPEBsx",
+        "options": {
+          "typecast": true
+        }
+      },
+      "id": "6234051f-6c17-4f67-8aac-c697d2ef0b41",
+      "name": "Airtable2",
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 1,
+      "position": [
+        1980,
+        280
+      ],
+      "alwaysOutputData": true,
+      "credentials": {
+        "airtableApi": {
+          "id": "2",
+          "name": "Airtable Thierry"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "airtable_record",
+              "value": "=https://airtable.com/appqMBlpxffjoCDno/pagGtwtetW2boCXHL?U3gJN={{$json[\"id\"]}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": false
+        }
+      },
+      "id": "0061a6a3-8888-4cf8-ad51-d68a9511696e",
+      "name": "Set8",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        2160,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "message",
+        "subject": "Nouvelle campagne sur KS",
+        "message": "=Pour valider la campagne : {{$json[\"airtable_record\"]}}\n\nNom : {{$node[\"Elimine le gras2\"].json[\"name\"]}}\nPar : {{$node[\"Elimine le gras2\"].json[\"creator\"]}}({{$node[\"Elimine le gras2\"].json[\"creator_url\"]}})\nURL : {{$node[\"Elimine le gras2\"].json[\"campaign_url\"]}}\nDeadline : {{$node[\"Elimine le gras2\"].json[\"deadline\"]}}\n\n<br>\n\n{{$node[\"Elimine le gras2\"].json[\"image_1024\"]}}\nPitch : {{$node[\"Elimine le gras2\"].json[\"blurb\"]}}",
+        "toList": [
+          "contact.cwowd@gmail.com"
+        ],
+        "additionalFields": {}
+      },
+      "id": "35e3524f-c1d6-40fc-801a-f99fd789a7b7",
+      "name": "Message Décideur2",
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 1,
+      "position": [
+        2380,
+        280
+      ],
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "11",
+          "name": "Gmail n8n"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "text": "={{$node[\"Launched il y a moins de 20 mn ?\"].json[\"blurb\"]}}",
+        "translateTo": "FR",
+        "additionalFields": {}
+      },
+      "id": "1ef8e64b-402c-42ed-9f82-791818c629fc",
+      "name": "DeepL2",
+      "type": "n8n-nodes-base.deepL",
+      "typeVersion": 1,
+      "position": [
+        1220,
+        280
+      ],
+      "credentials": {
+        "deepLApi": {
+          "id": "3",
+          "name": "DeepL Thierry"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "blurb",
+              "value": "={{$json[\"text\"]}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "993aa8be-9f82-48d9-a2eb-c45df3fd9a0c",
+      "name": "Set9",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        1380,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "let parts = $node[\"Item Lists\"].json[\"urls\"][\"web\"][\"project\"].split('=');\nlet ref = parts.pop();\nlet newURL = parts.join('=') + \"=cwowd\";\n\nreturn {\n  newURL\n};"
+      },
+      "id": "82112462-a9c0-4f53-b6b1-5966251b7eea",
+      "name": "Edit URL2",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        1080,
+        280
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "let now = $now\n\nreturn {\n  now\n}"
+      },
+      "id": "569d7dd5-7c4e-40a2-8181-38dba4c1ecd6",
+      "name": "FunctionItem2",
+      "type": "n8n-nodes-base.functionItem",
+      "typeVersion": 1,
+      "position": [
+        440,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "value": "235"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4545cd7b-13cb-4803-a5c5-3307f96dbef8",
+      "name": "Set2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        640,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "projects",
+        "options": {
+          "disableDotNotation": true
+        }
+      },
+      "id": "0fa03cf6-1d23-49a1-9963-33061629ddd6",
+      "name": "Item Lists",
+      "type": "n8n-nodes-base.itemLists",
+      "typeVersion": 1,
+      "position": [
+        -340,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "dateTime": [
+            {
+              "value1": "={{$now}}",
+              "value2": "={{$json[\"launchedAtPlus23\"]}}"
+            }
+          ]
+        }
+      },
+      "id": "f21e8a57-1999-43f1-af32-534bdca1df6d",
+      "name": "Launched il y a moins de 20 mn ?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        880,
+        80
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "value": "={{$node[\"Item Lists\"].json[\"launched_at\"]}}",
+        "dataPropertyName": "launched_at_formated",
+        "custom": true,
+        "toFormat": "DD/MM/YYYY",
+        "options": {
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "376d613f-6ed8-4446-bdaf-ffee67c409dd",
+      "name": "reversed localized",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        1700,
+        -40
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "action": "calculate",
+        "value": "={{$node[\"Item Lists\"].json[\"launched_at\"]}}",
+        "timeUnit": "minutes",
+        "dataPropertyName": "launched_at_formated",
+        "options": {
+          "fromFormat": "X"
+        }
+      },
+      "id": "afc340b1-76ff-44a8-93fd-8a1ca332534a",
+      "name": "Date & Time",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        1520,
+        520
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"deadline\"] }}",
+        "dataPropertyName": "deadline_formated",
+        "custom": true,
+        "toFormat": "YYYY-MM-DD H:mm",
+        "options": {
+          "fromFormat": "X",
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "a465ec2f-87d0-4de5-8d9d-414ca8c356d6",
+      "name": "format deadline",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        460,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{ $json[\"deadline_formated\"] }}",
+        "dataPropertyName": "deadline_local",
+        "toFormat": "X",
+        "options": {}
+      },
+      "id": "ca7fa140-f465-4e6e-acfa-d59a1a82efcf",
+      "name": "reversed deadline",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        600,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "keepOnlySet": true,
+        "values": {
+          "string": [
+            {
+              "name": "plateforme_id",
+              "value": "={{$node[\"Item Lists\"].json[\"id\"]}}"
+            },
+            {
+              "name": "name",
+              "value": "={{$node[\"Item Lists\"].json[\"name\"]}}"
+            },
+            {
+              "name": "campaign_url",
+              "value": "={{$node[\"Edit URL2\"].json[\"newURL\"]}}"
+            },
+            {
+              "name": "blurb",
+              "value": "={{ $json[\"blurb\"] }}"
+            },
+            {
+              "name": "launched_at",
+              "value": "={{$node[\"Item Lists\"].json[\"launched_at\"]}}"
+            },
+            {
+              "name": "deadline",
+              "value": "={{$node[\"Date & Time2\"].json[\"deadline\"]}}"
+            },
+            {
+              "name": "creator",
+              "value": "={{$node[\"Item Lists\"].json[\"creator\"][\"name\"]}}"
+            },
+            {
+              "name": "creator_url",
+              "value": "={{$node[\"Item Lists\"].json[\"creator\"][\"urls\"][\"web\"][\"user\"]}}"
+            },
+            {
+              "name": "creator_api",
+              "value": "={{$node[\"Item Lists\"].json[\"creator\"][\"urls\"][\"api\"][\"user\"]}}"
+            },
+            {
+              "name": "image_1024",
+              "value": "={{$node[\"Item Lists\"].json[\"photo\"][\"1024x576\"]}}"
+            },
+            {
+              "name": "launched_at_formated",
+              "value": "={{$json[\"launched_at_formated\"]}}"
+            },
+            {
+              "name": "image_url",
+              "value": "={{$json[\"photo\"][\"1024x576\"]}}"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "3191c9ac-a94c-4df1-8756-8f5d5a064d4e",
+      "name": "Elimine le gras",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        440,
+        1120
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "value": "={{$json[\"launchedAtPlus23\"]}}",
+        "dataPropertyName": "launchedAtPlus23",
+        "custom": true,
+        "options": {
+          "fromFormat": "X",
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "1fe17778-5e08-4ad4-9192-ff76848f8f65",
+      "name": "Date & Time3",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        120,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "launchedAtPlus23",
+              "value": "={{$json[\"launched_at\"]+1380}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "f54d9bbc-ec45-4201-be3b-353a8b30bbb7",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        -120
+      ]
+    },
+    {
+      "parameters": {
+        "value": "={{$json[\"launched_at\"]}}",
+        "dataPropertyName": "launchedAtPlus23",
+        "custom": true,
+        "options": {
+          "fromFormat": "X",
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "fa49b2a1-c683-4662-bfe4-1350a8d87e95",
+      "name": "Date & Time4",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        240
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [
+            {
+              "name": "Nouveau",
+              "value": "={{true}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "29bf3e34-33ef-4f9b-8542-11e5f0391f27",
+      "name": "Set1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        80,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "values": {
+          "boolean": [
+            {
+              "name": "Nouveau",
+              "value": "={{false}}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "841f31f2-e0ce-4650-8d36-bc754b8c8a43",
+      "name": "Set3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 1,
+      "position": [
+        -80,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "dateTime": [
+            {
+              "value1": "={{$now-1380000}}",
+              "operation": "before",
+              "value2": "={{$json[\"launched_at\"]*1000}}"
+            }
+          ]
+        }
+      },
+      "id": "5384773c-ec69-4242-b8aa-0ddc0ae5e02e",
+      "name": "Launched il y a moins de 23 mn ?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [
+        60,
+        240
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {},
+  "staticData": null,
+  "tags": [],
+  "updatedAt": "2023-01-10T19:27:05.828Z"
+}
