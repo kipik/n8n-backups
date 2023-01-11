@@ -111,6 +111,11 @@
         ]
       ]
     },
+    "Date & Time": {
+      "main": [
+        []
+      ]
+    },
     "format deadline": {
       "main": [
         [
@@ -299,7 +304,7 @@
             },
             {
               "name": "launched_at_formated",
-              "value": "={{$json[\"launched_at_formated2\"]}}"
+              "value": "={{$json[\"launched_at_formated\"]}}"
             },
             {
               "name": "image_url",
@@ -784,7 +789,7 @@
     {
       "parameters": {
         "value": "={{$json[\"launched_at\"]}}",
-        "dataPropertyName": "launched_at_UTC+1",
+        "dataPropertyName": "launched_at_locale",
         "custom": true,
         "options": {
           "fromFormat": "X",
@@ -848,9 +853,9 @@
         "conditions": {
           "dateTime": [
             {
-              "value1": "={{$now-(11*60*1000)}}",
+              "value1": "={{$now-(60*60*1000)}}",
               "operation": "before",
-              "value2": "={{$json[\"launched_at\"]*1000}}"
+              "value2": "={{$json[\"launched_at_locale\"]}}"
             }
           ]
         }
@@ -867,7 +872,7 @@
     {
       "parameters": {
         "value": "={{$node[\"Item Lists\"].json[\"launched_at\"]}}",
-        "dataPropertyName": "launched_at_formated2",
+        "dataPropertyName": "launched_at_formated",
         "custom": true,
         "toFormat": "DD/MM/y H:mm",
         "options": {
@@ -890,5 +895,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2023-01-11T10:39:52.270Z"
+  "updatedAt": "2023-01-11T17:58:05.446Z"
 }
