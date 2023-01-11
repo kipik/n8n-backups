@@ -181,6 +181,17 @@
           }
         ]
       ]
+    },
+    "Airtable2": {
+      "main": [
+        [
+          {
+            "node": "Set8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2022-11-03T01:03:56.265Z",
@@ -320,7 +331,8 @@
       "position": [
         1020,
         420
-      ]
+      ],
+      "disabled": true
     },
     {
       "parameters": {
@@ -342,8 +354,8 @@
       ],
       "credentials": {
         "gmailOAuth2": {
-          "id": "1",
-          "name": "Gmail account"
+          "id": "11",
+          "name": "Gmail n8n"
         }
       }
     },
@@ -557,7 +569,7 @@
           "string": [
             {
               "name": "name",
-              "value": "bloodrunes"
+              "value": "1812! War on the Great Lakes Frontier"
             }
           ]
         },
@@ -669,5 +681,5 @@
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2023-01-09T11:19:04.534Z"
+  "updatedAt": "2023-01-11T11:41:14.731Z"
 }
