@@ -1,5 +1,5 @@
 {
-  "active": false,
+  "active": true,
   "connections": {
     "HTTP Request2": {
       "main": [
@@ -71,7 +71,7 @@
       "main": [
         [
           {
-            "node": "Date & Time",
+            "node": "Date & Time1",
             "type": "main",
             "index": 0
           }
@@ -105,17 +105,6 @@
         [
           {
             "node": "Date & Time4",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Date & Time": {
-      "main": [
-        [
-          {
-            "node": "Elimine le gras2",
             "type": "main",
             "index": 0
           }
@@ -192,6 +181,17 @@
           }
         ]
       ]
+    },
+    "Date & Time1": {
+      "main": [
+        [
+          {
+            "node": "Elimine le gras2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2023-01-10T19:27:05.828Z",
@@ -202,7 +202,10 @@
       "parameters": {
         "url": "http://www.kickstarter.com/projects/search.json",
         "allowUnauthorizedCerts": true,
-        "options": {},
+        "options": {
+          "splitIntoItems": true,
+          "useQueryString": true
+        },
         "queryParametersUi": {
           "parameter": [
             {
@@ -276,7 +279,7 @@
             },
             {
               "name": "deadline",
-              "value": "={{$node[\"Date & Time2\"].json[\"deadline\"]}}"
+              "value": "={{$node[\"Item Lists\"].json[\"deadline\"]}}"
             },
             {
               "name": "creator",
@@ -296,7 +299,7 @@
             },
             {
               "name": "launched_at_formated",
-              "value": "={{$json[\"launched_at_formated\"]}}"
+              "value": "={{$json[\"launched_at_formated2\"]}}"
             },
             {
               "name": "image_url",
@@ -466,7 +469,7 @@
     },
     {
       "parameters": {
-        "text": "={{$node[\"Launched il y a moins de 20 mn ?\"].json[\"blurb\"]}}",
+        "text": "={{$node[\"Item Lists\"].json[\"blurb\"]}}",
         "translateTo": "FR",
         "additionalFields": {}
       },
@@ -483,8 +486,7 @@
           "id": "3",
           "name": "DeepL Thierry"
         }
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
@@ -587,7 +589,7 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 1,
       "position": [
-        880,
+        920,
         80
       ],
       "disabled": true
@@ -629,7 +631,8 @@
       "position": [
         1520,
         520
-      ]
+      ],
+      "disabled": true
     },
     {
       "parameters": {
@@ -781,7 +784,7 @@
     {
       "parameters": {
         "value": "={{$json[\"launched_at\"]}}",
-        "dataPropertyName": "launchedAtPlus23",
+        "dataPropertyName": "launched_at_UTC+1",
         "custom": true,
         "options": {
           "fromFormat": "X",
@@ -845,7 +848,7 @@
         "conditions": {
           "dateTime": [
             {
-              "value1": "={{$now-1380000}}",
+              "value1": "={{$now-(11*60*1000)}}",
               "operation": "before",
               "value2": "={{$json[\"launched_at\"]*1000}}"
             }
@@ -860,11 +863,32 @@
         60,
         240
       ]
+    },
+    {
+      "parameters": {
+        "value": "={{$node[\"Item Lists\"].json[\"launched_at\"]}}",
+        "dataPropertyName": "launched_at_formated2",
+        "custom": true,
+        "toFormat": "DD/MM/y H:mm",
+        "options": {
+          "fromFormat": "X",
+          "fromTimezone": "UTC",
+          "toTimezone": "Europe/Paris"
+        }
+      },
+      "id": "64d073d9-8cd3-47f9-a742-4a21e528e651",
+      "name": "Date & Time1",
+      "type": "n8n-nodes-base.dateTime",
+      "typeVersion": 1,
+      "position": [
+        1560,
+        460
+      ]
     }
   ],
   "pinData": {},
   "settings": {},
   "staticData": null,
   "tags": [],
-  "updatedAt": "2023-01-10T19:27:05.828Z"
+  "updatedAt": "2023-01-11T10:39:52.270Z"
 }
